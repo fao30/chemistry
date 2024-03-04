@@ -1,28 +1,13 @@
-import { ELEMENT_COLORS, ELEMENT_DATA } from "@/utils/constants";
-import { cn } from "@/utils/functions";
+import { ELEMENT_COLORS, type Element } from "@/utils/constants";
+import { cn, getElement } from "@/utils/functions";
 import { Fragment, useState } from "react";
 
 export default function Home() {
-  const sortedElements = ELEMENT_DATA.sort((a, b) => {
-    if (a.period === b.period) return a.group - b.group;
-    return a.period - b.period;
-  });
-
-  const numRows = Math.max(...sortedElements.map((el) => el.period));
-  const numCols = Math.max(...sortedElements.map((el) => el.group));
-
-  const tableRows = [];
-  for (let i = 0; i < numRows; i++) {
-    const row = [];
-    for (let j = 0; j < numCols; j++) {
-      const element = sortedElements.find((el) => el.period === i + 1 && el.group === j + 1);
-      row.push(element ?? null);
-    }
-    tableRows.push(row);
-  }
+  const data = getElement();
 
   const [hoveredGroup, setHoveredGroup] = useState<null | number>(null);
   const [hoveredPeriod, setHoveredPeriod] = useState<null | number>(null);
+  const [hoveredElement, setHoveredElement] = useState<null | Element>(null);
 
   return (
     <article className="overflow-auto">
@@ -34,7 +19,7 @@ export default function Home() {
           </div>
 
           {/* GROUPS */}
-          {[...Array(numCols)].map((_, index) => (
+          {[...Array(18)].map((_, index) => (
             <div
               onMouseEnter={() => setHoveredGroup(index + 1)}
               onMouseLeave={() => setHoveredGroup(null)}
@@ -50,48 +35,76 @@ export default function Home() {
             </div>
           ))}
 
-          {tableRows.map((row, rowIndex) => (
-            <Fragment key={rowIndex}>
-              {/* PERIODS */}
-              <div
-                onMouseEnter={() => setHoveredPeriod(rowIndex + 1)}
-                onMouseLeave={() => setHoveredPeriod(null)}
-                className="aspect-square relative flex items-center justify-center"
-              >
-                {rowIndex + 1}
+          {data.map((row, rowIndex) => {
+            return (
+              <Fragment key={rowIndex}>
+                {/* PERIODS */}
                 <div
-                  className={cn("absolute size-full centered animate", {
-                    "bg-dark/50": (hoveredPeriod && rowIndex + 1 !== hoveredPeriod) || hoveredGroup,
-                  })}
-                />
-              </div>
-
-              {row.map((element, colIndex) => (
-                <div
-                  key={colIndex}
-                  className={cn("relative aspect-square group", { "cursor-pointer": element })}
-                  style={{
-                    gridColumn: colIndex + 2,
-                    gridRow: rowIndex + 2,
-                    backgroundColor: element ? ELEMENT_COLORS[element.category] : undefined,
-                  }}
+                  onMouseEnter={() => setHoveredPeriod(rowIndex + 1)}
+                  onMouseLeave={() => setHoveredPeriod(null)}
+                  className="aspect-square relative flex items-center justify-center col-start-1"
                 >
-                  {element ? (
-                    <Fragment>
-                      <div
-                        className={cn("z-10 bg-dark/50 opacity-0 group-hover:opacity-100 absolute size-full centered animate", {
-                          "opacity-100":
-                            (hoveredGroup && element.group !== hoveredGroup) || (hoveredPeriod && element.period !== hoveredPeriod),
-                        })}
-                      />
-                      <p className="absolute left-1.5 top-1">{element.atomicNumber}</p>
-                      <h5 className="absolute centered">{element.symbol}</h5>
-                    </Fragment>
-                  ) : null}
+                  {rowIndex + 1}
+                  <div
+                    className={cn("absolute size-full centered animate", {
+                      "bg-dark/50": (hoveredPeriod && rowIndex + 1 !== hoveredPeriod) || hoveredGroup,
+                    })}
+                  />
                 </div>
-              ))}
-            </Fragment>
-          ))}
+
+                {row.map((element, colIndex) => {
+                  const isActive = rowIndex === 0 && colIndex === 2;
+                  return (
+                    <div
+                      key={colIndex}
+                      className={cn(
+                        "relative group",
+                        { "cursor-pointer aspect-square ": element },
+                        { "grid grid-cols-subgrid col-span-10 row-span-3 col-start-4 row-start-2": isActive },
+                      )}
+                      style={{
+                        gridColumn: !isActive ? colIndex + 2 : undefined,
+                        gridRow: !isActive ? rowIndex + 2 : undefined,
+                        backgroundColor: element ? ELEMENT_COLORS[element.category] : undefined,
+                      }}
+                    >
+                      {isActive ? (
+                        <section className={cn("flex p-6 gap-4 col-span-10 animate", { "opacity-0": !hoveredElement })}>
+                          <div
+                            className="aspect-square h-full relative animate"
+                            style={{ backgroundColor: hoveredElement ? ELEMENT_COLORS[hoveredElement.category] : undefined }}
+                          >
+                            <h4 className="absolute left-3 top-2.5">{hoveredElement?.atomicNumber}</h4>
+                            <h2 className="absolute centered">{hoveredElement?.symbol}</h2>
+                          </div>
+                          <div
+                            className="size-full animate flex flex-col gap-4 p-3"
+                            style={{ backgroundColor: hoveredElement ? ELEMENT_COLORS[hoveredElement.category] : undefined }}
+                          >
+                            <h6>{hoveredElement?.name.toUpperCase()}</h6>
+                          </div>
+                        </section>
+                      ) : element ? (
+                        <Fragment>
+                          <div
+                            onMouseEnter={() => setHoveredElement(element)}
+                            onMouseLeave={() => setHoveredElement(null)}
+                            className={cn("z-10 bg-dark/50 opacity-0 group-hover:opacity-100 absolute size-full centered animate", {
+                              "opacity-100":
+                                (hoveredGroup && element.group !== hoveredGroup) ||
+                                (hoveredPeriod && element.period !== hoveredPeriod),
+                            })}
+                          />
+                          <p className="absolute left-1.5 top-1">{element.atomicNumber}</p>
+                          <h5 className="absolute centered">{element.symbol}</h5>
+                        </Fragment>
+                      ) : null}
+                    </div>
+                  );
+                })}
+              </Fragment>
+            );
+          })}
         </section>
       </article>
     </article>
