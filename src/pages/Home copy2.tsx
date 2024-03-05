@@ -5,24 +5,55 @@ import { Fragment, useState } from "react";
 export default function Home() {
   const data = getElement();
 
+  const [hoveredGroup, setHoveredGroup] = useState<null | number>(null);
+  const [hoveredPeriod, setHoveredPeriod] = useState<null | number>(null);
   const [hoveredElement, setHoveredElement] = useState<null | Element>(null);
 
-  console.log(data);
-
   return (
-    <article className="overflow-auto min-h-screen bg-gradient-to-tr from-[#274786] to-[#229FBC]">
+    <article className="overflow-auto">
       <article className="mx-auto max-lg:w-[96rem]">
-        <section className="grid grid-cols-18 gap-2 animate overflow-x-auto p-24">
+        <section className="grid grid-cols-19 gap-2 animate overflow-x-auto">
+          <div className="aspect-square flex flex-col justify-center items-center gap-2">
+            <p className={cn({ "text-white/50": hoveredPeriod })}>Group</p>
+            <p className={cn({ "text-white/50": hoveredGroup })}>Period</p>
+          </div>
+
+          {/* GROUPS */}
+          {[...Array(18)].map((_, index) => (
+            <div
+              onMouseEnter={() => setHoveredGroup(index + 1)}
+              onMouseLeave={() => setHoveredGroup(null)}
+              className="aspect-square flex justify-center items-center relative"
+              key={index}
+            >
+              {index + 1}
+              <div
+                className={cn("absolute size-full centered animate", {
+                  "bg-dark/50": (hoveredGroup && index + 1 !== hoveredGroup) || hoveredPeriod,
+                })}
+              />
+            </div>
+          ))}
+
           {data.map((row, rowIndex) => {
             return (
               <Fragment key={rowIndex}>
+                {/* PERIODS */}
+                <div
+                  onMouseEnter={() => setHoveredPeriod(rowIndex + 1)}
+                  onMouseLeave={() => setHoveredPeriod(null)}
+                  className="aspect-square relative flex items-center justify-center col-start-1"
+                >
+                  {rowIndex + 1}
+                  <div
+                    className={cn("absolute size-full centered animate", {
+                      "bg-dark/50": (hoveredPeriod && rowIndex + 1 !== hoveredPeriod) || hoveredGroup,
+                    })}
+                  />
+                </div>
+
                 {row.map((element, colIndex) => {
                   const isActive = rowIndex === 0 && colIndex === 2;
-                  const firstCol = colIndex === 0;
-                  const firstRow =
-                    rowIndex === 0 ||
-                    (rowIndex === 1 && colIndex >= 1 && colIndex <= 16) ||
-                    (rowIndex === 3 && colIndex >= 2 && colIndex <= 11);
                   return (
                     <div
                       key={colIndex}
@@ -32,8 +63,8 @@ export default function Home() {
                         { "grid grid-cols-subgrid col-span-10 row-span-3 col-start-4 row-start-2": isActive },
                       )}
                       style={{
-                        gridColumn: !isActive ? colIndex + 1 : undefined,
-                        gridRow: !isActive ? rowIndex + 1 : undefined,
+                        gridColumn: !isActive ? colIndex + 2 : undefined,
+                        gridRow: !isActive ? rowIndex + 2 : undefined,
                         backgroundColor: element ? ELEMENT_COLORS[element.category] : undefined,
                       }}
                     >
@@ -55,21 +86,13 @@ export default function Home() {
                         </section>
                       ) : element ? (
                         <Fragment>
-                          {firstRow ? (
-                            <div className="absolute flex items-center justify-center -top-9 w-full h-8 border-t-2 border-x-2 border-white">
-                              <p>{colIndex + 1}</p>
-                            </div>
-                          ) : null}
-                          {firstCol ? (
-                            <div className="absolute flex items-center justify-center -left-9 h-full w-8 border-y-2 border-l-2 border-white">
-                              <p className="rotate-[270deg]">{rowIndex + 1}</p>
-                            </div>
-                          ) : null}
                           <div
                             onMouseEnter={() => setHoveredElement(element)}
                             onMouseLeave={() => setHoveredElement(null)}
-                            className={cn("z-10 bg-dark/50 opacity-0 absolute size-full centered animate", {
-                              "opacity-100": hoveredElement && hoveredElement.atomicNumber !== element.atomicNumber,
+                            className={cn("z-10 bg-dark/50 opacity-0 group-hover:opacity-100 absolute size-full centered animate", {
+                              "opacity-100":
+                                (hoveredGroup && element.group !== hoveredGroup) ||
+                                (hoveredPeriod && element.period !== hoveredPeriod),
                             })}
                           />
                           <p className="absolute left-1.5 top-1">{element.atomicNumber}</p>
