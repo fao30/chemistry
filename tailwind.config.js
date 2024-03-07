@@ -14,7 +14,8 @@ export default {
         20: "repeat(20, minmax(0, 1fr))",
       },
       colors: {
-        dark: "#18181e",
+        dark: "#2B2A29",
+        light: "#FEFEFE",
         OTHER_NONMETALS: "#19583c",
         NOBLE_GASSES: "#396113",
         ALKALI_METALS: "#7e1957",
