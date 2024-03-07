@@ -1,3 +1,4 @@
+import useSetting from "@/hooks/useSetting";
 import { ELEMENT_COLORS, type Element } from "@/lib/constants";
 import { cn, getElement } from "@/lib/functions";
 import { Fragment, useState } from "react";
@@ -5,9 +6,11 @@ import { Fragment, useState } from "react";
 export default function Home() {
   const data = getElement();
   const [hoveredElement, setHoveredElement] = useState<null | Element>(null);
+  const { t } = useSetting();
 
   return (
     <article className="overflow-auto min-h-screen bg-gradient-to-r from-[#274786] to-[#229FBC]">
+      <h1>{t.hello}</h1>
       <article className="mx-auto max-2xl:w-[120rem]">
         <section className="grid grid-cols-18 gap-2 animate overflow-x-auto p-24">
           {data.map((row, rowIndex) => {

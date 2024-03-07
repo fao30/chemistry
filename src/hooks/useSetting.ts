@@ -8,5 +8,6 @@ type Setting = { lang: Lang };
 
 export default function useSetting() {
   const [setting, setSetting] = useLocalStorage<Setting>("setting", { lang: defaultLocale });
+
   return { setting, setSetting, t: setting.lang === "ru" ? ru : en };
 }
