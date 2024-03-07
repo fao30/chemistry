@@ -11,8 +11,8 @@ export default function Home() {
   return (
     <article className="overflow-auto min-h-screen bg-gradient-to-r from-[#274786] to-[#229FBC]">
       <h1>{t.hello}</h1>
-      <article className="mx-auto max-2xl:w-[120rem]">
-        <section className="grid grid-cols-18 gap-2 animate overflow-x-auto p-24">
+      <article className="mx-auto max-xl:w-[100rem]">
+        <section className="grid grid-cols-18 gap-2 animate overflow-x-auto p-12">
           {data.map((row, rowIndex) => {
             return (
               <Fragment key={rowIndex}>
@@ -103,9 +103,9 @@ export default function Home() {
                               "opacity-100": notHovered,
                             })}
                           />
-                          <p className="absolute left-1.5 top-1 text-dark font-semibold">{element.no}</p>
+                          <p className="absolute left-1 top-0.5 text-dark font-semibold">{element.no}</p>
                           <h5 className="absolute centered">{element.symbol}</h5>
-                          <small className="absolute centered-bottom -translate-y-1 text-dark font-semibold">{element.name}</small>
+                          <small className="absolute centered-bottom text-dark font-semibold">{element.name}</small>
                         </Fragment>
                       ) : null}
                     </div>

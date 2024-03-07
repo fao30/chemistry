@@ -22,22 +22,22 @@ body {
     @apply animate;
   }
   h1 {
-    @apply text-6xl xl:text-7xl;
+    @apply text-6xl 2xl:text-7xl;
   }
   h2 {
-    @apply text-5xl xl:text-6xl;
+    @apply text-5xl 2xl:text-6xl;
   }
   h3 {
-    @apply text-4xl xl:text-5xl font-semibold;
+    @apply text-4xl 2xl:text-5xl font-semibold;
   }
   h4 {
-    @apply text-3xl xl:text-4xl font-semibold;
+    @apply text-3xl 2xl:text-4xl font-semibold;
   }
   h5 {
-    @apply text-2xl xl:text-3xl font-semibold;
+    @apply text-2xl 2xl:text-3xl font-semibold;
   }
   h6 {
-    @apply text-lg xl:text-xl font-semibold;
+    @apply text-lg 2xl:text-xl font-semibold;
   }
   label {
     @apply font-medium text-base select-none;
