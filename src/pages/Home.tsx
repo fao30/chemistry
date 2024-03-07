@@ -95,7 +95,7 @@ export default function Home() {
                           ) : null}
                           <div
                             onMouseEnter={() => setHoveredElement(element)}
-                            // onMouseLeave={() => setHoveredElement(null)}
+                            onMouseLeave={() => setHoveredElement(null)}
                             className={cn("z-10 bg-dark/50 opacity-0 absolute size-full centered animate cursor-pointer", {
                               "opacity-100": notHovered,
                             })}
