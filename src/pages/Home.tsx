@@ -1,5 +1,5 @@
-import { ELEMENT_COLORS, type Element } from "@/utils/constants";
-import { cn, getElement } from "@/utils/functions";
+import { ELEMENT_COLORS, type Element } from "@/lib/constants";
+import { cn, getElement } from "@/lib/functions";
 import { Fragment, useState } from "react";
 
 export default function Home() {

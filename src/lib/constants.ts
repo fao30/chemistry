@@ -1,3 +1,5 @@
+import type { Dictionary } from "@/types";
+
 export type ElementCategory =
   | "ALKALI_METALS"
   | "ALKALINE_EARTH_METALS"
@@ -18,6 +20,18 @@ export type Element = {
   period: number;
   // mass: number;
 };
+
+export const ELEMENT_CATEGORIES: { value: ElementCategory; label: string }[] = [
+  { value: "OTHER_NONMETALS", label: "hello" },
+  { value: "ALKALI_METALS", label: "" },
+  { value: "ALKALINE_EARTH_METALS", label: "" },
+  { value: "POST_TRANSITION_METALS", label: "" },
+  { value: "METTALOIDS", label: "" },
+  { value: "LANTHANIDES", label: "" },
+  { value: "ACTINIDES", label: "" },
+  { value: "NOBLE_GASSES", label: "" },
+  { value: "TRANSITION_METALS", label: "" },
+];
 
 export const ELEMENT_COLORS: Record<ElementCategory, string> = {
   OTHER_NONMETALS: "#FFD100",

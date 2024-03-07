@@ -2,11 +2,8 @@ import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 import { ELEMENT_DATA } from "./constants";
 
-type Lang = "en" | "ru";
-
 export const cn = (...inputs: ClassValue[]): string => twMerge(clsx(inputs));
-export const getLang = (): Lang | null => (localStorage.getItem("lang") as Lang) ?? null;
-export const setLang = (lang: Lang) => localStorage.setItem("lang", lang);
+
 export const getElement = () => {
   const sortedElements = ELEMENT_DATA.sort((a, b) => {
     if (a.period === b.period) return a.group - b.group;
