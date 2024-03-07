@@ -5,7 +5,7 @@ import { ELEMENT_DATA } from "./constants";
 export const cn = (...inputs: ClassValue[]): string => twMerge(clsx(inputs));
 
 export const getElement = () => {
-  const sortedElements = ELEMENT_DATA.sort((a, b) => {
+  const sortedElements = ELEMENT_DATA.toSorted((a, b) => {
     if (a.period === b.period) return a.group - b.group;
     return a.period - b.period;
   });

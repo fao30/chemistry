@@ -1,6 +1,7 @@
 import useSetting from "@/hooks/useSetting";
-import { ELEMENT_COLORS, type Element } from "@/lib/constants";
+import { ELEMENT_CATEGORIES } from "@/lib/constants";
 import { cn, getElement } from "@/lib/functions";
+import type { Element } from "@/types";
 import { Fragment, useState } from "react";
 
 export default function Home() {
@@ -10,7 +11,7 @@ export default function Home() {
 
   return (
     <article className="overflow-auto min-h-screen bg-gradient-to-r from-[#274786] to-[#229FBC]">
-      <h1>{t.hello}</h1>
+      <h1>{t.elements.He.name}</h1>
       <article className="mx-auto max-xl:w-[100rem]">
         <section className="grid grid-cols-18 gap-2 animate overflow-x-auto p-12">
           {data.map((row, rowIndex) => {
@@ -37,16 +38,16 @@ export default function Home() {
                       style={{
                         gridColumn: !isActive ? colIndex + 1 : undefined,
                         gridRow: !isActive ? rowIndex + 1 : undefined,
-                        borderColor: element ? ELEMENT_COLORS[element.category] : undefined,
-                        color: hovered ? "#FEFEFE" : element ? ELEMENT_COLORS[element.category] : undefined,
-                        backgroundColor: hovered ? ELEMENT_COLORS[element.category] : undefined,
+                        borderColor: element ? ELEMENT_CATEGORIES[element.category].color : undefined,
+                        color: hovered ? "#FEFEFE" : element ? ELEMENT_CATEGORIES[element.category].color : undefined,
+                        backgroundColor: hovered ? ELEMENT_CATEGORIES[element.category].color : undefined,
                       }}
                     >
                       {isActive ? (
                         <section className="flex gap-4 justify-end col-span-10">
                           <div
                             className={cn("aspect-square relative animate border-[4px] w-[30%]", { "opacity-0": !hoveredElement })}
-                            style={{ borderColor: hoveredElement ? ELEMENT_COLORS[hoveredElement.category] : undefined }}
+                            style={{ borderColor: hoveredElement ? ELEMENT_CATEGORIES[hoveredElement.category].color : undefined }}
                           >
                             <h4 className="absolute left-3 top-2.5 text-light">
                               <span>{hoveredElement?.no}</span>
@@ -56,7 +57,7 @@ export default function Home() {
                             </h5>
                             <h1
                               className="absolute centered font-bold"
-                              style={{ color: hoveredElement ? ELEMENT_COLORS[hoveredElement.category] : undefined }}
+                              style={{ color: hoveredElement ? ELEMENT_CATEGORIES[hoveredElement.category].color : undefined }}
                             >
                               {hoveredElement?.symbol}
                             </h1>
@@ -105,7 +106,7 @@ export default function Home() {
                           />
                           <p className="absolute left-1 top-0.5 text-dark font-semibold">{element.no}</p>
                           <h5 className="absolute centered">{element.symbol}</h5>
-                          <small className="absolute centered-bottom text-dark font-semibold">{element.name}</small>
+                          <small className="absolute centered-bottom text-dark font-semibold">{t.elements[element.symbol].name}</small>
                         </Fragment>
                       ) : null}
                     </div>

@@ -1,13 +1,14 @@
-import { defaultLocale } from "@/lib/internationalization";
-import en from "@/lib/locales/en.json";
-import ru from "@/lib/locales/ru.json";
+import { defaultLang as lang } from "@/lib/constants";
+import { getEnglishDictionary } from "@/lib/locales/en";
+// import { getRussianDictionary } from "@/lib/locales/ru";
 import type { Lang } from "@/types";
 import { useLocalStorage } from "@uidotdev/usehooks";
 
 type Setting = { lang: Lang };
 
 export default function useSetting() {
-  const [setting, setSetting] = useLocalStorage<Setting>("setting", { lang: defaultLocale });
+  const [setting, setSetting] = useLocalStorage<Setting>("setting", { lang });
 
-  return { setting, setSetting, t: setting.lang === "ru" ? ru : en };
+  // return { setting, setSetting, t: setting.lang === "ru" ? getRussianDictionary() : getEnglishDictionary() };
+  return { setting, setSetting, t: getEnglishDictionary() };
 }
