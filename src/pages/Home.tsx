@@ -90,11 +90,11 @@ export default function Home() {
                               <header className="text-center flex flex-col">
                                 <h5 className="leading-7">{t.tableFounder.name}</h5>
                                 <p>
-                                  {formatDate({ date: t.tableFounder.birthDate, lang: setting.lang, style: "long" })} —{" "}
-                                  {formatDate({ date: t.tableFounder.deathDate, lang: setting.lang, style: "long" })}
+                                  {`${formatDate({ date: t.tableFounder.birthDate, lang: setting.lang, style: "long" })} —
+                                  ${formatDate({ date: t.tableFounder.deathDate, lang: setting.lang, style: "long" })}`}
                                 </p>
                               </header>
-                              <section className="flex flex-col overflow-y-auto h-44">
+                              <section className="flex flex-col overflow-y-auto">
                                 <small className="indent-6">{t.tableFounder.history.text1}</small>
                                 <small className="indent-6">{t.tableFounder.history.text2}</small>
                                 <small className="indent-6">{t.tableFounder.history.text3}</small>
