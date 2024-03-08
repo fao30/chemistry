@@ -18,4 +18,8 @@ export type DictionaryKey = keyof Dictionary;
 
 // main
 export type Element = (typeof ELEMENT_DATA)[number];
-export type Dictionary = { elements: Record<ElementKey, { name: string }>; elementCategories: Record<ElementCategory, string> };
+export type Dictionary = {
+  elements: Record<ElementKey, { name: string }>;
+  elementCategories: Record<ElementCategory, string>;
+  tableFounder: { name: string; birthDate: Date; deathDate: Date; history: string };
+};

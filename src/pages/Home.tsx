@@ -1,19 +1,18 @@
 import useSetting from "@/hooks/useSetting";
 import { ELEMENT_CATEGORIES } from "@/lib/constants";
-import { cn, getElement } from "@/lib/functions";
+import { cn, formatDate, getElement } from "@/lib/functions";
 import type { Element } from "@/types";
 import { Fragment, useState } from "react";
 
 export default function Home() {
   const data = getElement();
   const [hoveredElement, setHoveredElement] = useState<null | Element>(null);
-  const { t } = useSetting();
+  const { t, setting } = useSetting();
 
   return (
     <article className="overflow-auto min-h-screen bg-gradient-to-r from-[#274786] to-[#229FBC]">
-      <h1>{t.elements.He.name}</h1>
       <article className="mx-auto max-xl:w-[100rem]">
-        <section className="grid grid-cols-18 gap-2 animate overflow-x-auto p-12">
+        <section className="grid grid-cols-18 gap-2.5 animate overflow-x-auto p-12">
           {data.map((row, rowIndex) => {
             return (
               <Fragment key={rowIndex}>
@@ -35,7 +34,7 @@ export default function Home() {
                       key={colIndex}
                       className={cn(
                         "relative group",
-                        { "border-2 bg-light aspect-square": element },
+                        { "border-4 bg-light aspect-square": element },
                         { "grid grid-cols-subgrid col-span-10 row-span-3 col-start-4 row-start-2": isActive },
                       )}
                       style={{
@@ -47,10 +46,12 @@ export default function Home() {
                       }}
                     >
                       {isActive ? (
-                        <section className="flex gap-4 justify-end col-span-10">
+                        <section className="col-span-10 flex gap-4 justify-end relative">
                           {/* HOVERED ELEMENT */}
                           <div
-                            className={cn("aspect-square relative animate border-[4px] w-[30%]", { "opacity-0": !hoveredElement })}
+                            className={cn("aspect-square relative animate border-[4px] w-[30%]", {
+                              "opacity-0": !hoveredElement,
+                            })}
                             style={{ borderColor: hoveredElement ? ELEMENT_CATEGORIES[hoveredElement.category].color : undefined }}
                           >
                             <h4 className="absolute left-3 top-2.5 text-light">
@@ -83,8 +84,22 @@ export default function Home() {
                             </div>
                           </div>
                           {/* MENDELEEV */}
-                          <div className="h-full w-[60%] animate flex flex-col gap-4 p-3 bg-light text-dark">
-                            <h5 className="text-center">Dmitri Ivanovich Mendeleev</h5>
+                          <div className="h-full w-[60%] animate grid grid-cols-3 gap-4 p-3 bg-light text-dark">
+                            <img
+                              alt={t.tableFounder.name}
+                              src="/assets/mendeleev.jpg"
+                              className="aspect-[19/6] object-cover size-full"
+                            />
+                            <section className="col-span-2 flex flex-col gap-2">
+                              <header className="text-center flex flex-col">
+                                <h5 className="leading-5">{t.tableFounder.name}</h5>
+                                <p>
+                                  {formatDate({ date: t.tableFounder.birthDate, lang: setting.lang, style: "long" })} —{" "}
+                                  {formatDate({ date: t.tableFounder.deathDate, lang: setting.lang, style: "long" })}
+                                </p>
+                              </header>
+                              <small className="whitespace-pre-line">{t.tableFounder.history}</small>
+                            </section>
                           </div>
                         </section>
                       ) : null}

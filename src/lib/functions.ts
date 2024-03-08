@@ -1,3 +1,4 @@
+import type { Lang } from "@/types";
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 import { ELEMENT_DATA } from "./constants";
@@ -25,3 +26,18 @@ export const getElement = () => {
 
   return tableRows;
 };
+
+export const formatDate = ({
+  date,
+  lang,
+  style,
+}: {
+  date: Date;
+  lang: Lang;
+  style: "short" | "long";
+}): string =>
+  date.toLocaleDateString(lang, {
+    year: "numeric",
+    month: style === "long" ? "long" : "numeric",
+    day: "numeric",
+  });

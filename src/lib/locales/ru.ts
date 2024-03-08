@@ -1,9 +1,32 @@
-// import type { Dictionary } from "@/types";
+import type { Dictionary } from "@/types";
 
-// export const getRussianDictionary = (): Dictionary => ({
-//   elements: {
-//     He: {
-//       name: "Helium",
-//     },
-//   },
-// });
+export const getRussianDictionary = (): Dictionary => ({
+  elements: {
+    H: { name: "Hydrogen" },
+    He: { name: "Helium" },
+    Li: { name: "Lithium" },
+    Be: { name: "Beryllium" },
+    Na: { name: "Natrium" },
+    K: { name: "Potassium" },
+  },
+
+  elementCategories: {
+    OTHER_NONMETALS: "Другие неметаллы",
+    NOBLE_GASSES: "Благородные газыs",
+    ALKALI_METALS: "Щелочные металлы",
+    ALKALINE_EARTH_METALS: "Щелочно-земельные металлы",
+    POST_TRANSITION_METALS: "Пост-переходные металлы",
+    METTALOIDS: "Металлоиды",
+    ACTINIDES: "Актиниды",
+    LANTHANIDES: "Лантаноиды",
+    TRANSITION_METALS: "Переходные металлы",
+  },
+
+  tableFounder: {
+    name: "Дми́трий Ива́нович Менделе́ев",
+    birthDate: new Date("1834-02-09"),
+    deathDate: new Date("1907-02-02"),
+    history:
+      "Гениальный русский ученый, профессор, член Академии наук, обладатель энциклопедических знаний по химии, физике, географии, экономике. Ученым был открыт и сформулирован один из фундаментальных законов природы периодический закон химических элементов. Над своей системой Менделеев работал с 1869 по 1900 года.\nСтоит упомянуть, что при создании своей системы Менделеев оставил пустыми некоторые клеточки таблицы и предвосхитил открытие таких элементов, галлий, скандий, германий, полоний, астат, технеций, рений и франций. Химик вычислил их атомные массы и указал основные свойства, однако сами элементы были открыты позднее.\nУмер ученый в 1907 году, в возрасте 72 лет.",
+  },
+});
