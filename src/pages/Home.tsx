@@ -33,8 +33,7 @@ export default function Home() {
                     <div
                       key={colIndex}
                       className={cn(
-                        "relative group",
-                        { "border-4 bg-light aspect-square": element },
+                        { "border-4 bg-light aspect-square relative group": element },
                         { "grid grid-cols-subgrid col-span-10 row-span-3 col-start-4 row-start-2": isActive },
                       )}
                       style={{
@@ -46,10 +45,10 @@ export default function Home() {
                       }}
                     >
                       {isActive ? (
-                        <section className="col-span-10 flex gap-4 justify-end relative">
+                        <section className="col-span-10 row-span-3 relative">
                           {/* HOVERED ELEMENT */}
                           <div
-                            className={cn("aspect-square relative animate border-[4px] w-[30%]", {
+                            className={cn("aspect-square relative animate border-[4px] w-[30%] ml-24", {
                               "opacity-0": !hoveredElement,
                             })}
                             style={{ borderColor: hoveredElement ? ELEMENT_CATEGORIES[hoveredElement.category].color : undefined }}
@@ -84,21 +83,22 @@ export default function Home() {
                             </div>
                           </div>
                           {/* MENDELEEV */}
-                          <div className="h-full w-[60%] animate grid grid-cols-3 gap-4 p-3 bg-light text-dark">
-                            <img
-                              alt={t.tableFounder.name}
-                              src="/assets/mendeleev.jpg"
-                              className="aspect-[19/6] object-cover size-full"
-                            />
-                            <section className="col-span-2 flex flex-col gap-2">
+
+                          <div className="absolute right-0 top-0 h-full w-[60%] animate flex gap-4 p-3 bg-light text-dark">
+                            <img alt={t.tableFounder.name} src="/assets/mendeleev.jpg" className="object-cover size-full" />
+                            <section className="flex flex-col gap-2">
                               <header className="text-center flex flex-col">
-                                <h5 className="leading-5">{t.tableFounder.name}</h5>
+                                <h5 className="leading-7">{t.tableFounder.name}</h5>
                                 <p>
                                   {formatDate({ date: t.tableFounder.birthDate, lang: setting.lang, style: "long" })} —{" "}
                                   {formatDate({ date: t.tableFounder.deathDate, lang: setting.lang, style: "long" })}
                                 </p>
                               </header>
-                              <small className="whitespace-pre-line">{t.tableFounder.history}</small>
+                              <section className="flex flex-col overflow-y-auto h-44">
+                                <small className="indent-6">{t.tableFounder.history.text1}</small>
+                                <small className="indent-6">{t.tableFounder.history.text2}</small>
+                                <small className="indent-6">{t.tableFounder.history.text3}</small>
+                              </section>
                             </section>
                           </div>
                         </section>
