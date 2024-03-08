@@ -27,6 +27,9 @@ export default function Home() {
 
                   const hovered = hoveredElement && element && hoveredElement.no === element.no;
                   const notHovered = hoveredElement && element && hoveredElement.no !== element.no;
+
+                  const tHoveredElement = hoveredElement && t.elements[hoveredElement.symbol];
+                  const tElement = element && t.elements[element.symbol];
                   return (
                     <div
                       key={colIndex}
@@ -45,6 +48,7 @@ export default function Home() {
                     >
                       {isActive ? (
                         <section className="flex gap-4 justify-end col-span-10">
+                          {/* HOVERED ELEMENT */}
                           <div
                             className={cn("aspect-square relative animate border-[4px] w-[30%]", { "opacity-0": !hoveredElement })}
                             style={{ borderColor: hoveredElement ? ELEMENT_CATEGORIES[hoveredElement.category].color : undefined }}
@@ -61,7 +65,7 @@ export default function Home() {
                             >
                               {hoveredElement?.symbol}
                             </h1>
-                            <h5 className="absolute centered-bottom -translate-y-6 text-light">{hoveredElement?.name}</h5>
+                            <h5 className="absolute centered-bottom -translate-y-6 text-light">{tHoveredElement?.name}</h5>
 
                             {/* DESC */}
                             <p className="text-light -left-56 top-4 absolute text-right w-44">Ordinal Period</p>
@@ -106,7 +110,7 @@ export default function Home() {
                           />
                           <p className="absolute left-1 top-0.5 text-dark font-semibold">{element.no}</p>
                           <h5 className="absolute centered">{element.symbol}</h5>
-                          <small className="absolute centered-bottom text-dark font-semibold">{t.elements[element.symbol].name}</small>
+                          <small className="absolute centered-bottom text-dark font-semibold">{tElement?.name}</small>
                         </Fragment>
                       ) : null}
                     </div>
