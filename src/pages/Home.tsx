@@ -46,61 +46,62 @@ export default function Home() {
                     >
                       {isActive ? (
                         <section className="col-span-10 row-span-3 relative">
-                          {/* HOVERED ELEMENT */}
-                          <div
-                            className={cn("aspect-square relative animate border-[4px] w-[30%] ml-24", {
-                              "opacity-0": !hoveredElement,
-                            })}
-                            style={{ borderColor: hoveredElement ? ELEMENT_CATEGORIES[hoveredElement.category].color : undefined }}
-                          >
-                            <h4 className="absolute left-3 top-2.5 text-light">
-                              <span>{hoveredElement?.no}</span>
-                            </h4>
-                            <h5 className="absolute right-3 top-3 text-light">
-                              <span>{hoveredElement?.no}</span>
-                            </h5>
-                            <h1
-                              className="absolute centered font-bold"
-                              style={{ color: hoveredElement ? ELEMENT_CATEGORIES[hoveredElement.category].color : undefined }}
+                          <section className="absolute right-0 top-0 size-full flex justify-end gap-4">
+                            {/* HOVERED ELEMENT */}
+                            <div
+                              className={cn("aspect-square relative animate border-[4px] w-[30%]", {
+                                "opacity-0": !hoveredElement,
+                              })}
+                              style={{ borderColor: hoveredElement ? ELEMENT_CATEGORIES[hoveredElement.category].color : undefined }}
                             >
-                              {hoveredElement?.symbol}
-                            </h1>
-                            <h5 className="absolute centered-bottom -translate-y-6 text-light">{tHoveredElement?.name}</h5>
+                              <h4 className="absolute left-3 top-2.5 text-light">
+                                <span>{hoveredElement?.no}</span>
+                              </h4>
+                              <h5 className="absolute right-3 top-3 text-light">
+                                <span>{hoveredElement?.no}</span>
+                              </h5>
+                              <h1
+                                className="absolute centered font-bold"
+                                style={{ color: hoveredElement ? ELEMENT_CATEGORIES[hoveredElement.category].color : undefined }}
+                              >
+                                {hoveredElement?.symbol}
+                              </h1>
+                              <h5 className="absolute centered-bottom -translate-y-6 text-light">{tHoveredElement?.name}</h5>
 
-                            {/* DESC */}
-                            <p className="text-light -left-56 top-4 absolute text-right w-44">Ordinal Period</p>
-                            <div className="h-1 bg-light w-11 absolute -left-[2.5rem] top-7" />
+                              {/* DESC */}
+                              <p className="text-light -left-48 top-4 absolute text-right w-44">Ordinal Period</p>
+                              <div className="h-1 bg-light w-5 absolute -left-3 top-7" />
 
-                            <p className="text-light -left-56 top-1/2 absolute -translate-y-1 text-right w-44">Symbol</p>
-                            <div className="h-1 bg-light w-[7.75rem] absolute -left-[2.5rem] top-1/2 translate-y-2" />
+                              <p className="text-light -left-48 top-1/2 absolute -translate-y-1 text-right w-44">Symbol</p>
+                              <div className="h-1 bg-light w-[7.5rem] absolute -left-3 top-1/2 translate-y-2" />
 
-                            <p className="text-light -left-56 bottom-7 absolute text-right w-44">Name</p>
-                            <div className="h-1 bg-light w-[6.5rem] absolute -left-[2.5rem] bottom-11 translate-y-2" />
+                              <p className="text-light -left-48 bottom-7 absolute text-right w-44">Name</p>
+                              <div className="h-1 bg-light w-[6.25rem] absolute -left-3 bottom-11 translate-y-2" />
 
-                            <div className="absolute right-4 -top-[4.2rem] flex flex-col gap-1 items-end justify-center">
-                              <p className="text-light">Atomic Mass</p>
-                              <div className="w-1 h-12 bg-light" />
+                              <div className="absolute right-4 -top-[4.2rem] flex flex-col items-end justify-center">
+                                <p className="text-light">Atomic Mass</p>
+                                <div className="w-1 h-12 bg-light" />
+                              </div>
                             </div>
-                          </div>
-                          {/* MENDELEEV */}
-
-                          <div className="absolute right-0 top-0 h-full w-[60%] animate flex gap-4 p-3 bg-light text-dark">
-                            <img alt={t.tableFounder.name} src="/assets/mendeleev.jpg" className="object-cover size-full" />
-                            <section className="flex flex-col gap-2">
-                              <header className="text-center flex flex-col">
-                                <h5 className="leading-7">{t.tableFounder.name}</h5>
-                                <p>
-                                  {`${formatDate({ date: t.tableFounder.birthDate, lang: setting.lang, style: "long" })} —
+                            {/* MENDELEEV */}
+                            <div className="w-[60%] animate flex gap-4 p-3 bg-light text-dark">
+                              <img alt={t.tableFounder.name} src="/assets/mendeleev.jpg" className="object-cover size-full" />
+                              <section className="flex flex-col gap-2">
+                                <header className="text-center flex flex-col">
+                                  <h5 className="leading-7">{t.tableFounder.name}</h5>
+                                  <p>
+                                    {`${formatDate({ date: t.tableFounder.birthDate, lang: setting.lang, style: "long" })} —
                                   ${formatDate({ date: t.tableFounder.deathDate, lang: setting.lang, style: "long" })}`}
-                                </p>
-                              </header>
-                              <section className="flex flex-col overflow-y-auto">
-                                <small className="indent-6">{t.tableFounder.history.text1}</small>
-                                <small className="indent-6">{t.tableFounder.history.text2}</small>
-                                <small className="indent-6">{t.tableFounder.history.text3}</small>
+                                  </p>
+                                </header>
+                                <section className="flex flex-col overflow-y-auto">
+                                  <small className="indent-6">{t.tableFounder.history.text1}</small>
+                                  <small className="indent-6">{t.tableFounder.history.text2}</small>
+                                  <small className="indent-6">{t.tableFounder.history.text3}</small>
+                                </section>
                               </section>
-                            </section>
-                          </div>
+                            </div>
+                          </section>
                         </section>
                       ) : null}
 
