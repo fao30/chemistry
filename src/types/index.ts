@@ -12,11 +12,20 @@ export type ElementCategory =
   | "LANTHANIDES"
   | "ACTINIDES";
 
-export type Color = "COLORLESS" | "SILVER" | "SLATE_GRAY" | "BLACK";
+export type Color = "COLORLESS" | "SILVER" | "SLATE_GRAY" | "BLACK" | "GRAY" | "YELLOW";
 
 export type Phase = "GAS" | "SOLID";
 
-export type CrystalStructure = "SIMPLE_HEXAGONAL" | "FACE_CENTERED_CUBIC" | "BODY_CENTERED_CUBIC" | "SIMPLE_TRIGONAL";
+export type CrystalStructure =
+  | "SIMPLE_HEXAGONAL"
+  | "FACE_CENTERED_CUBIC"
+  | "BODY_CENTERED_CUBIC"
+  | "SIMPLE_TRIGONAL"
+  | "BASE_CENTERED_MONOCLINIC"
+  | "TETRAHEDRAL_PACKING"
+  | "SIMPLE_TRICLINIC"
+  | "FACE_CENTERED_ORTHORHOMBIC"
+  | "BASE_CENTERED_ORTHORHOMBIC";
 
 // key
 export type ElementKey = (typeof ELEMENT_DATA)[number]["symbol"];
@@ -41,4 +50,49 @@ export type Dictionary = {
   >;
   elementCategories: Record<ElementCategory, string>;
   tableFounder: { name: string; birthDate: Date; deathDate: Date; history: { text1: string; text2: string; text3: string } };
+  titles: {
+    group: string;
+    period: string;
+    block: string;
+    history: string;
+    protons: string;
+    electrons: string;
+    neutrons: string;
+    generalProperties: string;
+    atomicNumber: string;
+    atomicWeight: string;
+    massNumber: string;
+    category: string;
+    color: string;
+    radioactive: string;
+    crystalStructure: string;
+    electronsPerShell: string;
+    electronConfiguration: string;
+    physicalProperties: string;
+    phase: string;
+    density: string;
+    meltingPoint: string;
+    boilingPoint: string;
+    heatOfFusion: string;
+    heatOfVaporization: string;
+    specificHeatCapacity: string;
+    abudanceInEarthCrust: string;
+    abudanceInUniverse: string;
+    casNumber: string;
+    pubchem: string;
+    atomicProperties: string;
+    atomicRadius: string;
+    covalentRadius: string;
+    electronegativity: string;
+    ionizationPotential: string;
+    atomicValue: string;
+    thermalConductivity: string;
+    oxidationStates: string;
+    applications: string;
+    isotopes: string;
+    stable: string;
+    unstable: string;
+    yes: string;
+    no: string;
+  };
 };

@@ -85,7 +85,7 @@ export const SmSVG = () => (
     />
   </svg>
 );
-export const BcMSVG = () => (
+export const BcmSVG = () => (
   <svg xmlns="http://www.w3.org/2000/svg" className="crystalDiagram" viewBox="-1 -1 37.41 37.41">
     <path
       className="strokeHidden"
@@ -225,4 +225,9 @@ export const CRYSTAL_STRUCTURES: Record<CrystalStructure, { component: React.JSX
   FACE_CENTERED_CUBIC: { component: <FcCSVG />, value: "FACE_CENTERED_CUBIC" },
   BODY_CENTERED_CUBIC: { component: <BccSVG />, value: "BODY_CENTERED_CUBIC" },
   SIMPLE_TRIGONAL: { component: <StgSVG />, value: "SIMPLE_TRIGONAL" },
+  BASE_CENTERED_MONOCLINIC: { component: <BcmSVG />, value: "BASE_CENTERED_MONOCLINIC" },
+  TETRAHEDRAL_PACKING: { component: <TpSVG />, value: "TETRAHEDRAL_PACKING" },
+  SIMPLE_TRICLINIC: { component: <StcSVG />, value: "SIMPLE_TRICLINIC" },
+  FACE_CENTERED_ORTHORHOMBIC: { component: <FcoSVG />, value: "FACE_CENTERED_ORTHORHOMBIC" },
+  BASE_CENTERED_ORTHORHOMBIC: { component: <BcoSVG />, value: "BASE_CENTERED_ORTHORHOMBIC" },
 };

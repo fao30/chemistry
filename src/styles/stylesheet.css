@@ -30,12 +30,12 @@
 }
 
 .fillInter {
-  stroke: white;
-  fill: white;
+  stroke: black;
+  fill: black;
   stroke-width: 0.75;
 }
 
 .strokeVisible {
-  stroke: white;
+  stroke: black;
   fill: none;
 }

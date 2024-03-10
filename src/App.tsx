@@ -1,6 +1,7 @@
 import { lazy } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { Route, Routes } from "react-router-dom";
+import ElementBySymbol from "./pages/ElementBySymbol";
 
 const Home = lazy(() => import("@/pages/Home"));
 
@@ -74,6 +75,7 @@ export default function App() {
       </section> */}
       <Routes>
         <Route element={<Home />} path="/" />
+        <Route element={<ElementBySymbol />} path="/:symbol" />
       </Routes>
     </BrowserRouter>
   );

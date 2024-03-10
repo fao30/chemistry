@@ -37,7 +37,7 @@ body {
     @apply text-2xl 2xl:text-3xl font-semibold;
   }
   h6 {
-    @apply text-lg 2xl:text-xl font-semibold;
+    @apply text-lg 2xl:text-xl;
   }
   label {
     @apply font-medium text-base select-none;
@@ -97,5 +97,8 @@ body {
   }
   .centered-horizontal {
     @apply left-1/2 -translate-x-1/2;
+  }
+  .title {
+    @apply text-gray-500;
   }
 }
