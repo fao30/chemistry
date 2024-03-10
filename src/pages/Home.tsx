@@ -1,5 +1,5 @@
 import useSetting from "@/hooks/useSetting";
-import { ELEMENT_CATEGORIES } from "@/lib/constants";
+import { CATEGORIES } from "@/lib/constants";
 import { cn, formatDate, getElement } from "@/lib/functions";
 import type { Element } from "@/types";
 import { Fragment, useState } from "react";
@@ -34,25 +34,25 @@ export default function Home() {
                       key={colIndex}
                       className={cn(
                         { "border-4 bg-light aspect-square relative group": element },
-                        { "grid grid-cols-subgrid col-span-10 row-span-3 col-start-4 row-start-2": isActive },
+                        { "grid grid-cols-subgrid col-span-9 row-span-3 col-start-4 row-start-2": isActive },
                       )}
                       style={{
                         gridColumn: !isActive ? colIndex + 1 : undefined,
                         gridRow: !isActive ? rowIndex + 1 : undefined,
-                        borderColor: element ? ELEMENT_CATEGORIES[element.category].color : undefined,
-                        color: hovered ? "#FEFEFE" : element ? ELEMENT_CATEGORIES[element.category].color : undefined,
-                        backgroundColor: hovered ? ELEMENT_CATEGORIES[element.category].color : undefined,
+                        borderColor: element ? CATEGORIES[element.category].color : undefined,
+                        color: hovered ? "#FEFEFE" : element ? CATEGORIES[element.category].color : undefined,
+                        backgroundColor: hovered ? CATEGORIES[element.category].color : undefined,
                       }}
                     >
                       {isActive ? (
-                        <section className="col-span-10 row-span-3 relative">
+                        <section className="col-span-9 row-span-3 relative">
                           <section className="absolute right-0 top-0 size-full flex justify-end gap-4">
                             {/* HOVERED ELEMENT */}
                             <div
                               className={cn("aspect-square relative animate border-[4px] w-[30%]", {
                                 "opacity-0": !hoveredElement,
                               })}
-                              style={{ borderColor: hoveredElement ? ELEMENT_CATEGORIES[hoveredElement.category].color : undefined }}
+                              style={{ borderColor: hoveredElement ? CATEGORIES[hoveredElement.category].color : undefined }}
                             >
                               <h4 className="absolute left-3 top-2.5 text-light">
                                 <span>{hoveredElement?.no}</span>
@@ -62,7 +62,7 @@ export default function Home() {
                               </h5>
                               <h1
                                 className="absolute centered font-bold"
-                                style={{ color: hoveredElement ? ELEMENT_CATEGORIES[hoveredElement.category].color : undefined }}
+                                style={{ color: hoveredElement ? CATEGORIES[hoveredElement.category].color : undefined }}
                               >
                                 {hoveredElement?.symbol}
                               </h1>
@@ -73,10 +73,10 @@ export default function Home() {
                               <div className="h-1 bg-light w-5 absolute -left-3 top-7" />
 
                               <p className="text-light -left-48 top-1/2 absolute -translate-y-1 text-right w-44">Symbol</p>
-                              <div className="h-1 bg-light w-[7.5rem] absolute -left-3 top-1/2 translate-y-2" />
+                              <div className="h-1 bg-light w-[6.75rem] absolute -left-3 top-1/2 translate-y-2" />
 
                               <p className="text-light -left-48 bottom-7 absolute text-right w-44">Name</p>
-                              <div className="h-1 bg-light w-[6.25rem] absolute -left-3 bottom-11 translate-y-2" />
+                              <div className="h-1 bg-light w-[5.5rem] absolute -left-3 bottom-11 translate-y-2" />
 
                               <div className="absolute right-4 -top-[4.2rem] flex flex-col items-end justify-center">
                                 <p className="text-light">Atomic Mass</p>

@@ -10,5 +10,5 @@ export default function useSetting() {
   const [setting, setSetting] = useLocalStorage<Setting>("setting", { lang });
 
   // return { setting, setSetting, t: setting.lang === "ru" ? getRussianDictionary() : getEnglishDictionary() };
-  return { setting, setSetting, t: getEnglishDictionary() };
+  return { setting, lang: setting.lang, setSetting, t: getEnglishDictionary() };
 }

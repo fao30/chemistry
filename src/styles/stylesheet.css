@@ -1,0 +1,41 @@
+@keyframes moveAround {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.crystalDiagram {
+  margin: 1.5rem 4rem 0;
+  stroke-width: 0.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.electron {
+  animation: moveAround linear infinite;
+}
+
+.strokeHidden {
+  stroke: gray;
+  fill: none;
+}
+
+.fillHidden {
+  stroke: gray;
+  fill: gray;
+  stroke-width: 0.75;
+}
+
+.fillInter {
+  stroke: white;
+  fill: white;
+  stroke-width: 0.75;
+}
+
+.strokeVisible {
+  stroke: white;
+  fill: none;
+}
