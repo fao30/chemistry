@@ -12,7 +12,7 @@ export default function ElementBySymbol() {
   const data = ELEMENT_DATA.find((e) => e.symbol === symbol);
   if (!data) return <Navigate to="/" />;
 
-  const { t, setting } = useSetting();
+  const { t } = useSetting();
   const tData = t.elements[data.symbol];
 
   const [angles, setAngles] = useState<{ angle: number; interval: NodeJS.Timeout }[]>([]);
