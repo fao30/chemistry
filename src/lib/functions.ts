@@ -43,9 +43,9 @@ export const formatDate = ({
   });
 
 export function kelvinToCelsius(K: number) {
-  return K - 273.15;
+  return (K - 273.15).toFixed(2);
 }
 
 export function kelvinToFahrenheit(K: number) {
-  return ((K - 273.15) * 9) / 5 + 32;
+  return (((K - 273.15) * 9) / 5 + 32).toFixed(2);
 }

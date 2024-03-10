@@ -74,11 +74,11 @@ export default function ElementBySymbol() {
           <h5>{tData.name}</h5>
         </Box>
         <section className="grid grid-cols-2 gap-6">
-          <Box classNameDiv="relative aspect-square">
+          <Box classNameDiv="relative aspect-[21/9]">
             <h5 className="absolute top-2 left-2.5">{data.static.generalProperties.atomicNumber}</h5>
             <h1 className="absolute centered">{data.symbol}</h1>
           </Box>
-          <Box classNameDiv="aspect-square flex flex-col justify-between">
+          <Box classNameDiv="aspect-[21/9] flex flex-col justify-between">
             <div className="grid grid-cols-2">
               <h6 className="title">{t.titles.group}</h6>
               <h6>{data.group}</h6>

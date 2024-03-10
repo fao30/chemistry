@@ -1,4 +1,4 @@
-import type { ELEMENT_DATA } from "@/lib/constants";
+import type { COLOR_SETTING, ELEMENT_DATA } from "@/lib/constants";
 
 export type Lang = "ru" | "en";
 export type ElementCategory =
@@ -13,6 +13,7 @@ export type ElementCategory =
   | "ACTINIDES";
 
 export type Color = "COLORLESS" | "SILVER" | "SLATE_GRAY" | "BLACK" | "GRAY" | "YELLOW";
+export type ColorSetting = keyof typeof COLOR_SETTING;
 
 export type Phase = "GAS" | "SOLID";
 

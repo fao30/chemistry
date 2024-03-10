@@ -3,6 +3,21 @@ import type { Color, ElementCategory, Lang, Phase } from "@/types";
 
 export const defaultLang: Lang = "ru";
 
+export const COLOR_SETTING = {
+  RED: "#ef4444",
+  ORANGE: "#f97316",
+  YELLOW: "#eab308",
+  BROWN: "#bfa094",
+  LIME: "#84cc16",
+  GREEN: "#22c55e",
+  CYAN: "#06b6d4",
+  INDIGO: "#6366f1",
+  PURPLE: "#a855f7",
+  PINK: "#ec4899",
+};
+
+export const COLOR_SETTING_OPTIONS = Object.entries(COLOR_SETTING).map(([_, e]) => ({ e }));
+
 export const CATEGORIES: Record<ElementCategory, { color: string; value: ElementCategory }> = {
   OTHER_NONMETALS: { color: "#FFD100", value: "OTHER_NONMETALS" },
   NOBLE_GASSES: { color: "#D61681", value: "NOBLE_GASSES" },

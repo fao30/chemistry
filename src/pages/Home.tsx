@@ -104,9 +104,9 @@ export default function Home() {
                                   </p>
                                 </header>
                                 <section className="flex flex-col overflow-y-auto">
-                                  <small className="indent-6">{t.tableFounder.history.text1}</small>
-                                  <small className="indent-6">{t.tableFounder.history.text2}</small>
-                                  <small className="indent-6">{t.tableFounder.history.text3}</small>
+                                  <p className="indent-6 leading-5">{t.tableFounder.history.text1}</p>
+                                  <p className="indent-6 leading-5">{t.tableFounder.history.text2}</p>
+                                  <p className="indent-6 leading-5">{t.tableFounder.history.text3}</p>
                                 </section>
                               </section>
                             </div>
