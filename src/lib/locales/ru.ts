@@ -51,6 +51,17 @@ export const getRussianDictionary = (): Dictionary => ({
     SOLID: "Твердое тело",
   },
 
+  unit: {
+    density: "грамм/см3",
+    heatOfFusion: "кДж/моль",
+    heatOfVaporization: "кДж/моль",
+    specificHeatCapacity: "Дж/грамм·K",
+    atomicRadius: "pm",
+    ionizationPotential: "эВ",
+    atomicVolume: "см3/моль",
+    thermalConductivity: "W/см·K",
+  },
+
   titles: {
     group: "Группа",
     period: "Период",
@@ -79,7 +90,7 @@ export const getRussianDictionary = (): Dictionary => ({
     covalentRadius: "Ковалентный радиус",
     electronegativity: "Электроотрицательность",
     ionizationPotential: "Ионизационный потенциал",
-    atomicValue: "Атомный объем",
+    atomicVolume: "Атомный объем",
     thermalConductivity: "Теплопроводность",
     oxidationStates: "Состояния окисления",
     applications: "Применения",
@@ -95,6 +106,8 @@ export const getRussianDictionary = (): Dictionary => ({
     specificHeatCapacity: "Удельная теплоемкость",
     yes: "Да",
     no: "Нет",
+    symbol: "Символ",
+    title: "Название",
   },
 
   elements: {

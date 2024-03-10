@@ -41,3 +41,11 @@ export const formatDate = ({
     month: style === "long" ? "long" : "numeric",
     day: "numeric",
   });
+
+export function kelvinToCelsius(K: number) {
+  return K - 273.15;
+}
+
+export function kelvinToFahrenheit(K: number) {
+  return ((K - 273.15) * 9) / 5 + 32;
+}

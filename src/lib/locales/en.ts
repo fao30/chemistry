@@ -52,6 +52,17 @@ export const getEnglishDictionary = (): Dictionary => ({
     SOLID: "Solid",
   },
 
+  unit: {
+    density: "g/cm3",
+    heatOfFusion: "kJ/mol",
+    heatOfVaporization: "kJ/mol",
+    specificHeatCapacity: "J/g·K",
+    atomicRadius: "pm",
+    ionizationPotential: "eV",
+    atomicVolume: "cm3/mol",
+    thermalConductivity: "W/cm·K",
+  },
+
   titles: {
     group: "Group",
     period: "Period",
@@ -80,7 +91,7 @@ export const getEnglishDictionary = (): Dictionary => ({
     covalentRadius: "Covalent Radius",
     electronegativity: "Electronegativity",
     ionizationPotential: "Ionization Potential",
-    atomicValue: "Atomic Volume",
+    atomicVolume: "Atomic Volume",
     thermalConductivity: "Thermal Conductivity",
     oxidationStates: "Oxidation States",
     applications: "Applications",
@@ -96,6 +107,8 @@ export const getEnglishDictionary = (): Dictionary => ({
     specificHeatCapacity: "Specific Heat Capacity",
     yes: "Yes",
     no: "No",
+    symbol: "Symbol",
+    title: "Name",
   },
 
   elements: {

@@ -85,7 +85,7 @@ export type Dictionary = {
     covalentRadius: string;
     electronegativity: string;
     ionizationPotential: string;
-    atomicValue: string;
+    atomicVolume: string;
     thermalConductivity: string;
     oxidationStates: string;
     applications: string;
@@ -94,5 +94,18 @@ export type Dictionary = {
     unstable: string;
     yes: string;
     no: string;
+    symbol: string;
+    title: string;
+  };
+
+  unit: {
+    density: string;
+    heatOfFusion: string;
+    heatOfVaporization: string;
+    specificHeatCapacity: string;
+    atomicRadius: string;
+    ionizationPotential: string;
+    atomicVolume: string;
+    thermalConductivity: string;
   };
 };

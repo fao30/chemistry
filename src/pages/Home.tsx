@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 export default function Home() {
   const data = getElement();
   const [hoveredElement, setHoveredElement] = useState<null | Element>(null);
-  const { t, setting } = useSetting();
+  const { t, setting, lang } = useSetting();
   const navigate = useNavigate();
 
   return (
@@ -78,17 +78,17 @@ export default function Home() {
                               <h5 className="absolute centered-bottom -translate-y-6 text-light">{tHoveredElement?.name}</h5>
 
                               {/* DESC */}
-                              <p className="text-light -left-48 top-4 absolute text-right w-44">Ordinal Period</p>
+                              <p className="text-light -left-48 top-4 absolute text-right w-44">{t.titles.atomicNumber}</p>
                               <div className="h-1 bg-light w-5 absolute -left-3 top-7" />
 
-                              <p className="text-light -left-48 top-1/2 absolute -translate-y-1 text-right w-44">Symbol</p>
+                              <p className="text-light -left-48 top-1/2 absolute -translate-y-1 text-right w-44">{t.titles.symbol}</p>
                               <div className="h-1 bg-light w-[6.75rem] absolute -left-3 top-1/2 translate-y-2" />
 
-                              <p className="text-light -left-48 bottom-7 absolute text-right w-44">Name</p>
+                              <p className="text-light -left-48 bottom-7 absolute text-right w-44">{t.titles.title}</p>
                               <div className="h-1 bg-light w-[5.5rem] absolute -left-3 bottom-11 translate-y-2" />
 
                               <div className="absolute right-4 -top-[3.5rem] flex flex-col items-end justify-center">
-                                <p className="text-light">Atomic Mass</p>
+                                <p className="text-light">{t.titles.atomicWeight}</p>
                                 <div className="w-1 h-10 bg-light" />
                               </div>
                             </div>
@@ -118,16 +118,24 @@ export default function Home() {
                         <Fragment>
                           {firstRow ? (
                             <div className="absolute flex items-center text-center justify-center -top-9 w-full h-8 border-t-2 border-x-2 border-light">
-                              <p className="text-light">Group {colIndex + 1}</p>
+                              <p className="text-light">
+                                {lang === "en" ? `${t.titles.group} ` : ""}
+                                {colIndex + 1}
+                                {lang === "ru" ? ` ${t.titles.group.toLowerCase()}` : ""}
+                              </p>
                             </div>
                           ) : null}
                           {firstCol ? (
                             <div className="rotate-[270deg] absolute flex items-center text-center w-full justify-center h-8 -left-5 centered border-x-2 border-t-2 border-light">
-                              <p className=" text-light">Period {rowIndex + 1}</p>
+                              <p className="text-light">
+                                {lang === "en" ? `${t.titles.period} ` : ""}
+                                {rowIndex + 1}
+                                {lang === "ru" ? ` ${t.titles.period.toLowerCase()}` : ""}
+                              </p>
                             </div>
                           ) : null}
                           <div
-                            onClick={() => navigate(`/${element.symbol}`)}
+                            onClick={() => navigate(`/element/${element.symbol}`)}
                             onMouseEnter={() => setHoveredElement(element)}
                             onMouseLeave={() => setHoveredElement(null)}
                             className={cn("z-10 bg-dark/50 opacity-0 absolute size-full centered animate cursor-pointer", {

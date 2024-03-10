@@ -65,7 +65,7 @@ export const ELEMENT_DATA = [
       atomicProperties: {
         atomicRadius: 53,
         covalentRadius: 31,
-        electronegavity: 2.2,
+        electronegativity: 2.2,
         ionizationPotential: 13.5984,
         atomicVolume: 14.4,
         thermalConductivity: 0.001815,
@@ -110,7 +110,7 @@ export const ELEMENT_DATA = [
       atomicProperties: {
         atomicRadius: 31,
         covalentRadius: 28,
-        electronegavity: null,
+        electronegativity: null,
         ionizationPotential: 24.5874,
         atomicVolume: 27.2,
         thermalConductivity: 0.00152,
@@ -155,7 +155,7 @@ export const ELEMENT_DATA = [
       atomicProperties: {
         atomicRadius: 152,
         covalentRadius: 128,
-        electronegavity: 0.98,
+        electronegativity: 0.98,
         ionizationPotential: 5.3917,
         atomicVolume: 13.1,
         thermalConductivity: 0.847,
@@ -200,7 +200,7 @@ export const ELEMENT_DATA = [
       atomicProperties: {
         atomicRadius: 112,
         covalentRadius: 96,
-        electronegavity: 1.57,
+        electronegativity: 1.57,
         ionizationPotential: 9.3227,
         atomicVolume: 4.9,
         thermalConductivity: 2.01,
@@ -245,7 +245,7 @@ export const ELEMENT_DATA = [
       atomicProperties: {
         atomicRadius: 90,
         covalentRadius: 84,
-        electronegavity: 2.04,
+        electronegativity: 2.04,
         ionizationPotential: 8.298,
         atomicVolume: 4.6,
         thermalConductivity: 0.274,
@@ -291,7 +291,7 @@ export const ELEMENT_DATA = [
       atomicProperties: {
         atomicRadius: 67,
         covalentRadius: 77,
-        electronegavity: 2.55,
+        electronegativity: 2.55,
         ionizationPotential: 11.2603,
         atomicVolume: 5.31,
         thermalConductivity: 1.29,
@@ -337,7 +337,7 @@ export const ELEMENT_DATA = [
       atomicProperties: {
         atomicRadius: 56,
         covalentRadius: 71,
-        electronegavity: 3.04,
+        electronegativity: 3.04,
         ionizationPotential: 14.5341,
         atomicVolume: 17.3,
         thermalConductivity: 0.0002598,
@@ -383,7 +383,7 @@ export const ELEMENT_DATA = [
       atomicProperties: {
         atomicRadius: 48,
         covalentRadius: 66,
-        electronegavity: 3.44,
+        electronegativity: 3.44,
         ionizationPotential: 13.6181,
         atomicVolume: 14.0,
         thermalConductivity: 0.0002674,
@@ -429,7 +429,7 @@ export const ELEMENT_DATA = [
       atomicProperties: {
         atomicRadius: 42,
         covalentRadius: 64,
-        electronegavity: 3.98,
+        electronegativity: 3.98,
         ionizationPotential: 17.4228,
         atomicVolume: 17.1,
         thermalConductivity: 0.000279,
@@ -475,7 +475,7 @@ export const ELEMENT_DATA = [
       atomicProperties: {
         atomicRadius: 38,
         covalentRadius: 59,
-        electronegavity: null,
+        electronegativity: null,
         ionizationPotential: 21.5645,
         atomicVolume: 16.7,
         thermalConductivity: 0.000493,
@@ -521,7 +521,7 @@ export const ELEMENT_DATA = [
       atomicProperties: {
         atomicRadius: 186,
         covalentRadius: 166,
-        electronegavity: 0.93,
+        electronegativity: 0.93,
         ionizationPotential: 5.1391,
         atomicVolume: 23.7,
         thermalConductivity: 1.41,
@@ -567,7 +567,7 @@ export const ELEMENT_DATA = [
       atomicProperties: {
         atomicRadius: 160,
         covalentRadius: 141,
-        electronegavity: 1.31,
+        electronegativity: 1.31,
         ionizationPotential: 7.6462,
         atomicVolume: 13.97,
         thermalConductivity: 1.56,
@@ -613,7 +613,7 @@ export const ELEMENT_DATA = [
       atomicProperties: {
         atomicRadius: 143,
         covalentRadius: 121,
-        electronegavity: 1.61,
+        electronegativity: 1.61,
         ionizationPotential: 5.9858,
         atomicVolume: 9.98,
         thermalConductivity: 2.37,
@@ -659,7 +659,7 @@ export const ELEMENT_DATA = [
       atomicProperties: {
         atomicRadius: 111,
         covalentRadius: 111,
-        electronegavity: 1.9,
+        electronegativity: 1.9,
         ionizationPotential: 8.1517,
         atomicVolume: 12.1,
         thermalConductivity: 1.48,
@@ -705,7 +705,7 @@ export const ELEMENT_DATA = [
       atomicProperties: {
         atomicRadius: 98,
         covalentRadius: 107,
-        electronegavity: 2.19,
+        electronegativity: 2.19,
         ionizationPotential: 10.4867,
         atomicVolume: 17.0,
         thermalConductivity: 0.00235,
@@ -751,7 +751,7 @@ export const ELEMENT_DATA = [
       atomicProperties: {
         atomicRadius: 88,
         covalentRadius: 105,
-        electronegavity: 2.58,
+        electronegativity: 2.58,
         ionizationPotential: 10.36,
         atomicVolume: 15.5,
         thermalConductivity: 0.00269,
@@ -797,7 +797,7 @@ export const ELEMENT_DATA = [
       atomicProperties: {
         atomicRadius: 79,
         covalentRadius: 102,
-        electronegavity: 3.16,
+        electronegativity: 3.16,
         ionizationPotential: 12.9676,
         atomicVolume: 22.7,
         thermalConductivity: 0.000089,
@@ -843,7 +843,7 @@ export const ELEMENT_DATA = [
       atomicProperties: {
         atomicRadius: 71,
         covalentRadius: 106,
-        electronegavity: null,
+        electronegativity: null,
         ionizationPotential: 15.7596,
         atomicVolume: 22.4,
         thermalConductivity: 0.0001772,
@@ -889,7 +889,7 @@ export const ELEMENT_DATA = [
       atomicProperties: {
         atomicRadius: 227,
         covalentRadius: 203,
-        electronegavity: 0.82,
+        electronegativity: 0.82,
         ionizationPotential: 4.3407,
         atomicVolume: 45.46,
         thermalConductivity: 1.024,
@@ -935,7 +935,7 @@ export const ELEMENT_DATA = [
       atomicProperties: {
         atomicRadius: 197,
         covalentRadius: 176,
-        electronegavity: 1.0,
+        electronegativity: 1.0,
         ionizationPotential: 6.1132,
         atomicVolume: 29.9,
         thermalConductivity: 2.01,
@@ -981,7 +981,7 @@ export const ELEMENT_DATA = [
       atomicProperties: {
         atomicRadius: 162,
         covalentRadius: 170,
-        electronegavity: 1.36,
+        electronegativity: 1.36,
         ionizationPotential: 6.5615,
         atomicVolume: 15.0,
         thermalConductivity: 0.158,
@@ -1027,7 +1027,7 @@ export const ELEMENT_DATA = [
       atomicProperties: {
         atomicRadius: 147,
         covalentRadius: 160,
-        electronegavity: 1.54,
+        electronegativity: 1.54,
         ionizationPotential: 6.8281,
         atomicVolume: 10.64,
         thermalConductivity: 0.219,
