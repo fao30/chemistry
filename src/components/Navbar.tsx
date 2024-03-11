@@ -20,7 +20,7 @@ export default function Navbar() {
       <section className="flex gap-4 items-center">
         <button type="button" onClick={() => navigate("/list")} className="flex gap-2 items-center">
           <Icon icon="material-symbols:list" width={40} />
-          <h6>List</h6>
+          <h6>{t.navbar.list}</h6>
         </button>
       </section>
     </nav>
