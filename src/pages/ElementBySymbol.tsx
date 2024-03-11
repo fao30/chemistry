@@ -3,7 +3,6 @@ import { CRYSTAL_STRUCTURES } from "@/components/CrystalStructures";
 import useSetting from "@/hooks/useSetting";
 import { ELEMENT_DATA } from "@/lib/constants";
 import { kelvinToCelsius, kelvinToFahrenheit } from "@/lib/functions";
-import { useEffect, useState } from "react";
 import { Navigate, useParams } from "react-router-dom";
 
 const renderUnit = (unit: string) => {
@@ -24,7 +23,6 @@ export default function ElementBySymbol() {
   if (!data) return <Navigate to="/" />;
   const { t } = useSetting();
   const tData = t.elements[data.symbol];
-  const [angles, setAngles] = useState<{ angle: number; interval: NodeJS.Timeout }[]>([]);
 
   const renderElectronConfiguration = (arr: typeof data.static.electrons.electronConfiguration) => {
     let renderedStructure = "";
@@ -57,30 +55,6 @@ export default function ElementBySymbol() {
     }
     return <span dangerouslySetInnerHTML={{ __html: renderedStructure }} />;
   };
-
-  useEffect(() => {
-    const newAngles = data.static.electrons.electronsPerShell.map((_, shellIndex) => ({
-      angle: 0,
-      interval: setInterval(
-        () => {
-          setAngles((prevAngles) => {
-            const newAngles = [...prevAngles];
-            newAngles[shellIndex].angle += 0.01 / (shellIndex + 1);
-            return newAngles;
-          });
-        },
-        10 * (shellIndex + 2),
-      ),
-    }));
-
-    setAngles(newAngles);
-
-    return () => {
-      for (const newAngle of newAngles) {
-        clearInterval(newAngle.interval);
-      }
-    };
-  }, []);
 
   return (
     <article className="p-6 grid md:grid-cols-2 xl:grid-cols-3 gap-6 text-dark">
@@ -193,10 +167,7 @@ export default function ElementBySymbol() {
                       style={{ width: `${radius * 2}px` }}
                       className="rounded-full aspect-square border-2 border-dark absolute centered"
                     >
-                      <div
-                        className="absolute centered"
-                        style={{ transform: angles[shellIndex]?.angle ? `rotate(${angles[shellIndex].angle}rad)` : undefined }}
-                      >
+                      <div style={{ animation: `rotate ${10 * (shellIndex + 1)}s linear infinite` }} className="absolute centered">
                         {Array(e)
                           .fill(e)
                           .map((_, electronIndex) => {

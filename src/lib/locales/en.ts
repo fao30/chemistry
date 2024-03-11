@@ -59,7 +59,7 @@ export const getEnglishDictionary = (): Dictionary => ({
     specificHeatCapacity: "J/g·K",
     atomicRadius: "pm",
     ionizationPotential: "eV",
-    atomicVolume: "cm-3/mol",
+    atomicVolume: "cm-3_/mol",
     thermalConductivity: "W/cm·K",
   },
 
