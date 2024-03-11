@@ -19,7 +19,7 @@ export default function Box({ children, title, classNameDiv }: Props) {
           {title}
         </h6>
       ) : null}
-      <section className={cn(`${classNameDiv} p-4`)}>{children}</section>
+      <section className={cn(`${classNameDiv} p-3 md:p-4`)}>{children}</section>
     </section>
   );
 }

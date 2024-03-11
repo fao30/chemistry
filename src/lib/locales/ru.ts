@@ -52,13 +52,13 @@ export const getRussianDictionary = (): Dictionary => ({
   },
 
   unit: {
-    density: "грамм/см3",
+    density: "грамм/см-3",
     heatOfFusion: "кДж/моль",
     heatOfVaporization: "кДж/моль",
     specificHeatCapacity: "Дж/грамм·K",
     atomicRadius: "pm",
     ionizationPotential: "эВ",
-    atomicVolume: "см3/моль",
+    atomicVolume: "см-3/_моль",
     thermalConductivity: "W/см·K",
   },
 

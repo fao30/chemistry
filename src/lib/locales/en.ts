@@ -53,13 +53,13 @@ export const getEnglishDictionary = (): Dictionary => ({
   },
 
   unit: {
-    density: "g/cm3",
+    density: "g/cm-3",
     heatOfFusion: "kJ/mol",
     heatOfVaporization: "kJ/mol",
     specificHeatCapacity: "J/g·K",
     atomicRadius: "pm",
     ionizationPotential: "eV",
-    atomicVolume: "cm3/mol",
+    atomicVolume: "cm-3/mol",
     thermalConductivity: "W/cm·K",
   },
 

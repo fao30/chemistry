@@ -131,7 +131,7 @@ export const ELEMENT_DATA = [
         thermalConductivity: 0.00152,
         oxidationStates: [0],
       },
-      abundance: { earth: "5.5×10-7", universe: "23" },
+      abundance: { earth: "5.5×10_-7", universe: "23" },
       isotopes: {
         stable: [3, 4],
         unstable: [5, 6, 7, 8, 9, 10],
@@ -176,7 +176,7 @@ export const ELEMENT_DATA = [
         thermalConductivity: 0.847,
         oxidationStates: [1],
       },
-      abundance: { earth: "0.0017", universe: "6×10-7" },
+      abundance: { earth: "0.0017", universe: "6×10_-7" },
       isotopes: {
         stable: [6, 7],
         unstable: [4, 5, 8, 9, 10, 11, 12],
@@ -221,7 +221,7 @@ export const ELEMENT_DATA = [
         thermalConductivity: 2.01,
         oxidationStates: [1, 2],
       },
-      abundance: { earth: "0.00019", universe: "1×10-7" },
+      abundance: { earth: "0.00019", universe: "1×10_-7" },
       isotopes: {
         stable: [9],
         unstable: [5, 6, 7, 8, 10, 11, 12, 13, 14, 15, 16],
@@ -266,7 +266,7 @@ export const ELEMENT_DATA = [
         thermalConductivity: 0.274,
         oxidationStates: [1, 2, 3],
       },
-      abundance: { earth: "0.00086", universe: "1×10-7" },
+      abundance: { earth: "0.00086", universe: "1×10_-7" },
       isotopes: {
         stable: [10, 11],
         unstable: [7, 8, 9, 12, 13, 14, 15, 16, 17, 18, 19],
@@ -450,7 +450,7 @@ export const ELEMENT_DATA = [
         thermalConductivity: 0.000279,
         oxidationStates: [-1],
       },
-      abundance: { earth: "46", universe: "1" },
+      abundance: { earth: "0.054", universe: "0.00004" },
       isotopes: {
         stable: [19],
         unstable: [14, 15, 16, 17, 18, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31],
@@ -496,7 +496,7 @@ export const ELEMENT_DATA = [
         thermalConductivity: 0.000493,
         oxidationStates: [0],
       },
-      abundance: { earth: "3×10-7", universe: "0.13" },
+      abundance: { earth: "3×10_-7", universe: "0.13" },
       isotopes: {
         stable: [20, 21, 22],
         unstable: [16, 17, 19, 19, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34],
@@ -1002,7 +1002,7 @@ export const ELEMENT_DATA = [
         thermalConductivity: 0.158,
         oxidationStates: [1, 2, 3],
       },
-      abundance: { earth: "0.0026", universe: "3×10-6" },
+      abundance: { earth: "0.0026", universe: "3×10_-6" },
       isotopes: {
         stable: [45],
         unstable: [36, 367, 38, 39, 40, 41, 42, 43, 44, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60],
