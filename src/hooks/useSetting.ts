@@ -7,7 +7,7 @@ import { useLocalStorage } from "@uidotdev/usehooks";
 type Setting = { lang: Lang; color: ColorSetting };
 
 export default function useSetting() {
-  const [setting, setSetting] = useLocalStorage<Setting>("setting", { lang, color: "GREEN" });
+  const [setting, setSetting] = useLocalStorage<Setting>("setting", { lang, color: "RED" });
 
   return { setting, setSetting, lang: setting.lang, t: setting.lang === "ru" ? getRussianDictionary() : getEnglishDictionary() };
 }

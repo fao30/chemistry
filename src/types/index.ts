@@ -40,6 +40,13 @@ export type Element = (typeof ELEMENT_DATA)[number];
 export type Dictionary = {
   crystalStructures: Record<CrystalStructure, string>;
   phase: Record<Phase, string>;
+  navbar: {
+    list: string;
+    sortByNumber: string;
+    sortByName: string;
+    sortBySymbol: string;
+    search: string;
+  };
   colors: Record<Color, string>;
   elements: Record<
     ElementKey,

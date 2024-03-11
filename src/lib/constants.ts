@@ -4,16 +4,16 @@ import type { Color, ElementCategory, Lang, Phase } from "@/types";
 export const defaultLang: Lang = "ru";
 
 export const COLOR_SETTING = {
-  RED: "#ef4444",
-  ORANGE: "#f97316",
-  YELLOW: "#eab308",
-  BROWN: "#bfa094",
-  LIME: "#84cc16",
-  GREEN: "#22c55e",
-  CYAN: "#06b6d4",
-  INDIGO: "#6366f1",
-  PURPLE: "#a855f7",
-  PINK: "#ec4899",
+  RED: "#dc2626",
+  ORANGE: "#ea580c",
+  YELLOW: "#ca8a04",
+  BROWN: "#a18072",
+  LIME: "##65a30d",
+  GREEN: "#16a34a",
+  CYAN: "#0891b2",
+  INDIGO: "#4f46e5",
+  PURPLE: "#9333ea",
+  PINK: "#db2777",
 };
 
 export const COLOR_SETTING_OPTIONS = Object.entries(COLOR_SETTING).map(([_, e]) => ({ e }));
@@ -3504,6 +3504,57 @@ export const ELEMENT_DATA = [
         unstable: [
           193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217,
           218, 219, 220, 221, 222, 223,
+        ],
+      },
+    },
+  },
+
+  {
+    symbol: "Rn",
+    category: CATEGORIES.NOBLE_GASSES.value,
+    group: 18,
+    period: 6,
+    block: "p",
+
+    static: {
+      abundance: { earth: null, universe: null },
+      unGrouped: { casNumber: "10043-92-2", pubChem: 24857, protons: 86, electrons: 86, neutrons: 136 },
+      generalProperties: {
+        atomicNumber: 86,
+        atomicWeight: 222,
+        massNumber: 222,
+        radioActive: true,
+        color: ELEMENT_COLORS.COLORLESS,
+      },
+      crystalStructure: null,
+      electrons: {
+        electronsPerShell: [2, 8, 18, 32, 18, 8],
+        electronConfiguration: ["[Xe]", "4f-14", "5d-10", "6s-2", "6p-6"],
+      },
+      physhicalProperties: {
+        phase: ELEMENT_PHASE.GAS,
+        density: 0.00973,
+        meltingPoint: 202,
+        boilingPoint: 211.3,
+        heatOfFusion: 3,
+        heatOfVaporization: 17,
+        specificHeatCapacity: 0.094,
+      },
+      atomicProperties: {
+        atomicRadius: 120,
+        covalentRadius: 150,
+        electronegativity: null,
+        ionizationPotential: 10.7485,
+        atomicVolume: 50.5,
+        thermalConductivity: 0.0000364,
+        oxidationStates: [2, 4, 6],
+      },
+
+      isotopes: {
+        stable: [],
+        unstable: [
+          195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219,
+          220, 221, 222, 223, 224, 225, 226, 227, 228,
         ],
       },
     },

@@ -1,6 +1,13 @@
 import type { Dictionary } from "@/types";
 
 export const getEnglishDictionary = (): Dictionary => ({
+  navbar: {
+    list: "List",
+    sortByName: "Sort by name",
+    sortByNumber: "Sort by number",
+    sortBySymbol: "Sort by symbol",
+    search: "Search",
+  },
   elementCategories: {
     OTHER_NONMETALS: "Other nonmetals",
     NOBLE_GASSES: "Noble gasses",
@@ -837,6 +844,16 @@ export const getEnglishDictionary = (): Dictionary => ({
       applications:
         "The newly formed astatine-211 is important in nuclear medicine.\n\nOnce produced, astatine must be used quickly, as it decays with a half-life of 7.2 hours.\n\nAstatine-211 can be used for targeted alpha particle radiotherapy, since it decays either via emission of an alpha particle.",
       nameOrigin: "From the Greek astatos meaning unstable",
+    },
+    Rn: {
+      name: "Radon",
+      nameOrigin: "The name was derived from radium; called niton at first, from the Latin word nitens meaning shining",
+      history:
+        "Radon was discovered in 1900 by Friedrich Ernst Dorn in Halle, Germany.\n\nHe reported some experiments in which he noticed that radium compounds emanate a radioactive gas.\n\nIn 1910, Sir William Ramsay and Robert Whytlaw-Gray isolated radon, determined its density, and determined that it was the heaviest known gas.",
+      applications:
+        "Radon is used in hydrologic research that studies the interaction between ground water and streams.\n\nRadon has been produced commercially for use in radiation therapy.\n\nRadon has been used in implantable seeds, made of gold or glass, primarily used to treat cancers.",
+      toxicity: "Radon is highly radioactive and a carcinogen",
+      description: "Upon condensation, radon glows because of the intense radiation it produces",
     },
   },
 });
