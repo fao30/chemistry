@@ -61,8 +61,8 @@ export const ELEMENT_DATA = [
       unGrouped: { casNumber: "1333-74-0", pubChem: 783, protons: 1, electrons: 1, neutrons: 0 },
       generalProperties: {
         atomicNumber: 1,
-        atomicWeight: 24.305,
-        massNumber: 24,
+        atomicWeight: 1.00794,
+        massNumber: 1,
         radioActive: false,
         color: ELEMENT_COLORS.COLORLESS,
       },
@@ -152,8 +152,8 @@ export const ELEMENT_DATA = [
       unGrouped: { casNumber: "7439-93-2", pubChem: 3028194, protons: 3, electrons: 3, neutrons: 4 },
       generalProperties: {
         atomicNumber: 3,
-        atomicWeight: 4.002602,
-        massNumber: 4,
+        atomicWeight: 6.941,
+        massNumber: 7,
         radioActive: false,
         color: ELEMENT_COLORS.COLORLESS,
       },
