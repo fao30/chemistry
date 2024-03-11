@@ -156,7 +156,10 @@ export default function ElementBySymbol() {
                 <h6 className="title">{t.titles.electronConfiguration}</h6>
                 <h6>{renderElectronConfiguration(data.static.electrons.electronConfiguration)}</h6>
               </section>
-              <section className="relative h-80">
+              <section
+                className="relative"
+                style={{ height: data.static.electrons.electronsPerShell.length >= 6 ? "25rem" : "20rem" }}
+              >
                 <div className="absolute flex items-center justify-center centered size-10 bg-dark text-light rounded-full">
                   <p>{data.symbol}</p>
                 </div>
