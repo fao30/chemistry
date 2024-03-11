@@ -10,11 +10,11 @@ type Props = {
 export default function Box({ children, title, classNameDiv }: Props) {
   const { setting } = useSetting();
   return (
-    <section className="bg-light border-t-4 rounded-md shadow-lg" style={{ borderColor: COLOR_SETTING[setting.color] }}>
+    <section className="bg-light border-t-4 rounded-md shadow-lg" style={{ borderColor: COLOR_SETTING[setting.color].color }}>
       {title ? (
         <h6
           className="py-1 pl-3 pr-6 rounded-r-lg mt-2 text-light w-fit font-semibold"
-          style={{ backgroundColor: COLOR_SETTING[setting.color] }}
+          style={{ backgroundColor: COLOR_SETTING[setting.color].color }}
         >
           {title}
         </h6>

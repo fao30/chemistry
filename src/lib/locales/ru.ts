@@ -79,6 +79,12 @@ export const getRussianDictionary = (): Dictionary => ({
   },
 
   titles: {
+    setting: "Настройка",
+    language: "Язык",
+    temperature: "Температура",
+    tableWidth: "Ширина Таблицы",
+    english: "Английский",
+    russian: "Русский",
     group: "Группа",
     period: "Период",
     block: "Блок",

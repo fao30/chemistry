@@ -70,7 +70,7 @@ export default function List() {
         <button
           type="button"
           className="hover:opacity-80 h-12 text-light px-6 outline-none flex items-center justify-center"
-          style={{ backgroundColor: COLOR_SETTING[setting.color] }}
+          style={{ backgroundColor: COLOR_SETTING[setting.color].color }}
           onClick={() => handleSort("atomicNumber")}
         >
           {sortBy === "atomicNumber" ? (
@@ -86,7 +86,7 @@ export default function List() {
         <button
           type="button"
           className="hover:opacity-80 h-12 text-light px-6 outline-none flex items-center justify-center"
-          style={{ backgroundColor: COLOR_SETTING[setting.color] }}
+          style={{ backgroundColor: COLOR_SETTING[setting.color].color }}
           onClick={() => handleSort("name")}
         >
           {sortBy === "name" ? (
@@ -102,7 +102,7 @@ export default function List() {
         <button
           type="button"
           className="hover:opacity-80 h-12 text-light px-6 outline-none flex items-center justify-center"
-          style={{ backgroundColor: COLOR_SETTING[setting.color] }}
+          style={{ backgroundColor: COLOR_SETTING[setting.color].color }}
           onClick={() => handleSort("symbol")}
         >
           {sortBy === "symbol" ? (
@@ -126,7 +126,7 @@ export default function List() {
             >
               <h6
                 className="left-0 top-0 text-light h-full aspect-square absolute flex items-center justify-center"
-                style={{ backgroundColor: COLOR_SETTING[setting.color] }}
+                style={{ backgroundColor: COLOR_SETTING[setting.color].color }}
               >
                 {e.symbol}
               </h6>

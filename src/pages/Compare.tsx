@@ -36,7 +36,10 @@ export default function Compare() {
   const sorteredData = ELEMENT_DATA.map((e) => ({ ...e, name: t.elements[e.symbol].name }));
 
   const Title = ({ title }: { title: string }) => (
-    <h6 className="uppercase text-light w-fit pl-4 pr-8 py-1 rounded-r-md" style={{ backgroundColor: COLOR_SETTING[setting.color] }}>
+    <h6
+      className="uppercase text-light w-fit pl-4 pr-8 py-1 rounded-r-md"
+      style={{ backgroundColor: COLOR_SETTING[setting.color].color }}
+    >
       {title}
     </h6>
   );

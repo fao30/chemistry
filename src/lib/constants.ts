@@ -4,19 +4,19 @@ import type { Color, ElementCategory, Lang, Phase } from "@/types";
 export const defaultLang: Lang = "ru";
 
 export const COLOR_SETTING = {
-  RED: "#dc2626",
-  ORANGE: "#ea580c",
-  YELLOW: "#ca8a04",
-  BROWN: "#a18072",
-  LIME: "##65a30d",
-  GREEN: "#16a34a",
-  CYAN: "#0891b2",
-  INDIGO: "#4f46e5",
-  PURPLE: "#9333ea",
-  PINK: "#db2777",
+  RED: { color: "#dc2626", value: "RED" },
+  ORANGE: { color: "#ea580c", value: "ORANGE" },
+  YELLOW: { color: "#ca8a04", value: "YELLOW" },
+  BROWN: { color: "#a18072", value: "BROWN" },
+  LIME: { color: "#65a30d", value: "LIME" },
+  GREEN: { color: "#16a34a", value: "GREEN" },
+  CYAN: { color: "#0891b2", value: "CYAN" },
+  INDIGO: { color: "#4f46e5", value: "INDIGO" },
+  PURPLE: { color: "#9333ea", value: "PURPLE" },
+  PINK: { color: "#db2777", value: "PINK" },
 };
 
-export const COLOR_SETTING_OPTIONS = Object.entries(COLOR_SETTING).map(([_, e]) => ({ e }));
+export const COLOR_SETTING_OPTIONS = Object.entries(COLOR_SETTING).map(([_, e]) => ({ ...e }));
 
 export const CATEGORIES: Record<ElementCategory, { color: string; value: ElementCategory }> = {
   OTHER_NONMETALS: { color: "#FFD100", value: "OTHER_NONMETALS" },

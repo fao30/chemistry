@@ -14,7 +14,10 @@ export default function Home() {
   return (
     // <article className="overflow-auto bg-gradient-to-r from-[#274786] to-[#229FBC]">
     <article className="overflow-auto">
-      <section className="mx-auto max-xl:w-[120rem] overflow-x-auto min-h-screen pt-12">
+      <section
+        className="animate mx-auto max-xl:!w-[120rem] overflow-x-auto min-h-screen pt-12"
+        style={{ width: `${setting.tableWidth}%` }}
+      >
         <section className="grid grid-cols-18 gap-2.5 animate p-12">
           {data.map((row, rowIndex) => {
             return (
@@ -146,7 +149,20 @@ export default function Home() {
                             {element.static.generalProperties.atomicNumber}
                           </p>
                           <h5 className="absolute centered">{element.symbol}</h5>
-                          <small className="absolute centered-bottom text-dark font-semibold">{tElement?.name}</small>
+                          <small
+                            className={cn("animate absolute centered-bottom text-dark font-semibold", {
+                              "opacity-0": !setting.withName,
+                            })}
+                          >
+                            {tElement?.name}
+                          </small>
+                          <small
+                            className={cn("text-xs animate absolute right-1 top-1 text-dark font-semibold", {
+                              "opacity-0": !setting.withAtomicWeight,
+                            })}
+                          >
+                            {element?.static.generalProperties.atomicWeight?.toFixed(2)}
+                          </small>
                         </Fragment>
                       ) : null}
                     </div>

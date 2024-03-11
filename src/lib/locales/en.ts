@@ -79,6 +79,12 @@ export const getEnglishDictionary = (): Dictionary => ({
   },
 
   titles: {
+    setting: "Setting",
+    english: "English",
+    russian: "Russian",
+    language: "Language",
+    temperature: "Temperature",
+    tableWidth: "Table Width",
     group: "Group",
     period: "Period",
     block: "Block",

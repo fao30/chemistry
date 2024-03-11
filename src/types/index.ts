@@ -14,7 +14,7 @@ export type ElementCategory =
 
 export type Color = "COLORLESS" | "SILVER" | "SLATE_GRAY" | "BLACK" | "GRAY" | "YELLOW" | "COPPER" | "RED" | "GOLD";
 export type ColorSetting = keyof typeof COLOR_SETTING;
-
+export type TableWidth = "80" | "85" | "90" | "95" | "100";
 export type Phase = "GAS" | "SOLID" | "LIQUID";
 
 export type CrystalStructure =
@@ -63,6 +63,7 @@ export type Dictionary = {
   elementCategories: Record<ElementCategory, string>;
   tableFounder: { name: string; birthDate: Date; deathDate: Date; history: { text1: string; text2: string; text3: string } };
   titles: {
+    setting: string;
     group: string;
     period: string;
     block: string;
@@ -108,6 +109,11 @@ export type Dictionary = {
     no: string;
     symbol: string;
     title: string;
+    english: string;
+    russian: string;
+    language: string;
+    tableWidth: string;
+    temperature: string;
   };
 
   unit: {
