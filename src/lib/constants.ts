@@ -2286,4 +2286,208 @@ export const ELEMENT_DATA = [
       },
     },
   },
+
+  {
+    symbol: "Cd",
+    category: CATEGORIES.TRANSITION_METALS.value,
+    group: 12,
+    period: 5,
+    block: "d",
+
+    static: {
+      abundance: { earth: "0.000015", universe: "2×10_-7" },
+      unGrouped: { casNumber: "7440-43-9", pubChem: 23973, protons: 48, electrons: 48, neutrons: 64 },
+      generalProperties: {
+        atomicNumber: 48,
+        atomicWeight: 112.411,
+        massNumber: 112,
+        radioActive: false,
+        color: ELEMENT_COLORS.SILVER,
+      },
+      crystalStructure: CRYSTAL_STRUCTURES.SIMPLE_HEXAGONAL.value,
+      electrons: {
+        electronsPerShell: [2, 8, 18, 18, 2],
+        electronConfiguration: ["[Kr]", "4d-10", "5s-2"],
+      },
+      physhicalProperties: {
+        phase: ELEMENT_PHASE.SOLID,
+        density: 8.69,
+        meltingPoint: 594.22,
+        boilingPoint: 1040.15,
+        heatOfFusion: 6.3,
+        heatOfVaporization: 100,
+        specificHeatCapacity: 0.232,
+      },
+      atomicProperties: {
+        atomicRadius: 151,
+        covalentRadius: 144,
+        electronegativity: 1.69,
+        ionizationPotential: 8.9938,
+        atomicVolume: 13.1,
+        thermalConductivity: 0.968,
+        oxidationStates: [1, 2],
+      },
+
+      isotopes: {
+        stable: [106, 108, 110, 111, 112, 114],
+        unstable: [
+          95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 107, 109, 113, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 127,
+          128, 129, 130, 131, 132,
+        ],
+      },
+    },
+  },
+
+  {
+    symbol: "In",
+    category: CATEGORIES.POST_TRANSITION_METALS.value,
+    group: 13,
+    period: 5,
+    block: "p",
+
+    static: {
+      abundance: { earth: "0.000016", universe: "3×10_-8" },
+      unGrouped: { casNumber: "7440-74-6", pubChem: 5359967, protons: 49, electrons: 49, neutrons: 66 },
+      generalProperties: {
+        atomicNumber: 49,
+        atomicWeight: 114.818,
+        massNumber: 115,
+        radioActive: false,
+        color: ELEMENT_COLORS.SILVER,
+      },
+      crystalStructure: CRYSTAL_STRUCTURES.CENTERED_TETRAGONAL.value,
+      electrons: {
+        electronsPerShell: [2, 8, 18, 18, 3],
+        electronConfiguration: ["[Kr]", "4d-10", "5s-2", "5p-1"],
+      },
+      physhicalProperties: {
+        phase: ELEMENT_PHASE.SOLID,
+        density: 7.31,
+        meltingPoint: 429.75,
+        boilingPoint: 2345.15,
+        heatOfFusion: 3.26,
+        heatOfVaporization: 230,
+        specificHeatCapacity: 0.233,
+      },
+      atomicProperties: {
+        atomicRadius: 167,
+        covalentRadius: 142,
+        electronegativity: 1.78,
+        ionizationPotential: 5.7864,
+        atomicVolume: 15.7,
+        thermalConductivity: 0.816,
+        oxidationStates: [1, 2, 3],
+      },
+
+      isotopes: {
+        stable: [113],
+        unstable: [
+          97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 114, 115, 116, 117, 118, 119, 120, 121, 122,
+          123, 124, 125, 127, 128, 129, 130, 131, 132, 134, 135,
+        ],
+      },
+    },
+  },
+
+  {
+    symbol: "Sn",
+    category: CATEGORIES.POST_TRANSITION_METALS.value,
+    group: 14,
+    period: 5,
+    block: "p",
+
+    static: {
+      abundance: { earth: "0.00022", universe: "4×10_-7" },
+      unGrouped: { casNumber: "7440-31-5", pubChem: 5352426, protons: 50, electrons: 50, neutrons: 69 },
+      generalProperties: {
+        atomicNumber: 50,
+        atomicWeight: 118.71,
+        massNumber: 119,
+        radioActive: false,
+        color: ELEMENT_COLORS.SILVER,
+      },
+      crystalStructure: CRYSTAL_STRUCTURES.CENTERED_TETRAGONAL.value,
+      electrons: {
+        electronsPerShell: [2, 8, 18, 18, 4],
+        electronConfiguration: ["[Kr]", "4d-10", "5s-2", "5p-2"],
+      },
+      physhicalProperties: {
+        phase: ELEMENT_PHASE.SOLID,
+        density: 7.287,
+        meltingPoint: 505.08,
+        boilingPoint: 2875.15,
+        heatOfFusion: 7,
+        heatOfVaporization: 290,
+        specificHeatCapacity: 0.228,
+      },
+      atomicProperties: {
+        atomicRadius: 140,
+        covalentRadius: 139,
+        electronegativity: 1.96,
+        ionizationPotential: 7.3439,
+        atomicVolume: 16.3,
+        thermalConductivity: 0.666,
+        oxidationStates: [-4, 2 - 4],
+      },
+
+      isotopes: {
+        stable: [112, 114, 115, 116, 117, 118, 119, 120, 122, 124],
+        unstable: [
+          99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 113, 121, 123, 125, 127, 128, 129, 130, 131, 132, 134, 135,
+          136, 137,
+        ],
+      },
+    },
+  },
+
+  {
+    symbol: "Sb",
+    category: CATEGORIES.METTALOIDS.value,
+    group: 15,
+    period: 5,
+    block: "p",
+
+    static: {
+      abundance: { earth: "0.00002", universe: "4×10_-8" },
+      unGrouped: { casNumber: "7440-36-0", pubChem: 5354495, protons: 51, electrons: 51, neutrons: 71 },
+      generalProperties: {
+        atomicNumber: 51,
+        atomicWeight: 121.76,
+        massNumber: 122,
+        radioActive: false,
+        color: ELEMENT_COLORS.SILVER,
+      },
+      crystalStructure: CRYSTAL_STRUCTURES.SIMPLE_TRIGONAL.value,
+      electrons: {
+        electronsPerShell: [2, 8, 18, 18, 5],
+        electronConfiguration: ["[Kr]", "4d-10", "5s-2", "5p-3"],
+      },
+      physhicalProperties: {
+        phase: ELEMENT_PHASE.SOLID,
+        density: 6.685,
+        meltingPoint: 903.78,
+        boilingPoint: 1860.15,
+        heatOfFusion: 19.7,
+        heatOfVaporization: 68,
+        specificHeatCapacity: 0.207,
+      },
+      atomicProperties: {
+        atomicRadius: 140,
+        covalentRadius: 139,
+        electronegativity: 2.05,
+        ionizationPotential: 8.6084,
+        atomicVolume: 18.22,
+        thermalConductivity: 0.243,
+        oxidationStates: [-3, 3, 5],
+      },
+
+      isotopes: {
+        stable: [121, 123],
+        unstable: [
+          103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 122, 124, 125, 127, 128, 129, 130,
+          131, 132, 134, 135, 136, 137, 138, 139,
+        ],
+      },
+    },
+  },
 ] as const;

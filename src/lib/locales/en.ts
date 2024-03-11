@@ -37,6 +37,7 @@ export const getEnglishDictionary = (): Dictionary => ({
     FACE_CENTERED_ORTHORHOMBIC: "Face Centered Orthorhombic",
     BASE_CENTERED_ORTHORHOMBIC: "Base Centered Orthorhombic",
     SIMPLE_MONOCLINIC: "Simple Monoclinic",
+    CENTERED_TETRAGONAL: "Centered Tetragonal",
   },
 
   colors: {
@@ -594,6 +595,46 @@ export const getEnglishDictionary = (): Dictionary => ({
         "Silver has long been valued as a precious metal, and is used as an investment, to make ornaments, jewelry, high-value tableware, utensils, and currency coins.\n\nIt is also used in electrical contacts and conductors, in mirrors and in catalysis of chemical reactions.\n\nIts compounds are used in photographic film, and dilute silver nitrate solutions and other silver compounds are used as disinfectants and microbiocides",
       toxicity: "Silver is considered to be non-toxic",
       description: "In ancient Egypt and Medieval Europe, silver was often more valuable than gold",
+    },
+    Cd: {
+      name: "Cadnium",
+      nameOrigin: "From the Latin word cadmia, Greek kadmeia - the ancient name for calamine, zinc carbonate",
+      history:
+        "Cadmium was discovered by German chemist Friedrich Stromeyer in 1817 as an impurity in zinc carbonate.\n\nStromeyer noted that some impure samples of calamine (zinc carbonate) changed color when heated but pure calamine did not.\n\nCadmium was independently discovered by German chemist Karl Hermann in 1818.",
+      applications:
+        "Cadmium is a key component in battery production.\n\nIt is also is used in electroplating.\n\nCadmium oxide is used in black and white television phosphors and in the blue and green phosphors for color television picture tubes.\n\nCadmium is used as a barrier to control neutrons in nuclear fission.",
+      description: "Cadmium is a soft metal which is easily cut with a knife",
+      toxicity: "Cadmium and its compounds are highly toxic",
+    },
+    In: {
+      name: "Indium",
+      nameOrigin: "From the brilliant indigo line in its spectrum",
+      toxicity: "Indium is considered to be of low toxicity",
+      description: "When it is bent, indium emits a high-pitched 'cry'",
+      history:
+        "Ferdinand Reich and Hieronymous Theodor Richter first identified indium in sphalerite by its bright indigo-blue spectroscopic emission line.\n\nAs no element was known with a bright blue emission they concluded that a new element was present in the minerals.\n\nRichter went on to isolate the metal in 1864.",
+      applications:
+        "Indium's current primary application is to form transparent electrodes from indium tin oxide in liquid crystal displays and touchscreens.\n\nIt is widely used in thin-films to form lubricated layers.\n\nIt is also used for making particularly low melting point alloys, and is a component in some lead-free solders.",
+    },
+    Sn: {
+      name: "Tin",
+      nameOrigin: "The Latin word for tin is stannum",
+      history:
+        "Tin was first smelted in combination with copper around 3500 BC to produce bronze.\n\nThe oldest artifacts date from around 2000 BC.\n\nCassiterite, the tin oxide form of tin, was most likely the original source of tin in ancient times.\n\nBritish scientist Robert Boyle published a description of his experiments on the oxidation of tin in 1673.",
+      toxicity: "Tin is considered to be non-toxic but most tin salts are toxic",
+      applications:
+        "Tin is used as a coating on the surface of other metals to prevent corrosion.\n\nIt has long been used as a solder in the form of an alloy with lead.\n\nTin salts sprayed onto glass are used to produce electrically conductive coatings.\n\nTin chloride is used as a mordant in dyeing textiles and for increasing the weight of silk.",
+      description: "When a bar of tin is bent, a crackling sound known as the tin cry can be heard",
+    },
+    Sb: {
+      name: "Antimony",
+      applications:
+        "The largest applications for metallic antimony are as alloying material for lead and tin and for lead antimony plates in lead-acid batteries.\n\nAlloying lead and tin with antimony improves the properties of the alloys which are used in solders, bullets and plain bearings.\n\nAntimony trioxide is used as a flame retardant in adhesives, plastics, rubber and textiles.",
+      history:
+        "One of antimony's minerals, stibnite was recognized in predynastic Egypt as an eye cosmetic as early as about 3100 BC.\n\nThe first European description of a procedure for isolating antimony is in the book De la pirotechnia of 1540 by Vannoccio Biringuccio.\n\nThe first natural occurrence of pure antimony in the Earth's crust was described by the Swedish scientist and local mine district engineer Anton von Swab in 1783.",
+      toxicity: "Antimony and many of its compounds are toxic",
+      description: "Antimony is a poor conductor of heat and electricity",
+      nameOrigin: "From the Greek word anti plus monos - a metal not found alone",
     },
   },
 });

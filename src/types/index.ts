@@ -27,7 +27,8 @@ export type CrystalStructure =
   | "SIMPLE_TRICLINIC"
   | "FACE_CENTERED_ORTHORHOMBIC"
   | "BASE_CENTERED_ORTHORHOMBIC"
-  | "SIMPLE_MONOCLINIC";
+  | "SIMPLE_MONOCLINIC"
+  | "CENTERED_TETRAGONAL";
 
 // key
 export type ElementKey = (typeof ELEMENT_DATA)[number]["symbol"];
