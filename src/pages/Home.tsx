@@ -161,7 +161,7 @@ export default function Home() {
                               "opacity-0": !setting.withAtomicWeight,
                             })}
                           >
-                            {element?.static.generalProperties.atomicWeight.toLocaleString(lang, { maximumFractionDigits: 3 })}
+                            {element?.static.generalProperties.atomicWeight.toLocaleString(lang, { minimumFractionDigits: 3 })}
                           </small>
                         </Fragment>
                       ) : null}
