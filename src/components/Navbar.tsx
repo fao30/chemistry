@@ -22,6 +22,10 @@ export default function Navbar() {
           <Icon icon="material-symbols:list" width={40} />
           <h6>{t.navbar.list}</h6>
         </a>
+        <a type="button" href="/compare" target="_blank" rel="noreferrer" className="flex gap-2 items-center">
+          <Icon icon="teenyicons:git-compare-solid" width={27} rotate={3} />
+          <h6>{t.navbar.compare}</h6>
+        </a>
       </section>
     </nav>
   );

@@ -2,6 +2,7 @@ import type { Dictionary } from "@/types";
 
 export const getRussianDictionary = (): Dictionary => ({
   navbar: {
+    compare: "Сравнить",
     list: "Список",
     sortBySymbol: "Сортировка по Символу",
     sortByNumber: "Сортировка по Числу",

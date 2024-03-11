@@ -7,6 +7,7 @@ export const getEnglishDictionary = (): Dictionary => ({
     sortByNumber: "Sort by number",
     sortBySymbol: "Sort by symbol",
     search: "Search",
+    compare: "Compare",
   },
   elementCategories: {
     OTHER_NONMETALS: "Other nonmetals",

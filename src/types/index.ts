@@ -42,6 +42,7 @@ export type Dictionary = {
   phase: Record<Phase, string>;
   navbar: {
     list: string;
+    compare: string;
     sortByNumber: string;
     sortByName: string;
     sortBySymbol: string;
