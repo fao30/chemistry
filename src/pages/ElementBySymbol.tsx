@@ -359,13 +359,15 @@ export default function ElementBySymbol() {
           <h6 className="whitespace-pre-line leading-5">{tData.applications ?? "-"}</h6>
         </Box>
         <Box title={t.titles.isotopes}>
-          <section className="grid grid-cols-2">
-            <h6 className="title">{t.titles.stable}</h6>
-            <h6>{data.static.isotopes.stable.length ? renderIsotopes(data.static.isotopes.stable) : "-"}</h6>
-          </section>
-          <section className="grid grid-cols-2">
-            <h6 className="title">{t.titles.unstable}</h6>
-            <h6>{data.static.isotopes.unstable.length ? renderIsotopes(data.static.isotopes.unstable) : "-"}</h6>
+          <section className="flex flex-col gap-2">
+            <section className="flex flex-col">
+              <h6 className="title">{t.titles.stable}</h6>
+              <h6>{data.static.isotopes.stable.length ? renderIsotopes(data.static.isotopes.stable) : "-"}</h6>
+            </section>
+            <section className="flex flex-col">
+              <h6 className="title">{t.titles.unstable}</h6>
+              <h6>{data.static.isotopes.unstable.length ? renderIsotopes(data.static.isotopes.unstable) : "-"}</h6>
+            </section>
           </section>
         </Box>
       </section>

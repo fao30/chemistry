@@ -38,6 +38,7 @@ export const getEnglishDictionary = (): Dictionary => ({
     BASE_CENTERED_ORTHORHOMBIC: "Base Centered Orthorhombic",
     SIMPLE_MONOCLINIC: "Simple Monoclinic",
     CENTERED_TETRAGONAL: "Centered Tetragonal",
+    SIMPLE_CUBIC: "Simple Cubic",
   },
 
   colors: {
@@ -49,6 +50,7 @@ export const getEnglishDictionary = (): Dictionary => ({
     YELLOW: "Yellow",
     COPPER: "Copper",
     RED: "Red",
+    GOLD: "Gold",
   },
 
   phase: {
@@ -635,6 +637,206 @@ export const getEnglishDictionary = (): Dictionary => ({
       toxicity: "Antimony and many of its compounds are toxic",
       description: "Antimony is a poor conductor of heat and electricity",
       nameOrigin: "From the Greek word anti plus monos - a metal not found alone",
+    },
+    Te: {
+      name: "Tellurium",
+      history:
+        "Tellurium was discovered in Transylvania in 1782 by Franz-Joseph Müller von Reichenstein in a mineral containing tellurium and gold.\n\nIn 1789, another Hungarian scientist, Pál Kitaibel, also discovered the element independently in an ore from Deutsch-Pilsen which had been regarded as argentiferous molybdenite.\n\nIn 1798, it was named by Martin Heinrich Klaproth who earlier isolated it from the mineral calaverite.",
+      applications:
+        "The primary use of tellurium is in alloys, foremost in steel and copper to improve machinability.\n\nTellurium is used as a basic ingredient in blasting caps, and is added to cast iron for chill control.\n\nIt is used in vulcanizing rubber and in catalysts for petroleum cracking.\n\nTellurium is used as a coloring agent in ceramics.",
+      description: "In air, tellurium burns with a greenish-blue flames, forming the dioxide",
+      toxicity: "Tellurium and tellurium compounds are considered to be mildly toxic",
+      nameOrigin: "From the Latin word tellus, earth",
+    },
+    I: {
+      name: "Iodine",
+      history:
+        "Iodine was discovered by French chemist Bernard Courtois in 1811.\n\nHe treated the liquor obtained from the extraction of kelp, with sulfuric acid to produce a vapour with a violet color.\n\nIn 1812, Joseph Louis Gay-Lussac demonstrated that iodine was an element and its chemical relationship to chlorine.",
+      applications:
+        "Iodine compounds are important in organic chemistry and very useful in medicine.\n\nA solution containing potassium iodide and iodine in alcohol is used to disinfect external wounds.\n\nSilver iodide is a major ingredient to traditional photographic film.\n\nIodine is added to table salt to prevent thyroid disease.",
+      toxicity: "Elemental iodine is toxic if taken orally",
+      description: "Kelp was the main source of natural iodine in the 18th and 19th centuries",
+      nameOrigin: "From the Greek word iodes, violet",
+    },
+    Xe: {
+      name: "Xenon",
+      nameOrigin: "From the Greek word xenon, stranger",
+      history:
+        "Xenon was discovered in England by the Scottish chemist William Ramsay and English chemist Morris Travers in 1898.\n\nThey found xenon in the residue left over from evaporating components of liquid air.\n\nSpectroscopic analysis showed the previously unseen beautiful blue lines that indicated the presence of a new element.",
+      applications:
+        "Xenon is used in flash lamps and arc lamps, and in photographic flashes.\n\nXenon is used in medicine as a general anesthetic and in medical imaging.\n\nIn nuclear energy applications, xenon is used in bubble chambers, probes, and in other areas where a high molecular weight and inert nature is desirable.",
+      description: "If inhaled, xenon can cause a person's voice to deepen",
+      toxicity: "Xenon is not toxic, but its compounds are highly toxic",
+    },
+    Cs: {
+      name: "Cesium",
+      nameOrigin: "From the Latin word caesius, sky blue",
+      history:
+        "Robert Bunsen and Gustav Kirchhoff were the first to suggest finding cesium in 1860 by spectrum analysis.\n\nThey discovered cesium by its two blue emission lines in a sample of Dürkheim mineral water.\n\nThe pure metal was eventually isolated by the German chemist Carl Setterberg while working on his doctorate with Kekulé and Bunsen.",
+      applications:
+        "The radioactive isotope cesium-137 has a half-life of about 30 years and is used in medical applications, industrial gauges, and hydrology.\n\nCesium is also used in photoelectric cells and as a catalyst in the hydrogenation of organic compounds.\n\nCesium vapor thermionic generators are low-power devices that convert heat energy to electrical energy.",
+      toxicity: "Cesium compounds are considered to be mildly toxic",
+      description: "Cesium was the first element discovered using a spectroscope",
+    },
+    Ba: {
+      applications:
+        "Barium is used as a flashed getter in vacuum tubes to remove the last traces of gases.\n\nIt is often used in barium-nickel alloys for spark plug wire.\n\nBarium sulfate is important to the petroleum industry as a drilling fluid in oil and gas wells.\n\nBarium is also used in medicine to detect abnormalities in the digestive system.",
+      history:
+        "Barium was identified as a new element in 1774 by Carl Wilhelm Scheele.\n\nBarium was first isolated by electrolysis of molten barium salts in 1808, by Sir Humphry Davy in England.\n\nRobert Bunsen and Augustus Matthiessen obtained pure barium by electrolysis of a molten mixture of barium chloride and ammonium chloride.",
+      toxicity: "Water-soluble barium compounds are poisonous",
+      description: "At low doses, barium acts as a muscle stimulant",
+      nameOrigin: "From the Greek word barys, heavy",
+      name: "Barium",
+    },
+    La: {
+      name: "Lanthanum",
+      nameOrigin: "From the Greek word lanthanein, to lie hidden",
+      history:
+        "Lanthanum was discovered in 1839 by Swedish chemist Carl Gustav Mosander.\n\nHe partially decomposed a sample of cerium nitrate by heating and treating the resulting salt with dilute nitric acid.\n\nFrom the resulting solution, he obtained a pale brick colored oxide of the new rare earth.\n\nLanthanum was isolated in relatively pure form in 1923.",
+      applications:
+        "Lanthanum is used in large quantities in batteries for hybrid automobiles.\n\nIt is also used to make night vision goggles.\n\nSmall amounts of lanthanum, as an additive, can be used to produce nodular cast iron.\n\nLanthanum carbonate is used to reduce blood levels of phosphate in patients with kidney disease.",
+      toxicity: "Lanthanum and its compounds are considered to be moderately toxic",
+      description: "Lanthanum is the most reactive of the rare earth metals",
+    },
+    Hf: {
+      nameOrigin: "From Hafinia, the Latin name for Copenhagen",
+      history:
+        "In 1911, Georges Urbain claimed to have found the element in rare-earth residues which was shown later to be a mixture of already discovered lanthanides.\n\nDirk Coster and George de Hevesy found it by X-ray spectroscopic analysis in Norwegian zircon in 1922.\n\nAnton Eduard van Arkel and Jan Hendrik de Boer were the first to prepare metallic hafnium by passing hafnium tetra-iodide vapor over a heated tungsten filament in 1924.",
+      applications:
+        "Hafnium oxide-based compounds are being introduced into silicon-based chips to produce smaller, more energy efficient and performance packed processors.\n\nMost of the hafnium produced is used in the production of control rods for nuclear reactors.\n\nHafnium is also used in photographic flash bulbs, light bulb filaments, and in electronic equipment as cathodes and capacitors.",
+      toxicity: "Hafnium is considered to be non-toxic",
+      description: "In powdered form, hafnium is pyrophoric and can ignite spontaneously in air",
+      name: "Hafnium",
+    },
+    Ta: {
+      name: "Tantalum",
+      nameOrigin: "Named after Tantalos, a Greek mythological character, father of Niobe",
+      history:
+        "Tantalum was discovered in Sweden in 1802 by Anders Ekeberg in the minerals tantalite from Finland and yttrotantalite from Sweden.\n\nUnfortunately, William Hyde Wollaston claimed Ekeberg's new element was actually niobium, which had also been discovered in 1802.\n\nIn 1846, German chemist Heinrich Rose finally proved beyond doubt that tantalum and niobium were different elements.",
+      applications:
+        "Tantalum is used in the electronics industry for capacitors and high power resistors.\n\nThe high melting point and oxidation resistance lead to the use of the metal in the production of vacuum furnace parts.\n\nTantalum oxide is used to make special glass with high index of refraction for camera lenses.",
+      toxicity: "Tantalum is considered to be non-toxic",
+      description: "Tantalum occurs principally in the mineral columbite-tantalite",
+    },
+    W: {
+      name: "Tungsten",
+      nameOrigin: "From Swedish, tung sten meaning heavy stone",
+      history:
+        "Torbern Bergman obtained from scheelite an oxide of a new element in 1781.\n\nIn 1783, José and Fausto Elhuyar found an acid made from wolframite that was identical to tungstic acid.\n\nLater that year, in Spain, the brothers succeeded in isolating tungsten by reduction of this acid with charcoal, and they are credited with the discovery of the element.",
+      applications:
+        "Tungsten and its alloys are widely used for filaments in electric bulbs and electronic tubes.\n\nTungsten carbide is of great importance to the metal-working, mining, and petroleum industries.\n\nTungsten oxides are used in ceramic glazes and calcium/magnesium tungstates are used widely in fluorescent lighting.",
+      description: "The chemical symbol, W, comes from the original name of the element, Wolfram",
+      toxicity: "Tungsten is considered to be of low toxicity",
+    },
+    Re: {
+      name: "Rhenium",
+      nameOrigin: "From the Latin word Rhenus meaning Rhine",
+      history:
+        "In 1908, Japanese chemist Masataka Ogawa announced that he discovered the 43rd element.\n\nHowever, later analysis indicated the presence of rhenium (element 75), not element 43.\n\nIn 1922, Walter Noddack, Ida Eva Tacke and Otto Berg announced its separation from gadolinite and gave it the present name.",
+      applications:
+        "Rhenium is widely used as filaments for mass spectrographs and ion gauges.\n\nIt is also used with platinum as catalysts in the production of lead-free, high-octane gasoline.\n\nNickel-based superalloys of rhenium are used in the combustion chambers, turbine blades, and exhaust nozzles of jet engines.",
+      description: "Chile has the world's largest rhenium reserves",
+      toxicity: "Very little is known about the toxicity of rhenium",
+    },
+    Os: {
+      name: "Osmium",
+      nameOrigin: "From the Greek word osme, meaning smell",
+      history:
+        "Osmium was discovered in 1803 by English chemist Smithson Tennant in London.\n\nChemists who studied platinum dissolved it in aqua regia to create soluble salts and observed a small amount of a dark, insoluble residue.\n\nSmithson Tennant analyzed the insoluble residue and concluded that it must contain a new metal.",
+      applications:
+        "Osmium is used alloyed with other metals in the platinum group to produce very hard alloys.\n\nOsmium alloys are used in the tips of fountain pens, instrument pivots, and electrical contacts.\n\nOsmium tetroxide has been used in fingerprint detection and in staining fatty tissue for optical and electron microscopy.",
+      toxicity: "Even low concentrations in air can cause lung congestion, skin damage, or eye damage",
+      description: "Osmium is the least abundant stable element in the Earth's crust",
+    },
+    Ir: {
+      name: "Iridium",
+      nameOrigin: "From the Latin word iris meaning rainbow",
+      history:
+        "Iridium was discovered in 1803 by English chemist Smithson Tennant in London.\n\nChemists who studied platinum dissolved it in aqua regia to create soluble salts and observed a small amount of a dark, insoluble residue.\n\nSmithson Tennant analyzed the insoluble residue and concluded that it must contain a new metal.",
+      applications:
+        "Iridium is used in making crucibles and other equipment that is used at high temperatures.\n\nIridium is also used as a hardening agent in platinum alloys.\n\nIts resistance to arc erosion makes iridium alloys ideal for electrical contacts for spark plugs.\n\nRadioactive isotopes of iridium are used in radiation therapy for the treatment of cancer.",
+      toxicity: "Iridium is considered to be of low toxicity",
+      description: "Iridium is the most corrosion-resistant metal known",
+    },
+    Pt: {
+      nameOrigin: "From the Spanish word platina, meaning silver",
+      name: "Platinum",
+      history:
+        "Platinum was first used by pre-Columbian South American natives to produce artifacts.\n\nAntonio de Ulloa published his findings about platinum in 1748, but Sir Charles Wood also investigated the metal in 1741.\n\nFirst reference to it as a new metal was made by William Brownrigg in 1750.",
+      applications:
+        "The most common use of platinum is as a catalyst in chemical reactions.\n\nPlatinum is used in jewelry, decoration and dental work.\n\nPlatinum-cobalt, an alloy of roughly three parts platinum and one part cobalt, is used to make relatively strong permanent magnets.\n\nPlatinum-based anodes are used in ships, pipelines, and steel piers.",
+      toxicity: "Platinum is considered to be non-toxic",
+      description: "Platinum exists in higher abundances on the Moon and in meteorites",
+    },
+    Au: {
+      name: "Gold",
+      nameOrigin: "From the Latin word aurum meaning gold",
+      history:
+        "Gold has been known since prehistoric times and was the first metal used by humans.\n\nGold artifacts dated to 5000 years ago have been found in Egyptian tombs.\n\nGold of 98% purity has been found in Nahal Qunah in the ancient kingdom of Israel, dating from about 6000 years ago.",
+      applications:
+        "Gold is used in coinage and is a standard for monetary systems in many countries.\n\nIt is also extensively used for jewelry, decoration, dental work, and for plating.\n\nGold is used widely in microelectronic circuits to ensure reliable, corrosion-resistant and static-free performance.\n\nGold leaf, flake or dust is used in some gourmet foods as decorative ingredient.",
+      toxicity: "Gold is considered to be non-toxic",
+      description: "India is the world's largest single consumer of gold",
+    },
+    Hg: {
+      name: "Mercury",
+      nameOrigin: "From the Latin word hydrargyrum meaning liquid silver",
+      history:
+        "Mercury was known to the ancient Chinese and Indians and has been found in Egyptian tombs dating back to about 1500 BC.\n\nAlchemists thought of mercury as the First Matter from which all metals were formed.\n\nThey believed that different metals could be produced by varying the quality and quantity of sulfur contained within the mercury.",
+      applications:
+        "Mercury is used in barometers and manometers because of its high density.\n\nGaseous mercury is used in mercury-vapor lamps and some 'neon sign' type advertising signs and fluorescent lamps.\n\nMercury is also found in liquid mirror telescopes.\n\nGaseous mercury is also found in some electron tubes, including ignitrons, thyratrons, and mercury arc rectifiers.",
+      toxicity: "Mercury and most of its compounds are highly toxic",
+      description: "Mercury is the only metal that is liquid at room temperature",
+    },
+    Tl: {
+      name: "Thallium",
+      nameOrigin: "From Greek thallos, meanin a green shoot or twig",
+      history:
+        "Thallium was discovered spectroscopically by Sir William Crookes in 1861, in London.\n\nIn 1862, Claude-Auguste Lamy used a spectrometer to determine the composition of a selenium-containing substance which was deposited during the production of sulfuric acid from pyrite.\n\nHe noticed the new green line in the spectra and concluded that a new element was present.",
+      applications:
+        "Thallium selenide has been used in a bolometer for infrared detection.\n\nThallium is also used in gamma radiation detection equipment.\n\nThallium oxide has been used to produce glasses with a high index of refraction, and is used in the manufacture of photo cells.\n\nSome of the electrodes in dissolved oxygen analyzers contain thallium.",
+      description: "Agatha Christie made use of thallium's toxicity in her novel The Pale Horse",
+      toxicity: "Thallium and its compounds are highly toxic",
+    },
+    Pb: {
+      name: "Lead",
+      nameOrigin: "From the Latin word plumbum",
+      history:
+        "Metallic lead beads dating back to 6400 BC have been found in Çatalhöyük in modern-day Turkey.\n\nThe Romans also used lead in molten form to secure iron pins that held together large limestone blocks in certain monumental buildings.\n\nIn alchemy, lead was thought to be the oldest metal and was associated with the planet Saturn.",
+      applications:
+        "Large quantities of lead, both as the metal and as the dioxide, are used in storage batteries.\n\nLead is used as electrodes in the process of electrolysis.\n\nIt is added to brass to reduce machine tool wear.\n\nLead, in either pure form or alloyed with tin, or antimony is the traditional material for bullets and shot in firearms use.",
+      toxicity: "Lead and its compounds are poisonous",
+      description: "Pencil leads in wooden pencils have never been made from lead",
+    },
+    Bi: {
+      name: "Bismuth",
+      nameOrigin: "From the German Weisse Masse, meaning white mass",
+      applications:
+        "Bismuth is used in producing malleable irons and is used as a catalyst for making acrylic fibers.\n\nBismuth oxychloride is used in cosmetics, as a pigment in paint for eye shadows, hair sprays and nail polishes.\n\nIt has also been used as a replacement for lead in shot, bullets and less-lethal riot gun ammunition.",
+      history:
+        "Bismuth has been known since ancient times, so no one person is credited with its discovery.\n\nThe element was confused in early times with tin and lead because of its resemblance to those elements.\n\nIn 1753, French chemist Claude François Geoffroy demonstrated that this metal is distinct from lead and tin.",
+      toxicity: "Bismuth is considered to be non-toxic",
+      description: "Bismuth has unusually high electrical resistance for a metal",
+    },
+    Po: {
+      name: "Polonium",
+      nameOrigin: "Named after Poland, native country of Madam Curie",
+      history:
+        "Polonium was discovered by Marie and Pierre Curie in 1898 in Paris.\n\nThis element was the first one discovered by the Curies while they were investigating the cause of pitchblende radioactivity.\n\nThe dangers of working with radioactive elements were not known when the Curies made their discoveries.",
+      applications:
+        "Polonium is used to eliminate static electricity produced during processes such as rolling paper, wire and sheet metal.\n\nPolonium can be mixed or alloyed with beryllium to provide a source of neutrons.\n\nIt is also used in anti-static brushes to eliminate dust on photographic film.",
+      toxicity: "Polonium is highly dangerous and radioactive",
+      description: "Polonium is obtained by irradiating bismuth with high-energy neutrons or protons",
+    },
+    At: {
+      description: "Astatine is preferentially concentrated in the thyroid gland",
+      toxicity: "Astatine is highly radioactive",
+      name: "Astatine",
+      history:
+        "In 1869, existence of astatine was first predicted by Russian chemist Dmitri Mendeleev and called the element eka-iodine.\n\nIn 1940, Dale R. Corson, Kenneth Ross MacKenzie, and Emilio Segrè isolated the element at the University of California, Berkeley.\n\nInstead of searching for the element in nature, the scientists created it by bombarding bismuth-209 with alpha particles.",
+      applications:
+        "The newly formed astatine-211 is important in nuclear medicine.\n\nOnce produced, astatine must be used quickly, as it decays with a half-life of 7.2 hours.\n\nAstatine-211 can be used for targeted alpha particle radiotherapy, since it decays either via emission of an alpha particle.",
+      nameOrigin: "From the Greek astatos meaning unstable",
     },
   },
 });
