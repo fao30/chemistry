@@ -230,4 +230,5 @@ export const CRYSTAL_STRUCTURES: Record<CrystalStructure, { component: React.JSX
   SIMPLE_TRICLINIC: { component: <StcSVG />, value: "SIMPLE_TRICLINIC" },
   FACE_CENTERED_ORTHORHOMBIC: { component: <FcoSVG />, value: "FACE_CENTERED_ORTHORHOMBIC" },
   BASE_CENTERED_ORTHORHOMBIC: { component: <BcoSVG />, value: "BASE_CENTERED_ORTHORHOMBIC" },
+  SIMPLE_MONOCLINIC: { component: <SmSVG />, value: "SIMPLE_MONOCLINIC" },
 };

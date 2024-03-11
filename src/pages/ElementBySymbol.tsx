@@ -21,7 +21,7 @@ export default function ElementBySymbol() {
   const { symbol } = useParams();
   const data = ELEMENT_DATA.find((e) => e.symbol === symbol);
   if (!data) return <Navigate to="/" />;
-  const { t } = useSetting();
+  const { t, lang } = useSetting();
   const tData = t.elements[data.symbol];
 
   const renderElectronConfiguration = (arr: typeof data.static.electrons.electronConfiguration) => {
@@ -47,11 +47,11 @@ export default function ElementBySymbol() {
 
   const renderAbudance = (abundance: typeof data.static.abundance.earth | typeof data.static.abundance.universe) => {
     let renderedStructure = "";
-    if (abundance.includes("_")) {
+    if (abundance?.includes("_") && abundance?.includes("×")) {
       const [base, exponent] = abundance.split("_");
-      renderedStructure += `${base}<sup>${exponent}</sup>%`;
+      renderedStructure += `${base.replace(".", lang === "ru" ? "," : ".")}<sup>${exponent}</sup>%`;
     } else {
-      renderedStructure += abundance;
+      renderedStructure += abundance?.replace(".", lang === "ru" ? "," : ".");
     }
     return <span dangerouslySetInnerHTML={{ __html: renderedStructure }} />;
   };
@@ -61,7 +61,7 @@ export default function ElementBySymbol() {
       {/* FIRST COLUMN */}
       <section className="flex flex-col gap-6">
         <Box classNameDiv="p-6 flex items-center justify-center">
-          <h5>{tData.name}</h5>
+          <h5>{tData.name.toUpperCase()}</h5>
         </Box>
         <section className="grid grid-cols-2 gap-6">
           <Box classNameDiv="relative size-full">
@@ -105,11 +105,11 @@ export default function ElementBySymbol() {
             </section>
             <section className="grid grid-cols-2">
               <h6 className="title">{t.titles.atomicWeight}</h6>
-              <h6>{data.static.generalProperties.atomicWeight ?? "-"}</h6>
+              <h6>{data.static.generalProperties.atomicWeight?.toLocaleString(lang) ?? "-"}</h6>
             </section>
             <section className="grid grid-cols-2">
               <h6 className="title">{t.titles.massNumber}</h6>
-              <h6>{data.static.generalProperties.massNumber ?? "-"}</h6>
+              <h6>{data.static.generalProperties.massNumber.toLocaleString(lang) ?? "-"}</h6>
             </section>
             <section className="grid grid-cols-2">
               <h6 className="title">{t.titles.category}</h6>
@@ -137,6 +137,9 @@ export default function ElementBySymbol() {
         </Box>
         <Box title={t.titles.history}>
           <h6 className="whitespace-pre-line leading-5">{tData.history}</h6>
+        </Box>
+        <Box>
+          <h6 className="whitespace-pre-line leading-5">{tData.description}</h6>
         </Box>
       </section>
 
@@ -201,7 +204,7 @@ export default function ElementBySymbol() {
 
               {data.static.physhicalProperties.density ? (
                 <h6>
-                  {data.static.physhicalProperties.density} {renderUnit(t.unit.density)}
+                  {data.static.physhicalProperties.density.toLocaleString(lang)} {renderUnit(t.unit.density)}
                 </h6>
               ) : (
                 <h6>-</h6>
@@ -213,8 +216,9 @@ export default function ElementBySymbol() {
 
               {data.static.physhicalProperties.meltingPoint ? (
                 <h6>
-                  {data.static.physhicalProperties.meltingPoint} K | {kelvinToCelsius(data.static.physhicalProperties.meltingPoint)}°C
-                  | {kelvinToFahrenheit(data.static.physhicalProperties.meltingPoint)}°F
+                  {data.static.physhicalProperties.meltingPoint.toLocaleString(lang)} K |{" "}
+                  {parseInt(kelvinToCelsius(data.static.physhicalProperties.meltingPoint)).toLocaleString(lang)}°C |{" "}
+                  {parseInt(kelvinToFahrenheit(data.static.physhicalProperties.meltingPoint)).toLocaleString(lang)}°F
                 </h6>
               ) : (
                 <h6>-</h6>
@@ -225,8 +229,9 @@ export default function ElementBySymbol() {
               <h6 className="title">{t.titles.boilingPoint}</h6>
               {data.static.physhicalProperties.boilingPoint ? (
                 <h6>
-                  {data.static.physhicalProperties.boilingPoint} K | {kelvinToCelsius(data.static.physhicalProperties.boilingPoint)}°C
-                  | {kelvinToFahrenheit(data.static.physhicalProperties.boilingPoint)}°F
+                  {data.static.physhicalProperties.boilingPoint.toLocaleString(lang)} K |{" "}
+                  {parseInt(kelvinToCelsius(data.static.physhicalProperties.boilingPoint)).toLocaleString(lang)}°C |{" "}
+                  {parseInt(kelvinToFahrenheit(data.static.physhicalProperties.boilingPoint)).toLocaleString(lang)}°F
                 </h6>
               ) : (
                 <h6>-</h6>
@@ -238,7 +243,7 @@ export default function ElementBySymbol() {
 
               {data.static.physhicalProperties.heatOfFusion ? (
                 <h6>
-                  {data.static.physhicalProperties.heatOfFusion} {t.unit.heatOfFusion}
+                  {data.static.physhicalProperties.heatOfFusion.toLocaleString(lang)} {t.unit.heatOfFusion}
                 </h6>
               ) : (
                 <h6>-</h6>
@@ -250,7 +255,7 @@ export default function ElementBySymbol() {
 
               {data.static.physhicalProperties.heatOfVaporization ? (
                 <h6>
-                  {data.static.physhicalProperties.heatOfVaporization} {t.unit.heatOfVaporization}
+                  {data.static.physhicalProperties.heatOfVaporization.toLocaleString(lang)} {t.unit.heatOfVaporization}
                 </h6>
               ) : (
                 <h6>-</h6>
@@ -262,7 +267,7 @@ export default function ElementBySymbol() {
 
               {data.static.physhicalProperties.specificHeatCapacity ? (
                 <h6>
-                  {data.static.physhicalProperties.specificHeatCapacity} {t.unit.specificHeatCapacity}
+                  {data.static.physhicalProperties.specificHeatCapacity.toLocaleString(lang)} {t.unit.specificHeatCapacity}
                 </h6>
               ) : (
                 <h6>-</h6>
@@ -287,6 +292,9 @@ export default function ElementBySymbol() {
         <Box>
           <img src={`/assets/elements/${data.symbol}.jpg`} alt={tData.name} className="size-full" />
         </Box>
+        <Box>
+          <h6 className="leading-5 whitespace-pre-line">{tData.toxicity}</h6>
+        </Box>
       </section>
       <section className="flex flex-col gap-6">
         <Box title={t.titles.atomicProperties}>
@@ -295,7 +303,7 @@ export default function ElementBySymbol() {
               <h6 className="title">{t.titles.atomicRadius}</h6>
               <h6>
                 {data.static.atomicProperties.atomicRadius
-                  ? `${data.static.atomicProperties.atomicRadius} ${t.unit.atomicRadius}`
+                  ? `${data.static.atomicProperties.atomicRadius.toLocaleString(lang)} ${t.unit.atomicRadius}`
                   : "-"}
               </h6>
             </section>
@@ -303,19 +311,23 @@ export default function ElementBySymbol() {
               <h6 className="title">{t.titles.covalentRadius}</h6>
               <h6>
                 {data.static.atomicProperties.covalentRadius
-                  ? `${data.static.atomicProperties.covalentRadius} ${t.unit.atomicRadius}`
+                  ? `${data.static.atomicProperties.covalentRadius.toLocaleString(lang)} ${t.unit.atomicRadius}`
                   : "-"}
               </h6>
             </section>
             <section className="grid grid-cols-2">
               <h6 className="title">{t.titles.electronegativity}</h6>
-              <h6>{data.static.atomicProperties.electronegativity ? `${data.static.atomicProperties.electronegativity}` : "-"}</h6>
+              <h6>
+                {data.static.atomicProperties.electronegativity
+                  ? `${data.static.atomicProperties.electronegativity.toLocaleString(lang)}`
+                  : "-"}
+              </h6>
             </section>
             <section className="grid grid-cols-2">
               <h6 className="title">{t.titles.ionizationPotential}</h6>
               <h6>
                 {data.static.atomicProperties.ionizationPotential
-                  ? `${data.static.atomicProperties.ionizationPotential} ${t.unit.ionizationPotential}`
+                  ? `${data.static.atomicProperties.ionizationPotential.toLocaleString(lang)} ${t.unit.ionizationPotential}`
                   : "-"}
               </h6>
             </section>
@@ -323,7 +335,7 @@ export default function ElementBySymbol() {
               <h6 className="title">{t.titles.atomicVolume}</h6>
               {data.static.atomicProperties.atomicVolume ? (
                 <h6>
-                  {data.static.atomicProperties.atomicVolume} {renderUnit(t.unit.atomicVolume)}
+                  {data.static.atomicProperties.atomicVolume.toLocaleString(lang)} {renderUnit(t.unit.atomicVolume)}
                 </h6>
               ) : (
                 <h6>-</h6>
@@ -333,7 +345,7 @@ export default function ElementBySymbol() {
               <h6 className="title">{t.titles.thermalConductivity}</h6>
               <h6>
                 {data.static.atomicProperties.thermalConductivity
-                  ? `${data.static.atomicProperties.thermalConductivity} ${t.unit.thermalConductivity}`
+                  ? `${data.static.atomicProperties.thermalConductivity.toLocaleString(lang)} ${t.unit.thermalConductivity}`
                   : "-"}
               </h6>
             </section>
@@ -349,11 +361,11 @@ export default function ElementBySymbol() {
         <Box title={t.titles.isotopes}>
           <section className="grid grid-cols-2">
             <h6 className="title">{t.titles.stable}</h6>
-            <h6>{data.static.isotopes.stable ? renderIsotopes(data.static.isotopes.stable) : "-"}</h6>
+            <h6>{data.static.isotopes.stable.length ? renderIsotopes(data.static.isotopes.stable) : "-"}</h6>
           </section>
           <section className="grid grid-cols-2">
             <h6 className="title">{t.titles.unstable}</h6>
-            <h6>{data.static.isotopes.unstable ? renderIsotopes(data.static.isotopes.unstable) : "-"}</h6>
+            <h6>{data.static.isotopes.unstable.length ? renderIsotopes(data.static.isotopes.unstable) : "-"}</h6>
           </section>
         </Box>
       </section>

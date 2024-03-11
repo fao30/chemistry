@@ -12,10 +12,10 @@ export type ElementCategory =
   | "LANTHANIDES"
   | "ACTINIDES";
 
-export type Color = "COLORLESS" | "SILVER" | "SLATE_GRAY" | "BLACK" | "GRAY" | "YELLOW" | "COPPER";
+export type Color = "COLORLESS" | "SILVER" | "SLATE_GRAY" | "BLACK" | "GRAY" | "YELLOW" | "COPPER" | "RED";
 export type ColorSetting = keyof typeof COLOR_SETTING;
 
-export type Phase = "GAS" | "SOLID";
+export type Phase = "GAS" | "SOLID" | "LIQUID";
 
 export type CrystalStructure =
   | "SIMPLE_HEXAGONAL"
@@ -26,7 +26,8 @@ export type CrystalStructure =
   | "TETRAHEDRAL_PACKING"
   | "SIMPLE_TRICLINIC"
   | "FACE_CENTERED_ORTHORHOMBIC"
-  | "BASE_CENTERED_ORTHORHOMBIC";
+  | "BASE_CENTERED_ORTHORHOMBIC"
+  | "SIMPLE_MONOCLINIC";
 
 // key
 export type ElementKey = (typeof ELEMENT_DATA)[number]["symbol"];

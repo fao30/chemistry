@@ -36,6 +36,7 @@ export const getEnglishDictionary = (): Dictionary => ({
     SIMPLE_TRICLINIC: "Simple Triclinic",
     FACE_CENTERED_ORTHORHOMBIC: "Face Centered Orthorhombic",
     BASE_CENTERED_ORTHORHOMBIC: "Base Centered Orthorhombic",
+    SIMPLE_MONOCLINIC: "Simple Monoclinic",
   },
 
   colors: {
@@ -46,11 +47,13 @@ export const getEnglishDictionary = (): Dictionary => ({
     GRAY: "Gray",
     YELLOW: "Yellow",
     COPPER: "Copper",
+    RED: "Red",
   },
 
   phase: {
     GAS: "Gas",
     SOLID: "Solid",
+    LIQUID: "Liquid",
   },
 
   unit: {
@@ -451,6 +454,146 @@ export const getEnglishDictionary = (): Dictionary => ({
         "The toxicity of arsenic to insects, bacteria and fungi led to its use as a wood preservative and as insecticides.\n\nArsenic is used in bronzing, pyrotechny, and for hardening and improving the sphericity of shot.\n\nGallium arsenide is a semiconductor used in laser diodes and LEDs.\n\nSmall amounts of arsenic can be used in lead alloys for ammunition.",
       toxicity: "Arsenic and its compounds are poisonous",
       description: "Prawns are known to contain quite high levels of arsenic",
+    },
+    Se: {
+      name: "Selenium",
+      nameOrigin: "From the Greek word Selene, moon",
+      history:
+        "Selenium was first observed in about the year 1300 by the alchemist Arnold of Villanova.\n\nSelenium was discovered in 1817 by Jöns Jacob Berzelius and Johan Gottlieb Gahn who noted the similarity of the new element to the previously-known tellurium.\n\nIn 1873, Willoughby Smith found that the electrical resistance of grey selenium was dependent on the ambient light.",
+      applications:
+        "Selenium is used in the glass industry to decolorize glass and to make red-colored glasses and enamels.\n\nIt is used as a catalyst in many chemical reactions.\n\nIt is also used as a photographic toner, and as an additive to stainless steel.\n\nSelenium sulfide is used in anti-dandruff shampoos.",
+      toxicity: "Many of selenium's compounds, such as selenates and selenites, are highly toxic",
+      description: "Selenium deficiency in animals can lead to slow growth",
+    },
+    Br: {
+      name: "Bromine",
+      nameOrigin: "From the Greek word bromos, stench",
+      history:
+        "Carl Jacob Löwig discovered bromine in 1825, while still a chemistry student at Heidelberg University, Germany.\n\nAntoine Balard distilled the bromine from a solution of seaweed ash saturated with chlorine in 1824.\n\nHe finally published his results in 1826, providing evidence that the substance he had discovered was a new element.",
+      applications:
+        "Bromine is used in making fumigants, flameproofing agents, water purification compounds, dyes, medicines and sanitizers.\n\nPotassium bromide is used as a source of bromide ions for the manufacture of silver bromide for photographic film.\n\nBromine is also used to reduce mercury pollution from coal-fired power plants.",
+      toxicity: "Bromine is poisonous and causes skin burns",
+      description: "Bromine is the only nonmetallic element that is liquid at ordinary temperatures",
+    },
+    Kr: {
+      name: "Krypton",
+      nameOrigin: "From the Greek word kryptos, hidden",
+      history:
+        "Scottish chemist Sir William Ramsay and his assistant English chemist Morris Travers discovered krypton in 1898 in London.\n\nThey found krypton in the residue left from evaporating nearly all components of liquid air.\n\nWilliam Ramsay was awarded the 1904 Nobel Prize in Chemistry for discovery of a series of noble gases, including krypton.",
+      applications:
+        "Krypton is used in certain photographic flash lamps for high-speed photography.\n\nKrypton-83 has application in magnetic resonance imaging (MRI) for imaging airways.\n\nKrypton is used as a filling gas for energy-saving fluorescent lights and as an inert filling gas in incandescent bulbs.",
+      toxicity: "Krypton is considered to be non-toxic",
+      description: "When ionized, krypton gas emits bright white light",
+    },
+    Rb: {
+      name: "Rubidium",
+      nameOrigin: "From the Latin word rubidus, deepest red",
+      history:
+        "German chemists Robert Bunsen and Gustav Kirchhoff discovered rubidium in 1861 by the newly developed method of flame spectroscopy.\n\nThe separation of the metal was tried by Bunsen, but he never got samples with more than 18% of Rubidium.\n\nThe separation of the metal was only accomplished by George de Hevesy, through the hydrolysis of melted rubidium hydroxide.",
+      applications:
+        "Rubidium is used as a getter in vacuum tubes and as a photocell component.\n\nRubidium compounds are sometimes used in fireworks to give them a purple color.\n\nRubidium salts are used in glasses and ceramics.\n\nRubidium-87 is slightly radioactive and has been used extensively in dating rocks.",
+      toxicity: "Rubidium is not known to be toxic",
+      description: "Rubidium burns with a reddish-violet flame color",
+    },
+    Sr: {
+      name: "Strontium",
+      nameOrigin: "Named after Strontian, a town in Scotland",
+      history:
+        "Strontium was recognized as a new element in 1790 when Adair Crawford and his colleague William Cruickshank analyzed a mineral sample from a lead mine near Strontian, Scotland.\n\nThe element was eventually isolated by Sir Humphry Davy in 1808.\n\nThe isolation was done by the electrolysis of a mixture containing strontium chloride and mercuric oxide.",
+      applications:
+        "The primary use for strontium is in glass for color television cathode ray tubes.\n\nStrontium salts are used in flares and fireworks for a crimson color.\n\nStrontium chloride is used in toothpaste for sensitive teeth.\n\nStrontium oxide is used to improve the quality of pottery glazes.",
+      toxicity: "Strontium's non-radioactive isotopes are considered non-toxic",
+      description: "Strontium metal turns yellow when exposed to air",
+    },
+    Y: {
+      name: "Yttrium",
+      history:
+        "In 1787, Carl Axel Arrhenius found a new mineral near Ytterby in Sweden and named it ytterbite, after the village.\n\nJohan Gadolin discovered yttrium's oxide in Arrhenius' sample in 1789, and Anders Gustaf Ekeberg named the new oxide yttria.\n\nElemental yttrium was first isolated in 1828 by Friedrich Wöhler.",
+      applications:
+        "Yttrium is often used in alloys, increasing the strength of aluminum and magnesium alloys.\n\nYttrium is one of the elements used to make the red color in CRT televisions.\n\nIt is also used as a deoxidizer for non-ferrous metals such as vanadium.\n\nYttrium can be used in laser systems and as a catalyst for ethylene polymerization reactions.",
+      toxicity: "Exposure to yttrium compounds in humans may cause lung disease",
+      description: "Finely divided yttrium is very unstable in air",
+      nameOrigin: "Named after Ytterby, a village in Sweden near Vauxholm",
+    },
+    Zr: {
+      name: "Zirconium",
+      nameOrigin: "From the Persian zargun, gold like",
+      description: "The most common oxide is zirconium dioxide, also referred to as zirconia",
+      toxicity: "Zirconium is considered to be non-toxic",
+      history:
+        "Zirconium was first recognized as an element by Martin Heinrich Klaproth in 1789, in Berlin, in a sample of zircon from Sri Lanka.\n\nZirconium metal was first obtained in an impure form in 1824 by Jöns Jakob Berzelius by heating a mixture of potassium and potassium zirconium fluoride in an iron tube.\n\nDutch scientists Anton Eduard van Arkel and Jan Hendrik de Boer discovered a method for producing high purity zirconium in 1925.",
+      applications:
+        "Zirconium is mainly used as a refractory and opacifier, although it is used in small amounts as an alloying agent for its strong resistance to corrosion.\n\nZirconium is used as to make surgical instruments and is used in steel alloys as a hardening agent.\n\nZirconium is also used to make superconductive magnets.",
+    },
+    Nb: {
+      name: "Niobium",
+      nameOrigin: "Named after Niobe, the daughter of Tantalu",
+      history:
+        "Niobium was discovered by the English chemist Charles Hatchett in 1801 and named the new element columbium.\n\nIn 1846, German chemist Henrich Rose independently discovered the element and named it niobium.\n\nThe metal was first isolated by Swedish scientist Christian Wilhelm Blomstrand in 1864 who reduced the chloride by heating it in a hydrogen atmosphere.",
+      applications:
+        "Niobium is used in arc-welding rods for stabilized grades of stainless steel.\n\nNiobium alloys are strong and are often used in pipeline construction.\n\nThe metal is used in superalloys for jet engines and heat resistant equipment.\n\nNiobium is found in many medical devices such as pacemakers.",
+      toxicity: "Some niobium compounds are highly toxic",
+      description: "Brazil is the leading producer of niobium",
+    },
+    Mo: {
+      name: "Molybdenum",
+      applications:
+        "Molybdenum is used as glass furnace electrodes due to its high melting point.\n\nThe metal is also used in nuclear energy applications and for missile and aircraft parts.\n\nMolybdenum is valuable as a catalyst in the refining of petroleum.\n\nMolybdenum is used in small quantities to harden steel and is used in many alloys.",
+      history:
+        "Molybdenite was often confused for graphite and it was thought to contain lead.\n\nIn 1778 Swedish scientist Carl Wilhelm Scheele proved that molybdenite was not graphite nor did it contain lead.\n\nIn 1781, Scheele's friend and countryman, Peter J. Hjelm isolated the metal by using carbon and linseed oil.",
+      toxicity: "Molybdenum is toxic in all but small quantities",
+      description: "Molybdenum is essential for plant foliage health",
+      nameOrigin: "From the Greek word molybdo, lead",
+    },
+    Tc: {
+      nameOrigin: "From the Greek word technetos, artificial",
+      name: "Technetium",
+      applications:
+        "Technetium is used in nuclear medicine to carry out a number of medical tests, mainly relating to imaging and functional studies of internal bodily organs like bone scan.\n\nIt is also used industrially for equipment calibration following its approval as a standard beta emitter.\n\nMild carbon steels may be effectively protected by minute quantities of technetium, but this corrosion protection is limited to closed systems because of technetium's radioactivity.",
+      history:
+        "Element 43 was predicted on the basis of the periodic table, and was erroneously reported as having been discovered in 1925, at which time it was named masurium.\n\nThe element was actually discovered by Carlo Perrier and Emilio Segrè in 1937.\n\nIt was also found in a sample of molybdenum sent by Ernest Lawrence that was bombarded by deuterons in the Berkeley cyclotron.\n\n",
+      description: "Technetium was the first element to be produced artificially",
+      toxicity: "Technetium is harmful due to its radioactivity",
+    },
+    Ru: {
+      name: "Ruthenium",
+      toxicity: "Ruthenium is a suspected carcinogen and its compounds strongly stain the skin",
+      description: "Ruthenium is unaffected by air, water and acids",
+      nameOrigin: "From the Latin word Ruthenia, Russia",
+      applications:
+        "Ruthenium is used in platinum and palladium alloys to make wear-resistant electrical contacts.\n\nRuthenium dioxide and lead and bismuth ruthenates are used in thick-film chip resistors.\n\nFountain pen nibs are frequently tipped with alloys containing ruthenium.\n\nRuthenium is a versatile catalyst.",
+      history:
+        "Jędrzej Śniadecki isolated the element in 1807, but his work was not ratified.\n\nJöns Berzelius and Gottfried Osann nearly discovered ruthenium in 1827.\n\nIn 1844, Karl Ernst Claus confirmed that there was a new element and isolated ruthenium from the platinum residues of the rouble production while he was working in Kazan University, Kazan.",
+    },
+    Rh: {
+      description: "Rhodium metal does not normally form an oxide, even when heated",
+      name: "Rhodium",
+      toxicity: "Rhodium is considered to be non-toxic",
+      applications:
+        "The element's major use is as one of the catalysts in the three-way catalytic converters in automobiles.\n\nRhodium is used as an alloying agent for hardening and improving the corrosion resistance of platinum and palladium.\n\nIt is also used as a filter in mammography systems because of the characteristic X-rays it produces.\n\nRhodium is also used for jewelry and for decorations.",
+      history:
+        "Rhodium was discovered in 1803 by William Hyde Wollaston in London.\n\nHe used crude platinum ore presumably obtained from South America.\n\nThe introduction of the three way catalytic converter by Volvo in 1976 increased the demand for rhodium.",
+      nameOrigin: "From the Greek word rhodon, rose",
+    },
+    Pd: {
+      name: "Palladium",
+      history:
+        "Palladium was discovered in 1803, in London, by English chemist William Hyde Wollaston.\n\nHe examined the residues left from platinum after dissolving it in aqua regia, a concentrated solution of hydrochloric and nitric acids.\n\nHe then isolated palladium in a series of chemical reactions.",
+      applications:
+        "The largest use of palladium is in catalytic converters in the automobile industry.\n\nFinely divided palladium is a good catalyst and is used for hydrogenation and dehydrogenation reactions.\n\nThe metal is used in dentistry, watch making, and in making surgical instruments and electrical contacts.",
+      toxicity: "Palladium is considered to be of low toxicity",
+      description: "In the late 1800s, palladium was more expensive than platinum",
+      nameOrigin: "Palladium was named after the asteroid Pallas; Pallas was the Greek goddess of wisdom",
+    },
+    Ag: {
+      name: "Silver",
+      nameOrigin: "The Latin word for silver is argentum",
+      history:
+        "Silver has been used for thousands of years for ornaments and utensils, for trade, and as the basis for many monetary systems.\n\nIts value as a precious metal was long considered second only to gold.\n\nSlag dumps in Asia Minor and on islands in the Aegean Sea indicate that man learned to separate silver from lead as early as 3000 BC.",
+      applications:
+        "Silver has long been valued as a precious metal, and is used as an investment, to make ornaments, jewelry, high-value tableware, utensils, and currency coins.\n\nIt is also used in electrical contacts and conductors, in mirrors and in catalysis of chemical reactions.\n\nIts compounds are used in photographic film, and dilute silver nitrate solutions and other silver compounds are used as disinfectants and microbiocides",
+      toxicity: "Silver is considered to be non-toxic",
+      description: "In ancient Egypt and Medieval Europe, silver was often more valuable than gold",
     },
   },
 });
