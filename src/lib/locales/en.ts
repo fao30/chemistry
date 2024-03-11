@@ -45,6 +45,7 @@ export const getEnglishDictionary = (): Dictionary => ({
     BLACK: "Black",
     GRAY: "Gray",
     YELLOW: "Yellow",
+    COPPER: "Copper",
   },
 
   phase: {
@@ -340,6 +341,116 @@ export const getEnglishDictionary = (): Dictionary => ({
         "Titanium is used in steel as an alloying element to reduce grain size and as a deoxidizer, and in stainless steel to reduce carbon content.\n\nTitanium has potential use in desalination plants for converting sea water into fresh water.\n\nTitanium is used in several everyday products such as drill bits, bicycles, golf clubs, watches and laptop computers.",
       toxicity: "Titanium metal is considered to be non-toxic",
       description: "Titanium is one of the few elements that burns in pure nitrogen gas",
+    },
+    V: {
+      name: "Vanadium",
+      nameOrigin: "Named after Scandinavian goddess, Vanadis",
+      history:
+        "Vanadium was originally discovered by Andrés Manuel del Río in 1801.\n\nIn 1805, the French chemist Hippolyte Victor Collet-Descotils incorrectly declared that del Río's new element was only an impure sample of chromium.\n\nIn 1831, the Swedish chemist Nils Gabriel Sefström rediscovered the element in a new oxide he found while working with iron ores.\n\nLater that same year, Friedrich Wöhler confirmed del Río's earlier work.",
+      applications:
+        "Vanadium is used as an additive in steel to strengthen and protect against corrosion.\n\nTitanium-aluminum-vanadium alloy is used in jet engines and for high-speed aircraft.\n\nVanadium foil is used in cladding titanium to steel.\n\nVanadium pentoxide is used in ceramics and as a catalyst for the production of sulfuric acid.",
+      toxicity: "All vanadium compounds should be considered toxic",
+      description: "Vanadium is mined mostly in South Africa, north-western China, and eastern Russia",
+    },
+    Cr: {
+      name: "Chromium",
+      nameOrigin: "From the Greek word chroma, color",
+      history:
+        "In 1797, Louis Nicolas Vauquelin received samples of crocoite ore.\n\nIn 1798, Vauquelin discovered that he could isolate metallic chromium by heating the oxide in a charcoal oven, making him the discoverer of the element.\n\nVauquelin was also able to detect traces of chromium in precious gemstones, such as ruby or emerald.",
+      applications:
+        "Chromium is used to harden steel, manufacture stainless steel, and form many useful alloys.\n\nIt is mostly used in plating to produce a hard, beautiful surface and to prevent corrosion.\n\nThe metal is also widely used as a catalyst.\n\nChromium compounds are valued as pigments for their vivid green, yellow, red and orange colors.",
+      description: "Chromium oxide was used by the Chinese in the Qin dynasty over 2,000 years ago",
+      toxicity: "In larger amounts, chromium can be toxic and carcinogenic",
+    },
+    Mn: {
+      name: "Manganese",
+      nameOrigin: "From the Latin word magnes, magnet, from magnetic properties of pyrolusite",
+      history:
+        "By the mid-18th century, Swedish chemist Carl Wilhelm Scheele had used pyrolusite to produce chlorine.\n\nScheele and others were aware that pyrolusite contained a new element, but they were not able to isolate it.\n\nJohan Gottlieb Gahn was the first to isolate an impure sample of manganese metal in 1774, by reducing the dioxide with carbon.",
+      applications:
+        "For over 2000 years, manganese dioxide has been used to make colorless glass.\n\nManganese dioxide is used as the cathode material in zinc-carbon and alkaline batteries.\n\nManganese also functions in the oxygen-evolving complex of photosynthetic plants.\n\nThe dioxide is also used in the preparation of oxygen and chlorine and in drying black paints.",
+      toxicity: "Excess manganese, particularly inhalation of the powder, is toxic",
+      description: "Neanderthals may have used black manganese di oxide as a cosmetic 50,000 years ago",
+    },
+    Fe: {
+      name: "Iron",
+      nameOrigin: "From the Latin word ferrum",
+      history:
+        "The first iron used by humans is likely to have come from meteorites.\n\nThe oldest known iron objects used by humans are some beads of meteoric iron, made in Egypt in about 4000 BC.\n\nThe discovery of smelting around 3000 BC led to the start of the iron age around 1200 BC and the prominent use of iron for tools and weapons.",
+      applications:
+        "Iron is used to manufacture steel and other alloys important in construction and manufacturing.\n\nIron is a vital constituent of plant and animal life and works as an oxygen carrier in hemoglobin.\n\nIron oxide mixed with aluminum powder can be ignited to create a thermite reaction, used in welding and purifying ores.",
+      description: "The color of blood is due to the hemoglobin, an iron-containing protein",
+      toxicity: "Iron is considered to be non-toxic",
+    },
+    Co: {
+      name: "Cobalt",
+      nameOrigin: "From the German word Kobald, goblin or evil spirit; also from the Greek cobalos, mine",
+      history:
+        "Cobalt compounds have been used for centuries to impart a rich blue color to glass, glazes and ceramics.\n\nThe element was first isolated by Swedish chemist George Brandt in 1735.\n\nHe showed it was the presence of the element cobalt that caused the blue color in glass, not bismuth as previously thought.",
+      applications:
+        "Cobalt is used in the preparation of magnetic, wear-resistant and high-strength alloys.\n\nCobalt is widely used in batteries and in electroplating.\n\nA solution of the chloride is used as a sympathetic ink.",
+      description: "Supplemental colbalt is essential in sheep's diets to improve the wools quality",
+      toxicity: "Cobalt and its compounds are considered to be slightly toxic",
+    },
+    Ni: {
+      name: "Nickel",
+      nameOrigin: "From the German word Nickel (Satan), and from kupfernickel, Old Nick's copper",
+      history:
+        "Artifacts made from metallic meteorites have been found dating from as early as 5000 BC.\n\nIn 1751, Baron Axel Fredrik Cronstedt was trying to extract copper from kupfernickel and instead produced the white metal.\n\nIn the early twentieth century, Ludwig Mond patented a process using nickel carbonyl to purify nickel.",
+      applications:
+        "Nickel is used extensively to make coins and nickel steel for armor plates and burglar-proof vaults.\n\nTubing made of copper-nickel alloy is extensively used in making desalination plants for converting sea water into fresh water.\n\nNickel is also used in batteries, ceramics and magnets.",
+      toxicity: "Nickel and its compounds are considered to be carcinogenic",
+      description: "Nickel is 100 times more concentrated below Earth's crust than in it",
+    },
+    Cu: {
+      name: "Copper",
+      nameOrigin: "From the Latin word cuprum, from the island of Cyprus",
+      history:
+        "Copper occurs naturally as native copper and was known to some of the oldest civilizations on record.\n\nEarliest estimates of the discovery of copper suggest around 9000 BC in the Middle East.\n\nIt was one of the most important materials to humans throughout the copper and bronze ages.",
+      applications:
+        "Copper is often used for electrical wiring applications and for household plumbing applications.\n\nCopper sulfate is used as a fungicide and as an algicide in rivers, lakes and ponds.\n\nIt is also used in cookware and cooking utensils.\n\nCommercially important alloys such as brass and bronze are made with copper and other metals.",
+      description: "Pure copper is orange-red and acquires a reddish tarnish when exposed to air",
+      toxicity: "Cooking acidic food in copper pots can cause toxicity",
+    },
+    Zn: {
+      name: "Zinc",
+      history:
+        "Metallic zinc was produced in the 13th century A.D. India by reducing calamine with organic substances such as wool.\n\nThe metal was rediscovered in Europe by Andreas Sigismund Marggraf in 1746.\n\nHe heated a mixture of calamine ore and carbon in a closed vessel without copper to produce the metal.",
+      applications:
+        "Because of its corrosion resistance, zinc is often plated to other metals in a process called galvanization.\n\nZinc is an essential trace element for animals and plants.\n\nLarge quantities of zinc are used to produce die castings, which are used extensively by the automotive, electrical, and hardware industries.",
+      nameOrigin: "From the German word Zink, of obscure origin",
+      toxicity: "Zinc is not considered to be particularly toxic",
+      description: "Zinc is referred to in nonscientific contexts as spelter",
+    },
+    Ga: {
+      name: "Gallium",
+      nameOrigin: "From the Latin word Gallia, France; also from Latin, gallus, a translation of Lecoq, a cock",
+      history:
+        "In 1871, existence of gallium was first predicted by Russian chemist Dmitri Mendeleev and called the element eka-aluminum.\n\nGallium was discovered spectroscopically by French chemist Paul Emile Lecoq de Boisbaudran in 1875 by its characteristic spectrum in an examination of a sphalerite sample.\n\nLater that year, Lecoq obtained the free metal by electrolysis of its hydroxide in potassium hydroxide solution.",
+      applications:
+        "Gallium wets glass or porcelain and forms a brilliant mirror when it is painted on glass.\n\nIt is widely used in doping semiconductors and producing solid-state devices such as transistors.\n\nLow melting gallium alloys are used in some medical thermometers as non-toxic substitutes for mercury.\n\nGallium arsenide is capable of converting electricity directly into coherent light.",
+      toxicity: "Gallium is considered to be non-toxic",
+      description: "Gallium has a strong tendency to supercool below its melting point / freezing point",
+    },
+    Ge: {
+      name: "Germanium",
+      nameOrigin: "From the Latin word Germania, Germany",
+      history:
+        "In 1869, Dmitri Mendeleev predicted its existence and some of its properties based on its position on his periodic table and called the element eka-silicon.\n\nIn 1886, Clemens Winkler found the new element along with silver and sulfur, in a rare mineral called argyrodite.\n\nThe first silicon-germanium alloys were obtained in 1955.",
+      applications:
+        "The most common use of germanium is as a semiconductor in electronics.\n\nGermanium is used in transistors and in integrated circuits.\n\nIt is used as an alloying agent and as a catalyst.\n\nIt is also used in infrared spectroscopes and infrared detectors.",
+      toxicity: "Germanium is not known to be toxic",
+      description: "Germanium and the oxide are transparent to infrared radiation",
+    },
+    As: {
+      name: "Arsenic",
+      nameOrigin: "From the Latin word arsenicum, Greek arsenikon",
+      history:
+        "Greek historian Olympiodorus of Thebes roasted arsenic sulfide and obtained white arsenic during 5th century AD.\n\nAlbertus Magnus is believed to have been the first to isolate the element from a compound in 1250, by heating soap together with arsenic trisulfide.\n\nIn 1649, Johann Schröder published two ways of preparing arsenic.",
+      applications:
+        "The toxicity of arsenic to insects, bacteria and fungi led to its use as a wood preservative and as insecticides.\n\nArsenic is used in bronzing, pyrotechny, and for hardening and improving the sphericity of shot.\n\nGallium arsenide is a semiconductor used in laser diodes and LEDs.\n\nSmall amounts of arsenic can be used in lead alloys for ammunition.",
+      toxicity: "Arsenic and its compounds are poisonous",
+      description: "Prawns are known to contain quite high levels of arsenic",
     },
   },
 });

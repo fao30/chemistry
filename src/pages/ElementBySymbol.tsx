@@ -147,7 +147,7 @@ export default function ElementBySymbol() {
             <section className="flex flex-col">
               <section className="grid grid-cols-2">
                 <h6 className="title">{t.titles.electronsPerShell}</h6>
-                <h6>{data.static.electrons.electronsPerShell.join(" ")}</h6>
+                <h6>{data.static.electrons.electronsPerShell?.join(" ")}</h6>
               </section>
               <section className="grid grid-cols-2">
                 <h6 className="title">{t.titles.electronConfiguration}</h6>
@@ -158,7 +158,7 @@ export default function ElementBySymbol() {
                   <p>{data.symbol}</p>
                 </div>
 
-                {data.static.electrons.electronsPerShell.map((e, shellIndex) => {
+                {data.static.electrons.electronsPerShell?.map((e, shellIndex) => {
                   const radius = 40 + shellIndex * 20;
 
                   return (
@@ -169,8 +169,8 @@ export default function ElementBySymbol() {
                     >
                       <div style={{ animation: `rotate ${10 * (shellIndex + 1)}s linear infinite` }} className="absolute centered">
                         {Array(e)
-                          .fill(e)
-                          .map((_, electronIndex) => {
+                          ?.fill(e)
+                          ?.map((_, electronIndex) => {
                             const electronAngle = (electronIndex / e) * Math.PI * 2;
                             const x = Math.cos(electronAngle) * radius;
                             const y = Math.sin(electronAngle) * radius;

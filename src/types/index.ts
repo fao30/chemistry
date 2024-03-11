@@ -12,7 +12,7 @@ export type ElementCategory =
   | "LANTHANIDES"
   | "ACTINIDES";
 
-export type Color = "COLORLESS" | "SILVER" | "SLATE_GRAY" | "BLACK" | "GRAY" | "YELLOW";
+export type Color = "COLORLESS" | "SILVER" | "SLATE_GRAY" | "BLACK" | "GRAY" | "YELLOW" | "COPPER";
 export type ColorSetting = keyof typeof COLOR_SETTING;
 
 export type Phase = "GAS" | "SOLID";
