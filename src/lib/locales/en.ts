@@ -1,6 +1,13 @@
 import type { Dictionary } from "@/types";
 
 export const getEnglishDictionary = (): Dictionary => ({
+  solubility: {
+    S: "Soluble",
+    SS: "Slightly Soluble",
+    I: "Insoluble",
+    NONE: "Unavailable",
+    R: "Reacts with water",
+  },
   reactions: {
     NR: "No Reaction",
     NM: "Non Metal",
@@ -10,6 +17,43 @@ export const getEnglishDictionary = (): Dictionary => ({
     SR: "Strong Reaction",
     VR: "Violent Reaction",
     VSR: "Very Slow Reaction",
+  },
+
+  solubilities: {
+    Ammonium: "Ammonium",
+    Lithium: "Lithium",
+    Sodium: "Sodium",
+    Potassium: "Pottasium",
+    Magnesium: "Magnesium",
+    Calcium: "Calcium",
+    Barium: "Barium",
+    IronII: "Iron (II)",
+    IronIII: "Iron (III)",
+    CopperII: "Copper (II)",
+    Silver: "Silver",
+    Zinc: "Zinc",
+    LeadII: "Lead (II)",
+    Aluminum: "Aluminum",
+  },
+
+  elementSolubilities: {
+    Fluoride: "Fluoride",
+    Chloride: "Chloride",
+    Bromide: "Bromide",
+    Iodide: "Iodide",
+    Chlorate: "Chlorate",
+    Hydroxide: "Hydroxide",
+    Sulfite: "Sulfite",
+    Sulfate: "Sulfate",
+    Carbonate: "Carbonate",
+    Nitrite: "Nitrite",
+    Nitrate: "Nitrate",
+    Phosphate: "Phosphate",
+    Cyanide: "Cyanide",
+    Cyanate: "Cyanate",
+    Thiocyanate: "Thiocyanate",
+    Dichromate: "Dichromate",
+    Oxide: "Oxide",
   },
 
   reactivity: { CW: "Cold Water", HW: "How Water / Steam", DA: "Dilute Acids" },

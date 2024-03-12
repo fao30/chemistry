@@ -1,4 +1,12 @@
-import type { COLOR_SETTING, ELEMENT_DATA_COMPLETE, REACTIONS, REACTIONS_DATA } from "@/lib/constants";
+import type {
+  COLOR_SETTING,
+  ELEMENT_DATA_COMPLETE,
+  ELEMENT_SOLUBILITY,
+  REACTIONS,
+  REACTIONS_DATA,
+  SOLUBILITIES,
+  SOLUBILITY_DATA,
+} from "@/lib/constants";
 
 export type Lang = "ru" | "en";
 export type ElementCategory =
@@ -36,6 +44,7 @@ export type CrystalStructure =
 export type ElementKey = (typeof ELEMENT_DATA_COMPLETE)[number]["symbol"];
 export type DictionaryKey = keyof Dictionary;
 export type ReactionKey = keyof typeof REACTIONS_DATA | undefined;
+export type SolubilityKey = keyof typeof SOLUBILITY_DATA;
 
 // main
 export type Element = (typeof ELEMENT_DATA_COMPLETE)[number];
@@ -134,4 +143,7 @@ export type Dictionary = {
 
   reactivity: Record<(typeof REACTIONS)[number], string>;
   reactions: Record<keyof typeof REACTIONS_DATA, string>;
+  solubility: Record<SolubilityKey, string>;
+  solubilities: Record<(typeof SOLUBILITIES)[number], string>;
+  elementSolubilities: Record<(typeof ELEMENT_SOLUBILITY)[number], string>;
 };

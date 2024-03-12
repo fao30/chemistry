@@ -16,7 +16,7 @@ export default function ReactivitySeries() {
             <div />
             {REACTIONS.map((e) => {
               return (
-                <h6 key={e} className="flex items-center justify-center p-2">
+                <h6 key={e} className="flex items-center justify-center p-4">
                   {t.reactivity[e]}
                 </h6>
               );
