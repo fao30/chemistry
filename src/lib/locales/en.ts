@@ -1,6 +1,18 @@
 import type { Dictionary } from "@/types";
 
 export const getEnglishDictionary = (): Dictionary => ({
+  reactions: {
+    NR: "No Reaction",
+    NM: "Non Metal",
+    FC: "For Comparison",
+    SLR: "Slow Reaction",
+    MR: "Moderate Reaction",
+    SR: "Strong Reaction",
+    VR: "Violent Reaction",
+    VSR: "Very Slow Reaction",
+  },
+
+  reactivity: { CW: "Cold Water", HW: "How Water / Steam", DA: "Dilute Acids" },
   navbar: {
     list: "List",
     sortByName: "Sort by name",
@@ -80,6 +92,9 @@ export const getEnglishDictionary = (): Dictionary => ({
   },
 
   titles: {
+    solubilityChart: "Solubility Chart",
+    reactivitySeries: "Reactivity Series",
+    tables: "Tables",
     setting: "Setting",
     english: "English",
     russian: "Russian",

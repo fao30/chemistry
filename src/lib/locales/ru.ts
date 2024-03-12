@@ -1,6 +1,18 @@
 import type { Dictionary } from "@/types";
 
 export const getRussianDictionary = (): Dictionary => ({
+  reactions: {
+    NR: "Нет реакции",
+    NM: "Неметалл",
+    FC: "Для сравнения",
+    SLR: "Медленная реакция",
+    MR: "Средняя реакция",
+    SR: "Сильная реакция",
+    VR: "Бурная реакция",
+    VSR: "Очень медленная реакция",
+  },
+
+  reactivity: { CW: "Холодная вода", HW: "Горячая вода/пар", DA: "Разбавленные кислоты" },
   navbar: {
     compare: "Сравнить",
     list: "Список",
@@ -80,6 +92,9 @@ export const getRussianDictionary = (): Dictionary => ({
   },
 
   titles: {
+    solubilityChart: "Таблица растворимости",
+    reactivitySeries: "Ряд активности",
+    tables: "Таблицы",
     setting: "Настройка",
     language: "Язык",
     temperature: "Температура",

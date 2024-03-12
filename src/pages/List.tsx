@@ -1,12 +1,12 @@
 import useSetting from "@/hooks/useSetting";
-import { COLOR_SETTING, ELEMENT_DATA_COMPLETE } from "@/lib/constants";
+import { ELEMENT_DATA_COMPLETE } from "@/lib/constants";
 import { cn } from "@/lib/functions";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { useEffect, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 
 export default function List() {
-  const { setting, t } = useSetting();
+  const { color, t } = useSetting();
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
   const search = (searchParams.get("q") as string) ?? "";
@@ -77,7 +77,7 @@ export default function List() {
         <button
           type="button"
           className="hover:opacity-80 h-12 text-light px-6 outline-none flex items-center justify-center"
-          style={{ backgroundColor: COLOR_SETTING[setting.color].color }}
+          style={{ backgroundColor: color }}
           onClick={() => handleSort("atomicNumber")}
         >
           {sortBy === "atomicNumber" ? (
@@ -93,7 +93,7 @@ export default function List() {
         <button
           type="button"
           className="hover:opacity-80 h-12 text-light px-6 outline-none flex items-center justify-center"
-          style={{ backgroundColor: COLOR_SETTING[setting.color].color }}
+          style={{ backgroundColor: color }}
           onClick={() => handleSort("name")}
         >
           {sortBy === "name" ? (
@@ -109,7 +109,7 @@ export default function List() {
         <button
           type="button"
           className="hover:opacity-80 h-12 text-light px-6 outline-none flex items-center justify-center"
-          style={{ backgroundColor: COLOR_SETTING[setting.color].color }}
+          style={{ backgroundColor: color }}
           onClick={() => handleSort("symbol")}
         >
           {sortBy === "symbol" ? (
@@ -133,7 +133,7 @@ export default function List() {
             >
               <h6
                 className="left-0 top-0 text-light h-full aspect-square absolute flex items-center justify-center"
-                style={{ backgroundColor: COLOR_SETTING[setting.color].color }}
+                style={{ backgroundColor: color }}
               >
                 {e.symbol}
               </h6>

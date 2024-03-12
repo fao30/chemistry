@@ -6,6 +6,8 @@ const Home = lazy(() => import("@/pages/Home"));
 const List = lazy(() => import("@/pages/List"));
 const ElementBySymbol = lazy(() => import("@/pages/ElementBySymbol"));
 const Compare = lazy(() => import("@/pages/Compare"));
+const SolubilityChart = lazy(() => import("@/pages/SolubilityChart"));
+const ReactivitySeries = lazy(() => import("@/pages/ReactivitySeries"));
 const Navbar = lazy(() => import("@/components/Navbar"));
 
 export default function App() {
@@ -18,6 +20,8 @@ export default function App() {
           <Route element={<ElementBySymbol />} path="/element/:symbol" />
           <Route element={<List />} path="/list" />
           <Route element={<Compare />} path="/compare" />
+          <Route element={<SolubilityChart />} path="/solubility-chart" />
+          <Route element={<ReactivitySeries />} path="/reactivity-series" />
         </Routes>
       </Suspense>
     </BrowserRouter>

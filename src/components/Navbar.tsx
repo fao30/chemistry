@@ -1,14 +1,14 @@
 import useSetting from "@/hooks/useSetting";
-import { COLOR_SETTING, COLOR_SETTING_OPTIONS } from "@/lib/constants";
+import { COLOR_SETTING_OPTIONS } from "@/lib/constants";
 import { cn } from "@/lib/functions";
 import type { ColorSetting, Lang, TableWidth } from "@/types";
 import { Icon } from "@iconify/react/dist/iconify.js";
-import { ConfigProvider, Drawer, Switch } from "antd";
+import { ConfigProvider, Drawer, Popover, Switch } from "antd";
 import { Fragment, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
-  const { setting, t, setSetting } = useSetting();
+  const { setting, t, setSetting, color } = useSetting();
   const navigate = useNavigate();
   const [openSetting, setOpenSetting] = useState(false);
 
@@ -16,13 +16,45 @@ export default function Navbar() {
     <Fragment>
       <nav
         className="animate sticky top-0 w-full py-2 px-6 text-light flex justify-between z-50 backdrop-blur-2xl"
-        style={{ backgroundColor: COLOR_SETTING[setting.color].color }}
+        style={{ backgroundColor: color }}
       >
         <button type="button" onClick={() => navigate("/")}>
           <Icon width={35} icon="mdi:home" />
         </button>
 
         <section className="flex gap-4 items-center">
+          <Popover
+            style={{ backgroundColor: "#FEFEFE" }}
+            content={
+              <section className="flex flex-col">
+                <a
+                  type="button"
+                  href="/solubility-chart"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="p-1 hover:text-dark flex gap-2 items-center"
+                >
+                  <h6>{t.titles.solubilityChart}</h6>
+                </a>
+
+                <a
+                  type="button"
+                  href="/reactivity-series"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="p-1 hover:text-dark flex gap-2 items-center"
+                >
+                  <h6>{t.titles.reactivitySeries}</h6>
+                </a>
+              </section>
+            }
+            placement="bottom"
+          >
+            <button type="button" className="flex gap-2 items-center">
+              <Icon icon="tabler:table" width={27} />
+              <h6 className="max-md:hidden">{t.titles.tables}</h6>
+            </button>
+          </Popover>
           <a type="button" href="/list" target="_blank" rel="noreferrer" className="flex gap-2 items-center">
             <Icon icon="material-symbols:list" width={40} />
             <h6 className="max-md:hidden">{t.navbar.list}</h6>
@@ -91,8 +123,8 @@ export default function Navbar() {
             theme={{
               components: {
                 Switch: {
-                  colorPrimary: COLOR_SETTING[setting.color].color,
-                  colorPrimaryHover: COLOR_SETTING[setting.color].color,
+                  colorPrimary: color,
+                  colorPrimaryHover: color,
                 },
               },
             }}

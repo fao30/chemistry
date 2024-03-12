@@ -1,5 +1,5 @@
 import useSetting from "@/hooks/useSetting";
-import { COLOR_SETTING, ELEMENT_DATA_COMPLETE } from "@/lib/constants";
+import { ELEMENT_DATA_COMPLETE } from "@/lib/constants";
 import { kelvinToCelsius, kelvinToFahrenheit } from "@/lib/functions";
 import type { ElementKey } from "@/types";
 import { Navigate, useSearchParams } from "react-router-dom";
@@ -18,7 +18,7 @@ const renderUnit = (unit: string) => {
 
 export default function Compare() {
   const [searchParams, setSearchParams] = useSearchParams();
-  const { t, lang, setting } = useSetting();
+  const { t, lang, color } = useSetting();
 
   const a: ElementKey = (searchParams.get("a") as ElementKey) ?? "Au";
   const b: ElementKey = (searchParams.get("b") as ElementKey) ?? "Au";
@@ -33,10 +33,7 @@ export default function Compare() {
   const sorteredData = ELEMENT_DATA_COMPLETE.map((e) => ({ ...e, name: t.elements[e.symbol].name }));
 
   const Title = ({ title }: { title: string }) => (
-    <h6
-      className="uppercase text-light w-fit pl-4 pr-8 py-1 rounded-r-md"
-      style={{ backgroundColor: COLOR_SETTING[setting.color].color }}
-    >
+    <h6 className="uppercase text-light w-fit pl-4 pr-8 py-1 rounded-r-md" style={{ backgroundColor: color }}>
       {title}
     </h6>
   );

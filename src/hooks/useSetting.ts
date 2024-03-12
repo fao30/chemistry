@@ -1,4 +1,4 @@
-import { defaultLang as lang } from "@/lib/constants";
+import { COLOR_SETTING, defaultLang as lang } from "@/lib/constants";
 import { getEnglishDictionary } from "@/lib/locales/en";
 import { getRussianDictionary } from "@/lib/locales/ru";
 import type { ColorSetting, Lang, TableWidth } from "@/types";
@@ -9,11 +9,17 @@ type Setting = { lang: Lang; color: ColorSetting; tableWidth: TableWidth; withNa
 export default function useSetting() {
   const [setting, setSetting] = useLocalStorage<Setting>("setting", {
     lang,
-    color: "RED",
+    color: "GREEN",
     tableWidth: "100",
     withAtomicWeight: false,
     withName: true,
   });
 
-  return { setting, setSetting, lang: setting.lang, t: setting.lang === "ru" ? getRussianDictionary() : getEnglishDictionary() };
+  return {
+    setting,
+    setSetting,
+    color: COLOR_SETTING[setting.color].value,
+    lang: setting.lang,
+    t: setting.lang === "ru" ? getRussianDictionary() : getEnglishDictionary(),
+  };
 }

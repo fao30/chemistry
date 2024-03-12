@@ -1,5 +1,5 @@
 import { CRYSTAL_STRUCTURES } from "@/components/CrystalStructures";
-import type { Color, ElementCategory, Lang, Phase } from "@/types";
+import type { Color, ElementCategory, Lang, Phase, ReactionKey } from "@/types";
 
 export const defaultLang: Lang = "ru";
 
@@ -15,6 +15,19 @@ export const COLOR_SETTING = {
   PURPLE: { color: "#9333ea", value: "PURPLE" },
   PINK: { color: "#db2777", value: "PINK" },
 };
+
+export const REACTIONS_DATA = {
+  VR: { color: "#dc2626", value: "VR" },
+  MR: { color: "#ca8a04", value: "MR" },
+  SR: { color: "#ea580c", value: "SR" },
+  VSR: { color: "#16a34a", value: "VSR" },
+  SLR: { color: "#65a30d", value: "SLR" },
+  NM: { color: "#a18072", value: "NM" },
+  FC: { color: "#a18072", value: "FC" },
+  NR: { color: "#0891b2", value: "NR" },
+};
+
+export const REACTIONS_OPTIONS = Object.entries(REACTIONS_DATA).map(([_, e]) => ({ ...e }));
 
 export const COLOR_SETTING_OPTIONS = Object.entries(COLOR_SETTING).map(([_, e]) => ({ ...e }));
 
@@ -48,6 +61,81 @@ export const ELEMENT_PHASE: Record<Phase, Phase> = {
   GAS: "GAS",
   SOLID: "SOLID",
   LIQUID: "LIQUID",
+};
+
+export const ELEMENT_REACTIONS = [
+  "Ce",
+  "Fr",
+  "Rb",
+  "K",
+  "Na",
+  "Li",
+  "Ba",
+  "Ra",
+  "Sr",
+  "Ca",
+  "Mg",
+  "Al",
+  "Ti",
+  "Mn",
+  "Zn",
+  "Cr",
+  "Fe",
+  "Cd",
+  "Co",
+  "Ni",
+  "Sn",
+  "Pb",
+  "H",
+  "Sb",
+  "Bi",
+  "Cu",
+  "W",
+  "Hg",
+  "Ag",
+  "Au",
+  "Pt",
+] as const;
+
+export const REACTIONS = ["CW", "HW", "DA"] as const;
+
+export const ELEMENT_REACTIONS_DATA: Record<(typeof ELEMENT_REACTIONS)[number], Record<(typeof REACTIONS)[number], ReactionKey>> = {
+  Ce: { CW: "VR", HW: undefined, DA: undefined },
+  Fr: { CW: "VR", HW: undefined, DA: undefined },
+  Rb: { CW: "VR", HW: undefined, DA: undefined },
+  K: { CW: "VR", HW: undefined, DA: undefined },
+
+  Na: { CW: "MR", HW: "SR", DA: undefined },
+  Li: { CW: "MR", HW: "SR", DA: undefined },
+  Ba: { CW: "MR", HW: "SR", DA: undefined },
+  Ra: { CW: "MR", HW: "SR", DA: undefined },
+  Sr: { CW: "MR", HW: "SR", DA: undefined },
+  Ca: { CW: "MR", HW: "SR", DA: undefined },
+  Mg: { CW: "VSR", HW: "SR", DA: undefined },
+
+  Al: { CW: undefined, HW: "MR", DA: "MR" },
+  Ti: { CW: undefined, HW: "MR", DA: "MR" },
+  Mn: { CW: undefined, HW: "MR", DA: "MR" },
+  Zn: { CW: undefined, HW: "MR", DA: "MR" },
+  Cr: { CW: undefined, HW: "MR", DA: "MR" },
+  Fe: { CW: undefined, HW: "MR", DA: "MR" },
+  Cd: { CW: undefined, HW: "MR", DA: "MR" },
+  Co: { CW: undefined, HW: "MR", DA: "MR" },
+
+  Ni: { CW: undefined, HW: undefined, DA: "SLR" },
+  Sn: { CW: undefined, HW: undefined, DA: "SLR" },
+  Pb: { CW: undefined, HW: undefined, DA: "SLR" },
+
+  H: { CW: "NM", HW: "FC", DA: undefined },
+
+  Sb: { CW: "NR", HW: "NR", DA: "NR" },
+  Bi: { CW: "NR", HW: "NR", DA: "NR" },
+  Cu: { CW: "NR", HW: "NR", DA: "NR" },
+  W: { CW: "NR", HW: "NR", DA: "NR" },
+  Hg: { CW: "NR", HW: "NR", DA: "NR" },
+  Ag: { CW: "NR", HW: "NR", DA: "NR" },
+  Au: { CW: "NR", HW: "NR", DA: "NR" },
+  Pt: { CW: "NR", HW: "NR", DA: "NR" },
 };
 
 export const ELEMENT_DATA2 = [
