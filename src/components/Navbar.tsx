@@ -15,7 +15,7 @@ export default function Navbar() {
   return (
     <Fragment>
       <nav
-        className="sticky top-0 w-full py-2 px-6 text-light flex justify-between z-50 backdrop-blur-sm"
+        className="animate sticky top-0 w-full py-2 px-6 text-light flex justify-between z-50 backdrop-blur-2xl"
         style={{ backgroundColor: COLOR_SETTING[setting.color].color }}
       >
         <button type="button" onClick={() => navigate("/")}>

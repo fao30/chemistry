@@ -1,5 +1,5 @@
 import useSetting from "@/hooks/useSetting";
-import { CATEGORIES } from "@/lib/constants";
+import { CATEGORIES, ELEMENT_DATA2 } from "@/lib/constants";
 import { cn, formatDate, getElement } from "@/lib/functions";
 import type { Element } from "@/types";
 import { Fragment, useState } from "react";
@@ -164,6 +164,55 @@ export default function Home() {
                   );
                 })}
               </Fragment>
+            );
+          })}
+        </section>
+
+        <section className="grid grid-cols-18 gap-2.5 animate px-12">
+          {ELEMENT_DATA2.map((element) => {
+            const hovered = hoveredElement && element && hoveredElement.symbol === element.symbol;
+            const notHovered = hoveredElement && element && hoveredElement.symbol !== element.symbol;
+
+            const tElement = element && t.elements[element.symbol];
+            return (
+              <div
+                key={element.symbol}
+                className={cn({ "border-4 bg-light aspect-square relative group": element })}
+                style={{
+                  borderColor: element?.category ? CATEGORIES[element.category].color : "#B1C0C9",
+                  color: hovered && element.category ? "#FEFEFE" : element?.category ? CATEGORIES[element.category].color : "#B1C0C9",
+                  backgroundColor: hovered && element.category ? CATEGORIES[element.category].color : undefined,
+                }}
+              >
+                {element ? (
+                  <Fragment>
+                    <div
+                      onClick={() => navigate(`/element/${element.symbol}`)}
+                      onMouseEnter={() => setHoveredElement(element)}
+                      onMouseLeave={() => setHoveredElement(null)}
+                      className={cn("z-10 bg-dark/50 opacity-0 absolute size-full centered animate cursor-pointer", {
+                        "opacity-100": notHovered,
+                      })}
+                    />
+                    <p className="absolute left-1 top-0.5 text-dark font-semibold">{element.static.generalProperties.atomicNumber}</p>
+                    <h5 className="absolute centered">{element.symbol}</h5>
+                    <small
+                      className={cn("animate absolute centered-bottom text-dark font-semibold", {
+                        "opacity-0": !setting.withName,
+                      })}
+                    >
+                      {tElement?.name}
+                    </small>
+                    <small
+                      className={cn("text-xs animate absolute right-1 top-1 text-dark font-semibold", {
+                        "opacity-0": !setting.withAtomicWeight,
+                      })}
+                    >
+                      {element?.static.generalProperties.atomicWeight.toLocaleString(lang, { minimumFractionDigits: 3 })}
+                    </small>
+                  </Fragment>
+                ) : null}
+              </div>
             );
           })}
         </section>

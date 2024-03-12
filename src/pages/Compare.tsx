@@ -1,5 +1,5 @@
 import useSetting from "@/hooks/useSetting";
-import { COLOR_SETTING, ELEMENT_DATA } from "@/lib/constants";
+import { COLOR_SETTING, ELEMENT_DATA_COMPLETE } from "@/lib/constants";
 import { kelvinToCelsius, kelvinToFahrenheit } from "@/lib/functions";
 import type { ElementKey } from "@/types";
 import { Navigate, useSearchParams } from "react-router-dom";
@@ -23,14 +23,14 @@ export default function Compare() {
   const a: ElementKey = (searchParams.get("a") as ElementKey) ?? "Au";
   const b: ElementKey = (searchParams.get("b") as ElementKey) ?? "Au";
 
-  const dataA = ELEMENT_DATA.find((e) => e.symbol === a);
+  const dataA = ELEMENT_DATA_COMPLETE.find((e) => e.symbol === a);
   const tDataA = t.elements[a];
-  const dataB = ELEMENT_DATA.find((e) => e.symbol === b);
+  const dataB = ELEMENT_DATA_COMPLETE.find((e) => e.symbol === b);
   const tDataB = t.elements[b];
 
   if (!dataA || !dataB) return <Navigate to="/" />;
 
-  const sorteredData = ELEMENT_DATA.map((e) => ({ ...e, name: t.elements[e.symbol].name }));
+  const sorteredData = ELEMENT_DATA_COMPLETE.map((e) => ({ ...e, name: t.elements[e.symbol].name }));
 
   const Title = ({ title }: { title: string }) => (
     <h6
@@ -178,8 +178,8 @@ export default function Compare() {
 
         <section className="grid grid-cols-3 gap-6">
           <h6 className="title">{t.titles.category}</h6>
-          <h6>{t.elementCategories[dataA.category]}</h6>
-          <h6>{t.elementCategories[dataB.category]}</h6>
+          <h6>{dataA.category ? t.elementCategories[dataA.category] : "-"}</h6>
+          <h6>{dataB.category ? t.elementCategories[dataB.category] : "-"}</h6>
         </section>
 
         <section className="grid grid-cols-3 gap-6">

@@ -1,4 +1,4 @@
-import type { COLOR_SETTING, ELEMENT_DATA } from "@/lib/constants";
+import type { COLOR_SETTING, ELEMENT_DATA_COMPLETE } from "@/lib/constants";
 
 export type Lang = "ru" | "en";
 export type ElementCategory =
@@ -32,11 +32,11 @@ export type CrystalStructure =
   | "SIMPLE_CUBIC";
 
 // key
-export type ElementKey = (typeof ELEMENT_DATA)[number]["symbol"];
+export type ElementKey = (typeof ELEMENT_DATA_COMPLETE)[number]["symbol"];
 export type DictionaryKey = keyof Dictionary;
 
 // main
-export type Element = (typeof ELEMENT_DATA)[number];
+export type Element = (typeof ELEMENT_DATA_COMPLETE)[number];
 export type Dictionary = {
   crystalStructures: Record<CrystalStructure, string>;
   phase: Record<Phase, string>;

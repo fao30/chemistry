@@ -1027,5 +1027,75 @@ export const getEnglishDictionary = (): Dictionary => ({
       toxicity: "Oganesson is harmful due to its radioactivity",
       applications: "Oganesson is used for scientific research purposes only.",
     },
+    Ce: {
+      name: "Cerium",
+      history:
+        "Jöns Jakob Berzelius and Wilhelm Hisinger discovered the element in ceria in 1803 in Sweden.\n\nKlaproth discovered it simultaneously and independently in some tantalum samples in Germany.\n\nCarl Gustaf Mosander, who worked closely with Berzelius, prepared metallic cerium in 1825.",
+      applications:
+        "Cerium is used in carbon-arc lighting, especially in the motion picture industry.\n\nCerium oxide is an important component of glass polishing powders and phosphors used in screens and fluorescent lamps.\n\nCerium compounds are also used in the manufacture of glass, both as a component and as a decolorizer.",
+      description: "Seawater contains 1.5 parts per trillion of cerium",
+      toxicity: "Cerium is considered to be moderately toxic",
+      nameOrigin: "Cerium was named for the asteroid Ceres",
+    },
+    Pr: {
+      nameOrigin: "From the Greek word prasios, green, and didymos, twin",
+      name: "Praseodymium",
+      history:
+        "Praseodymium was first identified in 1885, in Vienna, by the Austrian chemist Carl Auer von Welsbach.\n\nIt was discovered in didymium, a substance incorrectly said by Carl Gustav Mosander to be a new element in 1841.\n\nPure metallic praseodymium was first produced in 1931.",
+      applications:
+        "Praseodymium is used as an alloying agent with magnesium to create high-strength metals that are used in aircraft engines.\n\nMisch metal, used in making cigarette lighters, contains about 5% praseodymium metal.\n\nPraseodymium is used to make specialized yellow glass goggles for glass blowers and welders.",
+      toxicity: "Praseodymium is considered to be moderately toxic",
+      description: "Praseodymium is usually stored under a light mineral oil or sealed in glass",
+    },
+    Nd: {
+      name: "Neodymium",
+      description: "Most of the world's neodymium is mined in China",
+      nameOrigin: "From the Greek word neos meaning new, and didymos, twin",
+      history:
+        "Neodymium was first identified in 1885, in Vienna, by the Austrian chemist Carl Auer von Welsbach.\n\nIt was discovered in didymium, a substance incorrectly said by Carl Gustav Mosander to be a new element in 1841.\n\nPure neodymium metal was isolated in 1925.",
+      applications:
+        "Neodymium is used to make specialized goggles for glass blowers.\n\nNeodymium magnets appear in products such as microphones, professional loudspeakers, in-ear headphones, guitar and bass guitar pick-ups and computer hard disks.\n\nGlass containing neodymium can be used as a laser material to produce coherent light.",
+      toxicity: "Neodymium is considered to be moderately toxic",
+    },
+    Pm: {
+      name: "Promethium",
+      nameOrigin: "Named after the Greek Prometheus, who, according to mythology, stole fire from heaven",
+      history:
+        "The existence of an element between neodymium and samarium was first predicted by Czech chemist Bohuslav Brauner in 1902.\n\nPromethium was first produced and characterized at Oak Ridge National Laboratory in 1945 by Jacob A. Marinsky, Lawrence E. Glendenin and Charles D. Coryell.\n\nIt was produced by the separation and analysis of the fission products of uranium fuel irradiated in a graphite reactor.",
+      applications:
+        "Promethium is also used in atomic batteries for spacecraft and guided missiles.\n\nPromethium is also used to measure the thickness of materials by evaluating the amount of radiation from a promethium source that passes through the sample.\n\nIt has possible future uses in portable X-ray sources, and as auxiliary heat or power sources for space probes and satellites.",
+      description: "Promethium is the only lanthanide that has no stable isotopes",
+      toxicity: "Promethium is harmful due to its radioactivity",
+    },
+    Sm: {
+      name: "Samarium",
+      nameOrigin: "From samarskite, a mineral named after Russian mine official, Col. Samarski",
+      history:
+        "In 1853, Jean Charles Galissard de Marignac discovered samarium when he found lines in mineral spectra.\n\nPaul Émile Lecoq de Boisbaudran isolated a samarium salt in Paris in 1879 from the mineral samarskite and identified a new element in it via sharp optical absorption lines.\n\nThe pure element was produced only in 1901 by Eugène-Anatole Demarçay.",
+      applications:
+        "Samarium's main use is in samarium-cobalt alloy magnets for headphones, small motors and pickups for some electric guitars.\n\nRadioactive samarium-153 is used to kill cancer cells in the treatment of lung cancer, prostate cancer, breast cancer and osteosarcoma.\n\nSamarium and its compounds are also used as catalyst and chemical reagent.",
+      toxicity: "Samarium is considered to be moderately toxic",
+      description: "Samarium metal can be produced by reducing the oxide with lanthanum",
+    },
+    Eu: {
+      name: "Europium",
+      nameOrigin: "Europium was named after Europe",
+      applications:
+        "Europium is used in the manufacture of fluorescent glass.\n\nIt is also used in the anti-counterfeiting phosphors in Euro banknotes.\n\nEuropium-doped plastic has been used as a laser material.\n\nEuropium isotopes are good neutron absorbers and are used in nuclear reactor control rods.",
+      history:
+        "Europium was first found by Paul Émile Lecoq de Boisbaudran in 1890.\n\nIn 1896, French chemist Eugène-Antole Demarçay identified spectroscopic lines in ‘samarium' caused by europium.\n\nHe successfully isolated europium in 1901 using repeated crystallizations of samarium magnesium nitrate.",
+      toxicity: "Europium is considered to be mildly toxic",
+      description: "Europium is the most reactive rare earth element",
+    },
+    Gd: {
+      name: "Gadolinium",
+      description: "Gadolinium has the highest neutron cross-section among any stable nuclides",
+      toxicity: "Gadolinium is considered to be moderately toxic",
+      history:
+        "Gadolinium was first detected spectroscopically in 1880 by the Swiss chemist Jean Charles Galissard de Marignac who separated its oxide.\n\nHe observed spectroscopic lines due to gadolinium in samples of gadolinite and in the separate mineral cerite.\n\nThe metal was isolated by Paul Emile Lecoq de Boisbaudran in 1886.",
+      applications:
+        "Gadolinium is used to make gadolinium yttrium garnets which have microwave applications.\n\nIt is also used in intravenous radiocontrast agents in magnetic resonance imaging (MRI).\n\nGadolinium compounds are used for making green phosphors for color TV tubes, and in manufacturing compact discs.",
+      nameOrigin: "From gadolinite, a mineral named for Gadolin, a Finnish chemist",
+    },
   },
 });

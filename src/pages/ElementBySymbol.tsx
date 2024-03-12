@@ -1,7 +1,7 @@
 import Box from "@/components/Box";
 import { CRYSTAL_STRUCTURES } from "@/components/CrystalStructures";
 import useSetting from "@/hooks/useSetting";
-import { ELEMENT_DATA } from "@/lib/constants";
+import { ELEMENT_DATA_COMPLETE } from "@/lib/constants";
 import { kelvinToCelsius, kelvinToFahrenheit } from "@/lib/functions";
 import { Navigate, useParams } from "react-router-dom";
 
@@ -19,7 +19,7 @@ const renderUnit = (unit: string) => {
 
 export default function ElementBySymbol() {
   const { symbol } = useParams();
-  const data = ELEMENT_DATA.find((e) => e.symbol === symbol);
+  const data = ELEMENT_DATA_COMPLETE.find((e) => e.symbol === symbol);
   if (!data) return <Navigate to="/" />;
   const { t, lang } = useSetting();
   const tData = t.elements[data.symbol];

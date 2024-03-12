@@ -11,7 +11,7 @@ export default function useSetting() {
     lang,
     color: "RED",
     tableWidth: "100",
-    withAtomicWeight: true,
+    withAtomicWeight: false,
     withName: true,
   });
 
