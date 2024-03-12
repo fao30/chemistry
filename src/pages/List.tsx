@@ -1,5 +1,5 @@
 import useSetting from "@/hooks/useSetting";
-import { COLOR_SETTING, ELEMENT_DATA } from "@/lib/constants";
+import { COLOR_SETTING, ELEMENT_DATA_COMPLETE } from "@/lib/constants";
 import { cn } from "@/lib/functions";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { useEffect, useState } from "react";
@@ -14,7 +14,7 @@ export default function List() {
     (searchParams.get("sortBy") as "atomicNumber" | "name" | "symbol") ?? "atomicNumber";
   const sortOrder: "asc" | "desc" = (searchParams.get("sortOrder") as "asc" | "desc") ?? "asc";
 
-  const defaultData = ELEMENT_DATA.map((e) => ({
+  const defaultData = ELEMENT_DATA_COMPLETE.map((e) => ({
     ...e,
     name: t.elements[e.symbol].name,
     symbol: e.symbol,
