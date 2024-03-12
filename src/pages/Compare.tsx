@@ -47,7 +47,7 @@ export default function Compare() {
       const [base, exponent] = abundance.split("_");
       renderedStructure += `${base.replace(".", lang === "ru" ? "," : ".")}<sup>${exponent}</sup>%`;
     } else {
-      renderedStructure += abundance?.replace(".", lang === "ru" ? "," : ".");
+      renderedStructure += `${abundance?.replace(".", lang === "ru" ? "," : ".")}%`;
     }
     return <span dangerouslySetInnerHTML={{ __html: renderedStructure }} />;
   };
