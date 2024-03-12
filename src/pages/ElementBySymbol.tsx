@@ -160,8 +160,8 @@ export default function ElementBySymbol() {
                 className="relative"
                 style={{ height: data.static.electrons.electronsPerShell.length >= 6 ? "25rem" : "20rem" }}
               >
-                <div className="absolute flex items-center justify-center centered size-10 bg-dark text-light rounded-full">
-                  <p>{data.symbol}</p>
+                <div className="absolute flex items-center justify-center centered size-12 bg-dark text-light rounded-full">
+                  <h6>{data.symbol}</h6>
                 </div>
 
                 {data.static.electrons.electronsPerShell?.map((e, shellIndex) => {

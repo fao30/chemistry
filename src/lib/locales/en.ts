@@ -1218,5 +1218,91 @@ export const getEnglishDictionary = (): Dictionary => ({
       description: "The atomic bomb dropped on Nagasaki, Japan in 1945 had a plutonium core",
       nameOrigin: "Named after the planet Pluto",
     },
+    Am: {
+      nameOrigin: "Named after America",
+      name: "Americium",
+      description: "Americium often enters landfills from discarded smoke detectors",
+      history:
+        "Americium-241 was first identified in 1944 by Glenn T. Seaborg, Ralph A. James, Leon O. Morgan and Albert Ghiorso at the metallurgical laboratory at the University of Chicago.\n\nIt was produced by irradiating plutonium with neutrons during the Manhattan Project.\n\nAmericium was first isolated as a pure compound by Burris Cunningham in 1945, at the University of Chicago.",
+      applications:
+        "Americium is used in commercial ionization chamber smoke detectors, as well as in neutron sources and industrial gauges.\n\nAmericium-241 has been used as a portable source of both gamma rays and alpha particles for a number of medical and industrial uses.\n\nIt is also used as a target material in nuclear research to make even heavier elements.",
+      toxicity: "Americium is harmful due to its radioactivity",
+    },
+    Cm: {
+      name: "Curium",
+      nameOrigin: "Curium is named after Madame Curie and her husband Pierre Curie",
+      history:
+        "Curium was discovered by Glenn T. Seaborg, Ralph A. James and Albert Ghiorso in 1944 at the University of California, Berkeley.\n\nIt was produced by bombarding plutonium with alpha particles during the Manhattan Project.\n\nCurium metal was produced only in 1951 by reduction of curium fluoride with barium.",
+      description: "Curium accumulates in the bones, lungs and liver, where it promotes cancer",
+      toxicity: "Curium is harmful due to its radioactivity",
+      applications:
+        "Curium is mainly used for scientific research purposes.\n\nCurium is a common starting material for the production of higher transuranic elements and transactinides.\n\nThe most practical application of 244-Cm is as α-particle source in the alpha particle X-ray spectrometers (APXS).",
+    },
+    Bk: {
+      name: "Berkelium",
+      nameOrigin: "Named after Berkeley, California, the city of its discovery",
+      history:
+        "Berkelium was discovered by Glenn T. Seaborg, Albert Ghiorso and Stanley G. Thompson in 1949 at the University of California, Berkeley.\n\nIt was produced by the bombardment of americium with alpha particles.\n\nBerkelium was isolated in greater quantities for the first time by Burris Cunningham and Stanley Thompson in 1958.",
+      applications:
+        "Berkelium is mainly used for scientific research purposes.\n\nBerkelium-249 is a common target nuclide to prepare still heavier transuranic elements and transactinides, such as lawrencium, rutherfordium and bohrium.\n\nIt is also useful as a source of the isotope californium-249.",
+      description: "Just over one gram of berkelium has been produced in the United States since 1967",
+      toxicity: "Berkelium is harmful due to its radioactivity",
+    },
+    Cf: {
+      name: "Californium",
+      applications:
+        "Californium is used as a portable neutron source for discovery of metals such as gold or silver by on-the-spot activation analysis.\n\nNeutrons from californium are employed as a treatment of certain cervical and brain cancers where other radiation therapy is ineffective.\n\nNeutron moisture gauges use californium-252 to find water and petroleum layers in oil wells.",
+      history:
+        "Californium was discovered by Stanley G. Thompson, Kenneth Street, Jr., Albert Ghiorso and Glenn T. Seaborg in 1950 at the University of California, Berkeley.\n\nIt was produced by the bombardment of curium with alpha particles.\n\nCalifornium was isolated in macro quantities for the first time by Burris Cunningham and Stanley Thompson in 1958.",
+      description: "Californium is produced in nuclear reactors and particle accelerators",
+      toxicity: "Californium is harmful due to its radioactivity",
+      nameOrigin: "Named after California and the University of California",
+    },
+    Es: {
+      name: "Einsteinium",
+      history:
+        "Einsteinium was discovered as a component of the debris of the first hydrogen bomb explosion in 1952.\n\nIt was identified by Albert Ghiorso and co-workers at the University of California, Berkeley in collaboration with the Argonne and Los Alamos National Laboratories, in the fallout from the Ivy Mike nuclear test.\n\nThe new element was produced by the nuclear explosion in miniscule amounts by the addition of 15 neutrons to uranium-238.",
+      applications:
+        "Einsteinium is mainly used for scientific research purposes.\n\nThe rare isotope einsteinium-254 is favored for production of ultraheavy elements.\n\nEinsteinium-254 was used as the calibration marker in the chemical analysis spectrometer of the Surveyor 5 lunar probe.",
+      toxicity: "Einsteinium is harmful due to its radioactivity",
+      description: "Einsteinium is the first divalent metal in the actinide series",
+      nameOrigin: "Named after Albert Einstein",
+    },
+    Fm: {
+      name: "Fermium",
+      history:
+        "Fermium was discovered as a component of the debris of the first hydrogen bomb explosion in 1952.\n\nIt was identified by Albert Ghiorso and co-workers at the University of California, Berkeley in collaboration with the Argonne and Los Alamos National Laboratories, in the fallout from the Ivy Mike nuclear test.\n\nThe new element was produced by the nuclear fission of 17 neutrons with uranium-238.",
+      nameOrigin: "Named after Nobel laureate Enrico Fermi, one of the pioneers of nuclear physics",
+      applications: "Fermium is used for scientific research purposes only.",
+      description: "Sixteen isotopes of fermium are known to exist",
+      toxicity: "Fermium is harmful due to its radioactivity",
+    },
+    Md: {
+      name: "Mendelevium",
+      nameOrigin: "Named after Dmitri Mendeleev, who created the Periodic Table",
+      history:
+        "Mendelevium was discovered by Albert Ghiorso, Glenn T. Seaborg, Gregory R. Choppin, Bernard G. Harvey and Stanley G. Thompson in 1955 at the University of California, Berkeley.\n\nIt was produced by the bombardment of einsteinium with helium.\n\nMendelevium was identified by chemical analysis in an ion exchange experiment.",
+      applications: "Mendelevium is used for scientific research purposes only.",
+      toxicity: "Mendelevium is harmful due to its radioactivity",
+      description: "Mendelevium was the first element to be produced one atom at a time",
+    },
+    No: {
+      name: "Nobelium",
+      applications: "Nobelium is used for scientific research purposes only.",
+      nameOrigin: "Named after of Alfred Nobel, Swedish chemist who discovered dynamite and founder of the Nobel Prizes",
+      history:
+        "Nobelium was discovered by Albert Ghiorso, Glenn T. Seaborg, John R. Walton and Torbjørn Sikkeland in 1958 at the University of California, Berkeley.\n\nIt was produced by the bombardment of curium with carbon atoms.\n\nIt was correctly identified in 1966 by scientists at the Flerov Laboratory of Nuclear Reactions in Dubna, Soviet Union.",
+      description: "Nobelium is a divalent ion in aqueous solution",
+      toxicity: "Nobelium is harmful due to its radioactivity",
+    },
+    Lr: {
+      name: "Lawrencium",
+      nameOrigin: "Named after Ernest O. Lawrence, inventor of the cyclotron",
+      history:
+        "Lawrencium was discovered by Albert Ghiorso, Torbjørn Sikkeland, Almon Larsh and Robert M. Latimer in 1961 at the University of California, Berkeley.\n\nIt was produced by the bombardment of californium with boron atoms.\n\nLawrencium was the last member of the actinide series to be discovered.",
+      description: "Lawrencium is a trivalent ion in aqueous solution",
+      toxicity: "Lawrencium is harmful due to its radioactivity",
+      applications: "Lawrencium is used for scientific research purposes only.",
+    },
   },
 });
