@@ -3,14 +3,16 @@ import { COLOR_SETTING, ELEMENT_DATA } from "@/lib/constants";
 import { cn } from "@/lib/functions";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 
 export default function List() {
   const { setting, t } = useSetting();
   const navigate = useNavigate();
-  const [search, setSearch] = useState("");
-  const [sortBy, setSortBy] = useState<"atomicNumber" | "name" | "symbol">("atomicNumber"); // Default sorting by atomic number
-  const [sortOrder, setSortOrder] = useState<"asc" | "desc">("asc");
+  const [searchParams, setSearchParams] = useSearchParams();
+  const search = (searchParams.get("q") as string) ?? "";
+  const sortBy: "atomicNumber" | "name" | "symbol" =
+    (searchParams.get("sortBy") as "atomicNumber" | "name" | "symbol") ?? "atomicNumber";
+  const sortOrder: "asc" | "desc" = (searchParams.get("sortOrder") as "asc" | "desc") ?? "asc";
 
   const defaultData = ELEMENT_DATA.map((e) => ({
     ...e,
@@ -23,10 +25,12 @@ export default function List() {
 
   const handleSort = (sort: "atomicNumber" | "name" | "symbol") => {
     if (sort === sortBy) {
-      setSortOrder(sortOrder === "asc" ? "desc" : "asc");
+      searchParams.set("sortOrder", sortOrder === "asc" ? "desc" : "asc");
+      setSearchParams(searchParams);
     } else {
-      setSortBy(sort);
-      setSortOrder("asc");
+      searchParams.set("sortBy", sort);
+      searchParams.set("sortOrder", "asc");
+      setSearchParams(searchParams);
     }
   };
 
@@ -65,7 +69,10 @@ export default function List() {
           className="h-12 bg-black text-light border-2 border-gray-600 px-6 outline-none"
           placeholder="Search"
           value={search}
-          onChange={(e) => setSearch(e.target.value)}
+          onChange={(e) => {
+            searchParams.set("q", e.target.value);
+            setSearchParams(searchParams);
+          }}
         />
         <button
           type="button"

@@ -2,8 +2,7 @@ import useSetting from "@/hooks/useSetting";
 import { COLOR_SETTING, ELEMENT_DATA } from "@/lib/constants";
 import { kelvinToCelsius, kelvinToFahrenheit } from "@/lib/functions";
 import type { ElementKey } from "@/types";
-import { useState } from "react";
-import { Navigate } from "react-router-dom";
+import { Navigate, useSearchParams } from "react-router-dom";
 
 const renderUnit = (unit: string) => {
   let renderedStructure = "";
@@ -18,18 +17,16 @@ const renderUnit = (unit: string) => {
 };
 
 export default function Compare() {
+  const [searchParams, setSearchParams] = useSearchParams();
   const { t, lang, setting } = useSetting();
-  const [a, setA] = useState<ElementKey>("Au");
-  const [b, setB] = useState<ElementKey>("Au");
 
-  // biome-ignore lint/style/noNonNullAssertion: <explanation>
-  const dataA = ELEMENT_DATA.find((e) => e.symbol === a)!;
-  // biome-ignore lint/style/noNonNullAssertion: <explanation>
-  const tDataA = t.elements[a]!;
-  // biome-ignore lint/style/noNonNullAssertion: <explanation>
-  const dataB = ELEMENT_DATA.find((e) => e.symbol === b)!;
-  // biome-ignore lint/style/noNonNullAssertion: <explanation>
-  const tDataB = t.elements[b]!;
+  const a: ElementKey = (searchParams.get("a") as ElementKey) ?? "Au";
+  const b: ElementKey = (searchParams.get("b") as ElementKey) ?? "Au";
+
+  const dataA = ELEMENT_DATA.find((e) => e.symbol === a);
+  const tDataA = t.elements[a];
+  const dataB = ELEMENT_DATA.find((e) => e.symbol === b);
+  const tDataB = t.elements[b];
 
   if (!dataA || !dataB) return <Navigate to="/" />;
 
@@ -77,7 +74,10 @@ export default function Compare() {
         <select
           className="outline-none h-10 bg-gray-600 text-light px-4"
           value={a}
-          onChange={(e) => setA(e.target.value as ElementKey)}
+          onChange={(e) => {
+            searchParams.set("a", e.target.value);
+            setSearchParams(searchParams);
+          }}
         >
           {sorteredData
             .sort((a, b) => {
@@ -94,7 +94,10 @@ export default function Compare() {
         <select
           className="outline-none h-10 bg-gray-600 text-light px-4"
           value={b}
-          onChange={(e) => setB(e.target.value as ElementKey)}
+          onChange={(e) => {
+            searchParams.set("b", e.target.value);
+            setSearchParams(searchParams);
+          }}
         >
           {sorteredData
             .sort((a, b) => {
