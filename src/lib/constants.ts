@@ -722,7 +722,7 @@ export const ELEMENT_DATA2 = [
       abundance: { earth: "0.000056", universe: "1×10_-8" },
       unGrouped: { casNumber: "7440-64-4", pubChem: 23992, protons: 71, electrons: 71, neutrons: 104 },
       generalProperties: {
-        atomicNumber: 70,
+        atomicNumber: 71,
         atomicWeight: 174.9668,
         massNumber: 175,
         radioActive: false,
