@@ -35,6 +35,7 @@ export const getEnglishDictionary = (): Dictionary => ({
   },
 
   crystalStructures: {
+    SIMPLE_ORTHORHOMBIC: "Simple Orthorhombic",
     SIMPLE_HEXAGONAL: "Simple Hexagonal",
     FACE_CENTERED_CUBIC: "Face Centered Cubic",
     BODY_CENTERED_CUBIC: "Body Centered Cubic",
@@ -1176,6 +1177,46 @@ export const getEnglishDictionary = (): Dictionary => ({
         "Thorium is used to coat tungsten filaments in light bulbs.\n\nIt is also used in its oxide form in gas tungsten arc welding to increase the high-temperature strength of tungsten electrodes and improve arc stability.\n\nThorium-magnesium alloys are used in the aerospace industry for aircraft engines.",
       description: "Thorium fuel research is continuing in several countries including the USA and India",
       toxicity: "Thorium is highly radioactive",
+    },
+    Pa: {
+      name: "Protactinium",
+      description: "Protactinium is one of the rarest and most expensive naturally occurring elements",
+      nameOrigin: "From the Greek protos meaning first",
+      history:
+        "In 1900, William Crookes isolated protactinium as an intensely radioactive material from uranium\n\nProtactinium was first identified in 1913 by Kasimir Fajans and Oswald Helmuth Göhring in Germany.\n\nA more stable isotope of protactinium was discovered in 1917 by Otto Hahn and Lise Meitner at the Kaiser Wilhelm Institute in Berlin.",
+      applications:
+        "Owing to its scarcity, high radioactivity and high toxicity, there are currently no uses for protactinium outside of scientific research.\n\nWith the advent of highly sensitive mass spectrometers, an application of 231-Pa as a tracer in geology and paleoceanography has become possible.\n\nProtactinium-231 combined with the thorium-230 can be used to date marine sediments.",
+      toxicity: "Protactinium is toxic and highly radioactive",
+    },
+    U: {
+      name: "Uranium",
+      nameOrigin: "Named after the planet Uranus",
+      history:
+        "Uranium was discovered in 1789 by the German chemist Martin Heinrich Klaproth.\n\nIn 1841, Eugène-Melchior Péligot isolated the first sample of uranium metal by heating uranium tetrachloride with potassium.\n\nAntoine Henri Becquerel discovered radioactivity by using uranium in 1896.",
+      applications:
+        "Uranium is used as fuel for nuclear power plants.\n\nUranium is used as a colorant in uranium glass, producing orange-red to lemon yellow hues.\n\nIt was also used for tinting and shading in early photography.\n\nThe major application of uranium in the military sector is in high-density penetrators.",
+      toxicity: "Uranium is toxic and highly radioactive",
+      description: "Uranium-235 was the first isotope that was found to be fissile",
+    },
+    Np: {
+      name: "Neptunium",
+      nameOrigin: "Named after the planet Neptune",
+      history:
+        "Neptunium was the first synthetic transuranium element of the actinide series to be discovered.\n\nNeptunium was first produced by Edwin McMillan and Philip H. Abelson in 1940 at Berkeley Radiation Laboratory of the University of California.\n\nThe team produced the neptunium isotope 239-Np by bombarding uranium with slow moving neutrons.",
+      applications:
+        "Neptunium is used mainly for research purposes.\n\nWhen bombarded with neutrons 237-Np is used to produce 238-Pu which is used for spacecraft generators and terrestrial navigation beacons.\n\n237-Np is used in devices for detecting high-energy neutrons.",
+      toxicity: "Neptunium is harmful due to its radioactivity",
+      description: "Neptunium is obtained as a by-product from nuclear reactors",
+    },
+    Pu: {
+      name: "Plutonium",
+      history:
+        "Plutonium was first produced in 1940 by Glenn T. Seaborg, Edwin M. McMillan, Joseph W. Kennedy and Arthur Wahl.\n\nPlutonium-238 was produced by deuteron bombardment of uranium-238 in the 60-inch cyclotron at the University of California, Berkeley.\n\nThe Berkeley team made neptunium-238 which decayed to plutonium-238.",
+      applications:
+        "The isotope plutonium-239 is a key fissile component in nuclear weapons, due to its ease of fission and availability.\n\nPlutonium-238 has also been used successfully to power artificial heart pacemakers, to reduce the risk of repeated surgery.\n\nPlutonium-238 mixed with beryllium is used to generate neutrons for research purposes.",
+      toxicity: "Plutonium is harmful due to its radioactivity",
+      description: "The atomic bomb dropped on Nagasaki, Japan in 1945 had a plutonium core",
+      nameOrigin: "Named after the planet Pluto",
     },
   },
 });

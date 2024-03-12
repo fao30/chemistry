@@ -285,7 +285,7 @@ export default function Home() {
               );
             })}
           </section>
-          <section className="px-12 grid grid-cols-3 gap-4 mt-6 xl:w-[60%]">
+          <section className="px-12 grid grid-cols-3 gap-4 mt-6 w-[50%] xl:w-[70%]">
             {CATEGORIES_OPTIONS.map((e) => {
               const notHovered = hoveredCategory && hoveredCategory !== e.value;
               return (
@@ -295,14 +295,14 @@ export default function Home() {
                   key={e.value}
                   className="flex gap-3 items-center"
                 >
-                  <div className="size-16 relative" style={{ backgroundColor: e.color }}>
+                  <div className="size-12 aspect-square relative" style={{ backgroundColor: e.color }}>
                     <div
                       className={cn("z-10 bg-dark/50 opacity-0 absolute size-full centered animate cursor-pointer", {
                         "opacity-100": notHovered,
                       })}
                     />
                   </div>
-                  <h6>{t.elementCategories[e.value]}</h6>
+                  <h6 className="leading-5">{t.elementCategories[e.value]}</h6>
                 </section>
               );
             })}
