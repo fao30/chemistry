@@ -126,7 +126,7 @@ export default function ElementBySymbol() {
           </section>
         </Box>
         <Box classNameDiv="flex flex-col gap-4">
-          <h6 className="whitespace-pre-line leading-5">{tData.nameOrigin}</h6>
+          <h6 className="whitespace-pre-line leading-6">{tData.nameOrigin}</h6>
         </Box>
         <Box>
           <section className="grid grid-cols-2">
@@ -136,10 +136,10 @@ export default function ElementBySymbol() {
           {data.static.crystalStructure ? CRYSTAL_STRUCTURES[data.static.crystalStructure].component : null}
         </Box>
         <Box title={t.titles.history}>
-          <h6 className="whitespace-pre-line leading-5">{tData.history}</h6>
+          <h6 className="whitespace-pre-line leading-6">{tData.history}</h6>
         </Box>
         <Box>
-          <h6 className="whitespace-pre-line leading-5">{tData.description}</h6>
+          <h6 className="whitespace-pre-line leading-6">{tData.description}</h6>
         </Box>
       </section>
 
@@ -150,7 +150,7 @@ export default function ElementBySymbol() {
             <section className="flex flex-col">
               <section className="grid grid-cols-2">
                 <h6 className="title">{t.titles.electronsPerShell}</h6>
-                <h6>{data.static.electrons.electronsPerShell?.join(" ")}</h6>
+                <h6>{data.static.electrons.electronsPerShell?.join(", ")}</h6>
               </section>
               <section className="grid grid-cols-2">
                 <h6 className="title">{t.titles.electronConfiguration}</h6>
@@ -296,7 +296,7 @@ export default function ElementBySymbol() {
           <img src={`/assets/elements/${data.symbol}.jpg`} alt={tData.name} className="size-full" />
         </Box>
         <Box>
-          <h6 className="leading-5 whitespace-pre-line">{tData.toxicity}</h6>
+          <h6 className="leading-6 whitespace-pre-line">{tData.toxicity}</h6>
         </Box>
       </section>
       <section className="flex flex-col gap-6">
@@ -359,7 +359,7 @@ export default function ElementBySymbol() {
           </section>
         </Box>
         <Box title={t.titles.applications}>
-          <h6 className="whitespace-pre-line leading-5">{tData.applications ?? "-"}</h6>
+          <h6 className="whitespace-pre-line leading-6">{tData.applications ?? "-"}</h6>
         </Box>
         <Box title={t.titles.isotopes}>
           <section className="flex flex-col gap-2">

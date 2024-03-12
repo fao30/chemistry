@@ -13,7 +13,7 @@ export default function Box({ children, title, classNameDiv }: Props) {
     <section className="bg-light border-t-4 rounded-md shadow-lg" style={{ borderColor: COLOR_SETTING[setting.color].color }}>
       {title ? (
         <h6
-          className="py-1 pl-3 pr-6 rounded-r-lg mt-2 text-light w-fit font-semibold"
+          className="py-1 pl-3 pr-6 rounded-r-lg mt-2 text-light w-fit font-semibold uppercase"
           style={{ backgroundColor: COLOR_SETTING[setting.color].color }}
         >
           {title}

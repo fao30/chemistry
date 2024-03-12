@@ -406,6 +406,415 @@ export const ELEMENT_DATA2 = [
       },
     },
   },
+  {
+    symbol: "Tb",
+    category: CATEGORIES.LANTHANIDES.value,
+    group: null,
+    period: 6,
+    block: "f",
+    static: {
+      abundance: { earth: "0.000093", universe: "5×10_-8" },
+      unGrouped: { casNumber: "7440-27-9", pubChem: 23958, protons: 65, electrons: 65, neutrons: 94 },
+      generalProperties: {
+        atomicNumber: 65,
+        atomicWeight: 158.92535,
+        massNumber: 159,
+        radioActive: false,
+        color: ELEMENT_COLORS.SILVER,
+      },
+      crystalStructure: CRYSTAL_STRUCTURES.SIMPLE_HEXAGONAL.value,
+      electrons: {
+        electronsPerShell: [2, 8, 18, 27, 8, 2],
+        electronConfiguration: ["Xe", "4f-9", "6s-2"],
+      },
+
+      physhicalProperties: {
+        phase: ELEMENT_PHASE.SOLID,
+        density: 8.229,
+        meltingPoint: 1629.15,
+        boilingPoint: 3503.15,
+        heatOfFusion: 10.8,
+        heatOfVaporization: 295,
+        specificHeatCapacity: 0.182,
+      },
+      atomicProperties: {
+        atomicRadius: 177,
+        covalentRadius: 194,
+        electronegativity: 1.2,
+        ionizationPotential: 5.8638,
+        atomicVolume: 19.2,
+        thermalConductivity: 0.111,
+        oxidationStates: [1, 3, 4],
+      },
+
+      isotopes: {
+        stable: [159],
+        unstable: [
+          136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 160, 161,
+          162, 163, 164, 165, 166, 167, 168, 169, 170, 171,
+        ],
+      },
+    },
+  },
+
+  {
+    symbol: "Dy",
+    category: CATEGORIES.LANTHANIDES.value,
+    group: null,
+    period: 6,
+    block: "f",
+    static: {
+      abundance: { earth: "0.00062", universe: "2×10_-7" },
+      unGrouped: { casNumber: "7429-91-6", pubChem: 23912, protons: 66, electrons: 66, neutrons: 97 },
+      generalProperties: {
+        atomicNumber: 66,
+        atomicWeight: 162.5,
+        massNumber: 163,
+        radioActive: false,
+        color: ELEMENT_COLORS.SILVER,
+      },
+      crystalStructure: CRYSTAL_STRUCTURES.SIMPLE_HEXAGONAL.value,
+      electrons: {
+        electronsPerShell: [2, 8, 18, 28, 8, 2],
+        electronConfiguration: ["Xe", "4f-10", "6s-2"],
+      },
+
+      physhicalProperties: {
+        phase: ELEMENT_PHASE.SOLID,
+        density: 8.55,
+        meltingPoint: 1680.15,
+        boilingPoint: 2840.15,
+        heatOfFusion: 11.1,
+        heatOfVaporization: 280,
+        specificHeatCapacity: 0.17,
+      },
+      atomicProperties: {
+        atomicRadius: 178,
+        covalentRadius: 192,
+        electronegativity: 1.22,
+        ionizationPotential: 5.9389,
+        atomicVolume: 19.0,
+        thermalConductivity: 0.107,
+        oxidationStates: [2, 3],
+      },
+
+      isotopes: {
+        stable: [156, 158, 160, 161, 162, 163, 164],
+        unstable: [
+          138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 157, 159, 165, 166, 167, 168, 169,
+          170, 171, 172, 173,
+        ],
+      },
+    },
+  },
+
+  {
+    symbol: "Ho",
+    category: CATEGORIES.LANTHANIDES.value,
+    group: null,
+    period: 6,
+    block: "f",
+    static: {
+      abundance: { earth: "0.00012", universe: "5×10_-8" },
+      unGrouped: { casNumber: "7429-91-6", pubChem: 23912, protons: 67, electrons: 67, neutrons: 98 },
+      generalProperties: {
+        atomicNumber: 67,
+        atomicWeight: 164.93032,
+        massNumber: 165,
+        radioActive: false,
+        color: ELEMENT_COLORS.SILVER,
+      },
+      crystalStructure: CRYSTAL_STRUCTURES.SIMPLE_HEXAGONAL.value,
+      electrons: {
+        electronsPerShell: [2, 8, 18, 29, 8, 2],
+        electronConfiguration: ["Xe", "4f-11", "6s-2"],
+      },
+
+      physhicalProperties: {
+        phase: ELEMENT_PHASE.SOLID,
+        density: 8.795,
+        meltingPoint: 1734.15,
+        boilingPoint: 2993.15,
+        heatOfFusion: 17,
+        heatOfVaporization: 265,
+        specificHeatCapacity: 0.165,
+      },
+      atomicProperties: {
+        atomicRadius: 176,
+        covalentRadius: 192,
+        electronegativity: 1.23,
+        ionizationPotential: 6.0215,
+        atomicVolume: 18.7,
+        thermalConductivity: 0.162,
+        oxidationStates: [3],
+      },
+
+      isotopes: {
+        stable: [165],
+        unstable: [
+          140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164,
+          166, 167, 168, 169, 170, 171, 172, 173, 174, 175,
+        ],
+      },
+    },
+  },
+
+  {
+    symbol: "Er",
+    category: CATEGORIES.LANTHANIDES.value,
+    group: null,
+    period: 6,
+    block: "f",
+    static: {
+      abundance: { earth: "0.0003", universe: "2×10_-7" },
+      unGrouped: { casNumber: "7440-52-0", pubChem: 23980, protons: 68, electrons: 68, neutrons: 99 },
+      generalProperties: {
+        atomicNumber: 68,
+        atomicWeight: 167.259,
+        massNumber: 167,
+        radioActive: false,
+        color: ELEMENT_COLORS.SILVER,
+      },
+      crystalStructure: CRYSTAL_STRUCTURES.SIMPLE_HEXAGONAL.value,
+      electrons: {
+        electronsPerShell: [2, 8, 18, 30, 8, 2],
+        electronConfiguration: ["Xe", "4f-12", "6s-2"],
+      },
+
+      physhicalProperties: {
+        phase: ELEMENT_PHASE.SOLID,
+        density: 9.066,
+        meltingPoint: 1802.15,
+        boilingPoint: 3141.15,
+        heatOfFusion: 19.9,
+        heatOfVaporization: 285,
+        specificHeatCapacity: 0.168,
+      },
+      atomicProperties: {
+        atomicRadius: 176,
+        covalentRadius: 189,
+        electronegativity: 1.24,
+        ionizationPotential: 6.1077,
+        atomicVolume: 18.4,
+        thermalConductivity: 0.143,
+        oxidationStates: [3],
+      },
+
+      isotopes: {
+        stable: [162, 164, 166, 167, 168, 170],
+        unstable: [
+          143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 163, 165, 169, 171, 172, 173,
+          174, 175, 176, 177,
+        ],
+      },
+    },
+  },
+
+  {
+    symbol: "Tm",
+    category: CATEGORIES.LANTHANIDES.value,
+    group: null,
+    period: 6,
+    block: "f",
+    static: {
+      abundance: { earth: "0.000045", universe: "1×10_-8" },
+      unGrouped: { casNumber: "7440-30-4", pubChem: 23961, protons: 69, electrons: 69, neutrons: 100 },
+      generalProperties: {
+        atomicNumber: 69,
+        atomicWeight: 168.93421,
+        massNumber: 169,
+        radioActive: false,
+        color: ELEMENT_COLORS.SILVER,
+      },
+      crystalStructure: CRYSTAL_STRUCTURES.SIMPLE_HEXAGONAL.value,
+      electrons: {
+        electronsPerShell: [2, 8, 18, 31, 8, 2],
+        electronConfiguration: ["Xe", "4f-13", "6s-2"],
+      },
+
+      physhicalProperties: {
+        phase: ELEMENT_PHASE.SOLID,
+        density: 9.321,
+        meltingPoint: 1818.15,
+        boilingPoint: 2223.15,
+        heatOfFusion: 16.8,
+        heatOfVaporization: 250,
+        specificHeatCapacity: 0.16,
+      },
+      atomicProperties: {
+        atomicRadius: 176,
+        covalentRadius: 190,
+        electronegativity: 1.25,
+        ionizationPotential: 6.1843,
+        atomicVolume: 18.1,
+        thermalConductivity: 0.168,
+        oxidationStates: [2, 3],
+      },
+
+      isotopes: {
+        stable: [169],
+        unstable: [
+          145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 170,
+          171, 172, 173, 174, 175, 176, 177, 178, 179,
+        ],
+      },
+    },
+  },
+
+  {
+    symbol: "Yb",
+    category: CATEGORIES.LANTHANIDES.value,
+    group: null,
+    period: 6,
+    block: "f",
+    static: {
+      abundance: { earth: "0.00028", universe: "2×10_-7" },
+      unGrouped: { casNumber: "7440-64-4", pubChem: 23992, protons: 70, electrons: 70, neutrons: 103 },
+      generalProperties: {
+        atomicNumber: 70,
+        atomicWeight: 173.054,
+        massNumber: 173,
+        radioActive: false,
+        color: ELEMENT_COLORS.SILVER,
+      },
+      crystalStructure: CRYSTAL_STRUCTURES.FACE_CENTERED_CUBIC.value,
+      electrons: {
+        electronsPerShell: [2, 8, 18, 32, 8, 2],
+        electronConfiguration: ["Xe", "4f-14", "6s-2"],
+      },
+
+      physhicalProperties: {
+        phase: ELEMENT_PHASE.SOLID,
+        density: 6.965,
+        meltingPoint: 1097.15,
+        boilingPoint: 1469.15,
+        heatOfFusion: 7.7,
+        heatOfVaporization: 160,
+        specificHeatCapacity: 0.155,
+      },
+      atomicProperties: {
+        atomicRadius: 176,
+        covalentRadius: 187,
+        electronegativity: 1.1,
+        ionizationPotential: 6.2542,
+        atomicVolume: 24.79,
+        thermalConductivity: 0.349,
+        oxidationStates: [2, 3],
+      },
+
+      isotopes: {
+        stable: [168, 170, 171, 172, 173, 174, 176],
+        unstable: [
+          148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 169, 175, 177, 178, 179,
+          180, 181,
+        ],
+      },
+    },
+  },
+
+  {
+    symbol: "Lu",
+    category: CATEGORIES.LANTHANIDES.value,
+    group: null,
+    period: 6,
+    block: "f",
+    static: {
+      abundance: { earth: "0.000056", universe: "1×10_-8" },
+      unGrouped: { casNumber: "7440-64-4", pubChem: 23992, protons: 71, electrons: 71, neutrons: 104 },
+      generalProperties: {
+        atomicNumber: 70,
+        atomicWeight: 174.9668,
+        massNumber: 175,
+        radioActive: false,
+        color: ELEMENT_COLORS.SILVER,
+      },
+      crystalStructure: CRYSTAL_STRUCTURES.FACE_CENTERED_CUBIC.value,
+      electrons: {
+        electronsPerShell: [2, 8, 18, 32, 9, 2],
+        electronConfiguration: ["Xe", "4f-14", "5d-1", "6s-2"],
+      },
+
+      physhicalProperties: {
+        phase: ELEMENT_PHASE.SOLID,
+        density: 9.84,
+        meltingPoint: 1925.15,
+        boilingPoint: 3675.15,
+        heatOfFusion: 22,
+        heatOfVaporization: 415,
+        specificHeatCapacity: 0.154,
+      },
+      atomicProperties: {
+        atomicRadius: 174,
+        covalentRadius: 187,
+        electronegativity: 1.27,
+        ionizationPotential: 5.4259,
+        atomicVolume: 17.78,
+        thermalConductivity: 0.164,
+        oxidationStates: [3],
+      },
+
+      isotopes: {
+        stable: [168, 170, 171, 172, 173, 174, 176],
+        unstable: [
+          150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174,
+          175, 176, 177, 178, 179, 180, 181, 182, 183, 184,
+        ],
+      },
+    },
+  },
+] as const;
+
+export const ELEMENT_DATA3 = [
+  {
+    symbol: "Th",
+    category: CATEGORIES.ACTINIDES.value,
+    group: null,
+    period: 6,
+    block: "f",
+    static: {
+      abundance: { earth: "0.0006", universe: "4×10_-8" },
+      unGrouped: { casNumber: "7440-29-1", pubChem: 23960, protons: 90, electrons: 90, neutrons: 142 },
+      generalProperties: {
+        atomicNumber: 90,
+        atomicWeight: 232.03806,
+        massNumber: 232,
+        radioActive: true,
+        color: ELEMENT_COLORS.SILVER,
+      },
+      crystalStructure: CRYSTAL_STRUCTURES.FACE_CENTERED_CUBIC.value,
+      electrons: {
+        electronsPerShell: [2, 8, 18, 32, 18, 10, 2],
+        electronConfiguration: ["Rn", "6d-2", "7s-2"],
+      },
+
+      physhicalProperties: {
+        phase: ELEMENT_PHASE.SOLID,
+        density: 11.7,
+        meltingPoint: 2115.15,
+        boilingPoint: 5061.15,
+        heatOfFusion: 16,
+        heatOfVaporization: 530,
+        specificHeatCapacity: 0.113,
+      },
+      atomicProperties: {
+        atomicRadius: 179,
+        covalentRadius: 206,
+        electronegativity: 1.3,
+        ionizationPotential: 6.3067,
+        atomicVolume: 19.9,
+        thermalConductivity: 0.54,
+        oxidationStates: [2, 3, 4],
+      },
+
+      isotopes: {
+        stable: [232],
+        unstable: [
+          209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 233, 234,
+          235, 236, 237, 238,
+        ],
+      },
+    },
+  },
 ] as const;
 
 export const ELEMENT_DATA = [
@@ -4792,4 +5201,4 @@ export const ELEMENT_DATA = [
   },
 ] as const;
 
-export const ELEMENT_DATA_COMPLETE = [...ELEMENT_DATA, ...ELEMENT_DATA2];
+export const ELEMENT_DATA_COMPLETE = [...ELEMENT_DATA, ...ELEMENT_DATA2, ...ELEMENT_DATA3];

@@ -1097,5 +1097,85 @@ export const getEnglishDictionary = (): Dictionary => ({
         "Gadolinium is used to make gadolinium yttrium garnets which have microwave applications.\n\nIt is also used in intravenous radiocontrast agents in magnetic resonance imaging (MRI).\n\nGadolinium compounds are used for making green phosphors for color TV tubes, and in manufacturing compact discs.",
       nameOrigin: "From gadolinite, a mineral named for Gadolin, a Finnish chemist",
     },
+    Tb: {
+      applications:
+        "Terbium is used in alloys and in the production of electronic devices.\n\nIt is also used as a dopant for materials in solid-state devices and optical fibers.\n\nTerbium oxide is in fluorescent lamps and TV tubes.\n\nThe brilliant fluorescence allows terbium to be used as a probe in biochemistry.",
+      history:
+        "Terbium was discovered in 1843 by Swedish chemist Carl Gustaf Mosander, who detected it as an impurity in yttria.\n\nUsing ammonium hydroxide he precipitated fractions of different basicity from yttria.\n\nIn these fractions he found that the fraction that was essentially colorless in solution, but gave a brown-tinged oxide was terbium.\n\n",
+      description: "Terbium is soft enough to be cut with a knife",
+      name: "Terbium",
+      toxicity: "Terbium is considered to be moderately toxic",
+      nameOrigin: "Terbium was named after Ytterby, a town in Sweden",
+    },
+    Dy: {
+      name: "Dysprosium",
+      applications:
+        "Dysprosium oxide-nickel cermets are used in neutron-absorbing control rods in nuclear reactors.\n\nDysprosium is used in data storage applications such as compact discs and hard discs.\n\nIt is also used in dosimeters for measuring ionizing radiation.\n\nDysprosium iodide and dysprosium bromide are used in high intensity metal-halide lamps.",
+      history:
+        "French chemist Paul Émile Lecoq de Boisbaudran, while working with holmium oxide, separated dysprosium oxide from it in Paris in 1886.\n\nHis procedure for isolating the dysprosium involved dissolving dysprosium oxide in acid, then adding ammonia to precipitate the hydroxide.\n\nIt was not isolated in pure form until the development of ion exchange techniques in the 1950s.",
+      nameOrigin: "From the Greek word dysprositos, meaning hard to get at",
+      description: "Naturally occurring dysprosium is composed of 7 isotopes",
+      toxicity: "Dysprosium is considered to be moderately toxic",
+    },
+    Ho: {
+      name: "Holmium",
+      history:
+        "Holmium was discovered by Swiss chemists Marc Delafontaine and Jacques-Louis Soret in 1878.\n\nThey noticed the aberrant spectrographic absorption bands of the then-unknown element.\n\nLater in 1878, Per Teodor Cleve independently discovered the element while he was working on erbia earth.",
+      applications:
+        "Holmium is used to create the strongest artificially generated magnetic fields, when placed within high-strength magnets as a magnetic pole piece.\n\nIt is one of the colorants used for cubic zirconia and glass, providing yellow or red coloring.\n\nHolmium isotopes are good neutron absorbers and are used in nuclear reactor control rods.",
+      toxicity: "Holmium is considered to be of low toxicity",
+      description: "Holmium has the highest magnetic strength of any naturally occurring element",
+      nameOrigin: "From the Latin word Holmia meaning Stockholm",
+    },
+    Er: {
+      name: "Erbium",
+      toxicity: "Erbium is considered to be moderately toxic",
+      description: "The highest concentration of erbium in humans is in the bones",
+      history:
+        "Erbium was discovered in 1843 by Swedish chemist Carl Gustaf Mosander, who detected it as an impurity in yttria.\n\nUsing ammonium hydroxide he precipitated fractions of different basicity from yttria.\n\nIn these fractions he found that the fraction that contained the pink color was erbium.",
+      applications:
+        "Erbium is used in photographic filters to absorb infrared light.\n\nErbium oxide gives a pink color and has been used as a colorant in glasses and porcelain enamel glazes.\n\nIt is also used in nuclear technology in neutron-absorbing control rods.\n\nErbium is used in alloys especially with vanadium to decrease the hardness of metals.",
+      nameOrigin: "Erbium was named after Ytterby, a town in Sweden",
+    },
+    Tm: {
+      name: "Thulium",
+      history:
+        "Thulium was discovered by Swedish chemist Per Teodor Cleve in 1879 by looking for impurities in the oxides of other rare earth elements.\n\nThe first researcher to obtain nearly pure thulium was Charles James, a British expatriate working on a large scale at New Hampshire College in Durham.\n\nHigh-purity thulium oxide was first offered commercially in the late 1950s.",
+      applications:
+        "Thulium is used to dope yttrium aluminum garnets used in lasers.\n\nIt has also been used in high-temperature superconductors similarly to yttrium.\n\nThulium has use in ferrites, ceramic magnetic materials that are used in microwave equipment.\n\nThulium is used in euro banknotes for its blue fluorescence under UV light to defeat counterfeiters.",
+      toxicity: "Thulium is considered to be non-toxic",
+      description: "Thulium ore occurs most commonly in China",
+      nameOrigin: "Named after Thule, the earliest name for Scandinavia",
+    },
+    Yb: {
+      name: "Ytterbium",
+      nameOrigin: "Ytterbium was named after Ytterby, a town in Sweden",
+      history:
+        "Ytterbium was discovered by the Swiss chemist Jean Charles Galissard de Marignac in the year 1878.\n\nIn 1907, in Paris, George Urbain separated ytterbia into two constituents.\n\nYtterbium metal was first made in 1937 by Klemm and Bonner by heating ytterbium chloride and potassium together.\n\nA relatively pure sample of the metal was obtained only in 1953.",
+      applications:
+        "Ytterbium fiber laser amplifiers are used in marking and engraving.\n\nYtterbium compounds are also used as catalysts in the organic chemical industry.\n\nYtterbium can be used as a dopant to help improve the grain refinement, strength, and other mechanical properties of stainless steel.",
+      toxicity: "Ytterbium is considered to be moderately toxic",
+      description: "Ytterbium is recovered commercially from monazite sand",
+    },
+    Lu: {
+      nameOrigin: "Lutetia is the ancient name for Paris",
+      history:
+        "French chemist Georges Urbain successfully separated lutetium from ytterbia in 1907 in Paris.\n\nAustrian scientist Carl Auer von Welsbach and American chemist Charles James also succeeded in isolating lutetium independently in the same year.\n\nPure lutetium metal was first produced in 1953.",
+      applications:
+        "Lutetium oxide is used to make catalysts for cracking hydrocarbons in the petrochemical industry.\n\nLutetium aluminum garnet has been proposed for use as a lens material in high refractive index immersion lithography.\n\nLutetium is used as a phosphor in LED light bulbs.",
+      toxicity: "Lutetium is considered to be non toxic",
+      description: "Lutetium was the last natural rare earth element to be discovered",
+      name: "Lutetium",
+    },
+    Th: {
+      name: "Thorium",
+      nameOrigin: "Named after Thor, Scandinavian god of war",
+      history:
+        "Thorium was discovered by Jöns Jacob Berzelius in 1828, in Stockholm, Sweden.\n\nThorium was first observed to be radioactive in 1898, independently, by Polish-French physicist Marie Curie and German chemist Gerhard Carl Schmidt.\n\nThe crystal bar process was discovered by Anton Eduard van Arkel and Jan Hendrik de Boer in 1925 to produce high-purity metallic thorium.",
+      applications:
+        "Thorium is used to coat tungsten filaments in light bulbs.\n\nIt is also used in its oxide form in gas tungsten arc welding to increase the high-temperature strength of tungsten electrodes and improve arc stability.\n\nThorium-magnesium alloys are used in the aerospace industry for aircraft engines.",
+      description: "Thorium fuel research is continuing in several countries including the USA and India",
+      toxicity: "Thorium is highly radioactive",
+    },
   },
 });
