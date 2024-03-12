@@ -28,10 +28,10 @@ export default function ReactivitySeries() {
               <section
                 key={e}
                 className={cn("grid grid-cols-4 text-center", {
-                  "bg-gray-600/20": i % 2 !== 0,
+                  "bg-gray-700/20": i % 2 !== 0,
                 })}
               >
-                <a className="bg-light/10 h-full p-4" href={`/element/${e}`}>
+                <a className="bg-dark/80 h-full p-4" href={`/element/${e}`}>
                   <h6>{t.elements[e].name}</h6>
                 </a>
                 <h6 className="p-4" style={{ color: reactions.CW ? REACTIONS_DATA[reactions.CW].color : undefined }}>

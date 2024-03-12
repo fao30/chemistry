@@ -46,7 +46,7 @@ export default function Home() {
                       className={cn(
                         { "aspect-square": !isActive },
                         { "border-4 bg-light relative group": element },
-                        { "pb-10 grid grid-cols-subgrid col-span-10 row-span-3 col-start-3 row-start-1": isActive },
+                        { "pb-8 grid grid-cols-subgrid col-span-10 row-span-3 col-start-3 row-start-1": isActive },
                       )}
                       style={{
                         gridColumn: !isActive ? colIndex + 1 : undefined,
@@ -101,7 +101,7 @@ export default function Home() {
                               <img alt={t.tableFounder.name} src="/assets/mendeleev.jpg" className="object-cover size-full" />
                               <section className="flex flex-col gap-2">
                                 <header className="text-center flex flex-col">
-                                  <h5 className="leading-7">{t.tableFounder.name}</h5>
+                                  <h6 className="leading-7 font-semibold">{t.tableFounder.name}</h6>
                                   <p>
                                     {`${formatDate({ date: t.tableFounder.birthDate, lang: setting.lang, style: "long" })} —
                                   ${formatDate({ date: t.tableFounder.deathDate, lang: setting.lang, style: "long" })}`}
