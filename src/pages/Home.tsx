@@ -1,7 +1,7 @@
 import useSetting from "@/hooks/useSetting";
 import { CATEGORIES, CATEGORIES_OPTIONS, ELEMENT_DATA2, ELEMENT_DATA3 } from "@/lib/constants";
 import { cn, formatDate, getElement } from "@/lib/functions";
-import { type Element, ElementCategory } from "@/types";
+import type { Element, ElementCategory } from "@/types";
 import { Fragment, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
