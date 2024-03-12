@@ -30,14 +30,8 @@ export default function Home() {
                     (rowIndex === 1 && colIndex >= 1 && colIndex <= 16) ||
                     (rowIndex === 3 && colIndex >= 2 && colIndex <= 11);
 
-                  const hovered =
-                    hoveredElement &&
-                    element &&
-                    hoveredElement.static.generalProperties.atomicNumber === element.static.generalProperties.atomicNumber;
-                  const notHovered =
-                    hoveredElement &&
-                    element &&
-                    hoveredElement.static.generalProperties.atomicNumber !== element.static.generalProperties.atomicNumber;
+                  const hovered = hoveredElement && element && hoveredElement.symbol === element.symbol;
+                  const notHovered = hoveredElement && element && hoveredElement.symbol !== element.symbol;
 
                   const tHoveredElement = hoveredElement && t.elements[hoveredElement.symbol];
                   const tElement = element && t.elements[element.symbol];
@@ -51,9 +45,10 @@ export default function Home() {
                       style={{
                         gridColumn: !isActive ? colIndex + 1 : undefined,
                         gridRow: !isActive ? rowIndex + 1 : undefined,
-                        borderColor: element ? CATEGORIES[element.category].color : undefined,
-                        color: hovered ? "#FEFEFE" : element ? CATEGORIES[element.category].color : undefined,
-                        backgroundColor: hovered ? CATEGORIES[element.category].color : undefined,
+                        borderColor: element?.category ? CATEGORIES[element.category].color : "#B1C0C9",
+                        color:
+                          hovered && element.category ? "#FEFEFE" : element?.category ? CATEGORIES[element.category].color : "#B1C0C9",
+                        backgroundColor: hovered && element.category ? CATEGORIES[element.category].color : undefined,
                       }}
                     >
                       {isActive ? (
@@ -64,7 +59,7 @@ export default function Home() {
                               className={cn("aspect-square relative animate border-[4px] w-[30%]", {
                                 "opacity-0": !hoveredElement,
                               })}
-                              style={{ borderColor: hoveredElement ? CATEGORIES[hoveredElement.category].color : undefined }}
+                              style={{ borderColor: hoveredElement?.category ? CATEGORIES[hoveredElement.category].color : "#B1C0C9" }}
                             >
                               <h4 className="absolute left-3 top-2.5 text-light">
                                 <span>{hoveredElement?.static.generalProperties.atomicNumber}</span>
@@ -74,7 +69,7 @@ export default function Home() {
                               </h5>
                               <h1
                                 className="absolute centered font-bold"
-                                style={{ color: hoveredElement ? CATEGORIES[hoveredElement.category].color : undefined }}
+                                style={{ color: hoveredElement?.category ? CATEGORIES[hoveredElement.category].color : "#B1C0C9" }}
                               >
                                 {hoveredElement?.symbol}
                               </h1>

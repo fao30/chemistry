@@ -862,5 +862,170 @@ export const getEnglishDictionary = (): Dictionary => ({
       toxicity: "Radon is highly radioactive and a carcinogen",
       description: "Upon condensation, radon glows because of the intense radiation it produces",
     },
+    Fr: {
+      name: "Francium",
+      history:
+        "Francium was discovered in 1939 by Marguerite Perey of the Curie Institute in Paris, France.\n\nIt was discovered when she was researching the radioactive decay of actinium-227.\n\nMarguerite Perey discovered that francium-223 is made naturally when actinium-227 emits an alpha-particle.",
+      applications:
+        "Due to its instability and rarity, there are no commercial applications for francium.\n\nIt has been used for research purposes in the fields of biology and of atomic structure.\n\nIts use as a potential diagnostic aid for various cancers has also been explored, but this application has been deemed impractical.",
+      toxicity: "Francium is highly radioactive",
+      description: "Francium was the last element discovered in nature, rather than by synthesis",
+      nameOrigin: "Francium was named after France",
+    },
+    Ra: {
+      name: "Radium",
+      toxicity: "Radium is highly radioactive and carcinogenic",
+      description: "Radium imparts a carmine red color to a flame",
+      history:
+        "Radium was discovered by Marie Curie and Pierre Curie in 1898.\n\nThey extracted the radium compound from a uraninite sample.\n\nRadium was isolated in its metallic state by Marie Curie and André-Louis Debierne in 1910 through the electrolysis of radium chloride by using a mercury cathode and distilling in an atmosphere of hydrogen gas.",
+      applications:
+        "Radium was formerly used in self-luminous paints for watches, nuclear panels, aircraft switches, clocks, and instrument dials.\n\nRadium chloride was used in medicine to produce radon gas which in turn was used as a cancer treatment.\n\nThe isotope 223-Ra is currently under investigation for use in medicine as a cancer treatment of bone metastasis.",
+      nameOrigin: "From the Latin word radius meaning ray",
+    },
+    Ac: {
+      name: "Actinium",
+      nameOrigin: "From the Greek aktis, aktinos, meaning beam or ray",
+      history:
+        "André-Louis Debierne, a French chemist, discovered actinium in 1899.\n\nHe separated it from pitchblende residues left by Marie and Pierre Curie after they had extracted radium.\n\nFriedrich Oskar Giesel independently discovered actinium in 1902 as a substance being similar to lanthanum.",
+      applications:
+        "Actinium is used as an active element of radioisotope thermoelectric generators, for example in spacecraft.\n\nThe medium half-life of 227-Ac makes it very convenient radioactive isotope in modeling the slow vertical mixing of oceanic waters.\n\n225-Ac is applied in medicine to produce 213-Bi in a reusable generator or can be used alone as an agent for radiation therapy.\n\n",
+      toxicity: "Actinium is highly radioactive",
+      description: "Actinium glows in the dark with a pale blue light",
+    },
+    Rf: {
+      name: "Rutherfordium",
+      nameOrigin: "Named after Ernest Rutherford, the physicist and chemist from New Zealand",
+      history:
+        "Rutherfordium was reportedly first detected in 1964 at the Joint Institute of Nuclear Research at Dubna.\n\nThe element was synthesized by Albert Ghiorso, Matti Nurmia, James Andrew Harris, Kari Eskola and Pirkko Eskola in 1968 at the University of California, Berkeley.\n\nIt was produced by the bombardment of californium with carbon atoms.",
+      applications: "Rutherfordium is used for scientific research purposes only.",
+      toxicity: "Rutherfordium is harmful due to its radioactivity",
+      description: "Rutherfordium is the first transactinide element",
+    },
+    Db: {
+      name: "Dubnium",
+      nameOrigin: "Named after the Russian town of Dubna",
+      history:
+        "Dubnium was reportedly first discovered in 1968 at the Joint Institute for Nuclear Research at Dubna.\n\nResearchers there bombarded an americium-243 target with neon-22 ions.\n\nIn the same year, a team led by Albert Ghiorso working at the University of California, Berkeley conclusively synthesized the element by bombarding a californium-249 target with nitrogen-15 ions.",
+      applications: "Dubnium is used for scientific research purposes only.",
+      toxicity: "Dubnium is harmful due to its radioactivity",
+      description: "The Berkeley team proposed the name hahnium for the element",
+    },
+    Sg: {
+      nameOrigin: "Named after Glenn Seaborg, American nuclear chemist and Nobel prize winner",
+      applications: "Seaborgium is used for scientific research purposes only.",
+      toxicity: "Seaborgium is harmful due to its radioactivity",
+      history:
+        "Scientists working at the Joint Institute for Nuclear Research in Dubna, USSR reported their discovery of element 106 in June 1974.\n\nSynthesis was also reported in September 1974 at the Lawrence Berkeley Laboratory by the workers of the Lawrence Berkeley and Livermore Laboratories led by Albert Ghiorso and E. Kenneth Hulet.\n\nIt was produced by collisions of californium-249 with oxygen atoms.",
+      description: "There are 12 known isotopes of seaborgium",
+      name: "Seaborgium",
+    },
+    Bh: {
+      history:
+        "Bohrium was first convincingly synthesized in 1981 by a German research team led by Peter Armbruster and Gottfried Münzenberg at the Institute for Heavy Ion Research (Gesellschaft für Schwerionenforschung) in Darmstadt.\n\nThe team bombarded a target of bismuth-209 with accelerated nuclei of chromium-54 to produce 5 atoms of the isotope bohrium-262.",
+      applications: "Bohrium is used for scientific research purposes only.",
+      toxicity: "Bohrium is harmful due to its radioactivity",
+      description: "The only confirmed example of isomerism in bohrium is in the isotope 262-Bh",
+      name: " Bohrium",
+      nameOrigin: "Named after Niels Bohr, the Danish physicist",
+    },
+    Hs: {
+      nameOrigin: "From the Latin word Hassias meaning Hess, the German state",
+      history:
+        "Hassium was first synthesized in 1984 by a German research team led by Peter Armbruster and Gottfried Münzenberg at the Institute for Heavy Ion Research (Gesellschaft für Schwerionenforschung) in Darmstadt.\n\nThe team bombarded a target of lead-208 with accelerated nuclei of iron-58 to produce 3 atoms of the isotope hassium-265.",
+      applications: "Hassium is used for scientific research purposes only.",
+      toxicity: "Hassium is harmful due to its radioactivity",
+      description: "More than 100 atoms of hassium have been synthesized to date",
+      name: "Hassium",
+    },
+    Mt: {
+      nameOrigin: "Named after Lise Meitner, the Austrian physicist",
+      history:
+        "Meitnerium was first synthesized in 1982 by a German research team led by Peter Armbruster and Gottfried Münzenberg at the Institute for Heavy Ion Research (Gesellschaft für Schwerionenforschung) in Darmstadt.\n\nThe team bombarded a target of bismuth-209 with accelerated nuclei of iron-58 and detected a single atom of the isotope meitnerium-266.",
+      applications: "Meitnerium is used for scientific research purposes only.",
+      description: "Meitnerium has 7 isotopes whose half-lives are known",
+      toxicity: "Meitnerium is harmful due to its radioactivity",
+      name: "Meitnerium",
+    },
+    Ds: {
+      name: "Darmstadtium",
+      nameOrigin: "Named after the German city of Darmstadt",
+      history:
+        "Darmstadtium was first created in 1994, at the Institute for Heavy Ion Research (Gesellschaft für Schwerionenforschung) in Darmstadt, Germany, by Peter Armbruster and Gottfried Münzenberg, under the direction of Sigurd Hofmann.\n\nThe team bombarded a lead-208 target with accelerated nuclei of nickel-62 and detected a single atom of the isotope darmstadtium-269.",
+      applications: "Darmstadtium is used for scientific research purposes only.",
+      toxicity: "Darmstadtium is harmful due to its radioactivity",
+      description: "Darmstadtium has no stable or naturally-occurring isotopes",
+    },
+    Rg: {
+      name: "Roentgenium",
+      nameOrigin: "Named after Wilhelm Conrad Röntgen, the German physicist",
+      history:
+        "Roentgenium was first synthesized by an international team led by Sigurd Hofmann at the Institute for Heavy Ion Research (Gesellschaft für Schwerionenforschung) in Darmstadt, Germany in 1994.\n\nThe team bombarded a target of bismuth-209 with accelerated nuclei of nickel-64 and detected a single atom of the isotope roentgenium-272.",
+      applications: "Roentgenium is used for scientific research purposes only.",
+      description: "Roentgenium has no stable or naturally-occurring isotopes",
+      toxicity: "Roentgenium is harmful due to its radioactivity",
+    },
+    Cn: {
+      history:
+        "Copernicium was first created on February 9, 1996, at the Institute for Heavy Ion Research (Gesellschaft für Schwerionenforschung) in Darmstadt, Germany, by Sigurd Hofmann, Victor Ninov et al.\n\nThis element was created by firing accelerated zinc-70 nuclei at a target made of lead-208 nuclei in a heavy ion accelerator.\n\nA single atom of copernicium was produced with a mass number of 277.",
+      name: "Copernicium",
+      applications: "Copernicium is used for scientific research purposes only.",
+      description: "Copernicium has no stable or naturally-occurring isotopes",
+      toxicity: "Copernicium is harmful due to its radioactivity",
+      nameOrigin: "Named after the astronomer Nicolaus Copernicus",
+    },
+    Nh: {
+      name: "Nihonium",
+      history:
+        "Nihonium was identified in 2003 as an alpha decay product of element 115, moscovium by a team composed of Russian scientists at Joint Institute for Nuclear Research, Dubna and American scientists at the Lawrence Livermore National Laboratory.\n\nThe Dubna-Livermore collaboration has strengthened their claim for the discovery of nihonium by conducting chemical experiments on the final decay product 268-Db.",
+      nameOrigin: "The name comes from the common Japanese name for Japan",
+      description: "Nihonium is historically known as eka-thallium",
+      toxicity: "Nihonium is harmful due to its radioactivity",
+      applications: "Nihonium is used for scientific research purposes only.",
+    },
+    Fl: {
+      name: "Flerovium",
+      nameOrigin: "Named after the founder of the Flerov Laboratory of Nuclear Reactions, the Soviet physicist Georgy Flyorov",
+      history:
+        "Ununquadium (Uuq) was the temporary IUPAC systematic element name.\n\nIn 1998, a team led by Yuri Oganessian and Vladimir Utyonkov at the Joint Institute for Nuclear Research, Dubna produced flerovium by bombarding plutonium with calcium.\n\nIn an experiment lasting 40 days, 5 x (10 x 18) atoms of calcium to be fired at plutonium to produce a single atom of flerovium.",
+      description: "The longest-lived isotope currently known is 289-Fl",
+      toxicity: "Flerovium is harmful due to its radioactivity",
+      applications: "Flerovium is used for scientific research purposes only.",
+    },
+    Mc: {
+      name: "Moscovium",
+      nameOrigin: "Named after Moscow Oblast where Dubna is located",
+      history:
+        "Moscovium was identified in 2004 by a team composed of Russian scientists at the Joint Institute for Nuclear Research in Dubna, and American scientists at the Lawrence Livermore National Laboratory.\n\nThe team reported that they bombarded americium-243 with calcium-48 ions to produce four atoms of moscovium.\n\nThese atoms decayed by emission of alpha-particles to nihonium in approximately 100 milliseconds.",
+      description: "Moscovium is historically known as eka-bismuth",
+      toxicity: "Moscovium is harmful due to its radioactivity",
+      applications: "Moscovium is used for scientific research purposes only.",
+    },
+    Lv: {
+      name: "Livermorium",
+      history:
+        "Ununhexium (Uuh) was the temporary IUPAC systematic element name.\n\nLivermorium was identified in 2000 by a team composed of Russian scientists at Joint Institute for Nuclear Research, Dubna and American scientists at the Lawrence Livermore National Laboratory led by Yuri Oganessian and Ken Moody.",
+      description: "Livermorium is historically known as eka-polonium",
+      nameOrigin: "Named after the Lawrence Livermore National Laboratory, within the city of Livermore, California",
+      toxicity: "Livermorium is harmful due to its radioactivity",
+      applications: "Livermorium is used for scientific research purposes only.",
+    },
+    Ts: {
+      name: "Tennessine",
+      history:
+        "Tennessine was identified in 2010 by a team composed of Russian scientists at Joint Institute for Nuclear Research, Dubna and American scientists at the Lawrence Livermore National Laboratory.\n\nIt was produced by the bombardment of berkelium with calcium.\n\nUnunseptium was the temporary IUPAC systematic element name.",
+      description: "Tennessine is historically known as eka-astatine",
+      nameOrigin: "Named after the region of Tennessee",
+      toxicity: "Tennessine is harmful due to its radioactivity",
+      applications: "Tennessine is used for scientific research purposes only.",
+    },
+    Og: {
+      name: "Oganesson",
+      history:
+        "Oganesson was identified in 2002 by a team composed of Russian scientists at Joint Institute for Nuclear Research, Dubna and American scientists at the Lawrence Livermore National Laboratory.\n\nIt was produced by the bombardment of californium with calcium.\n\nUnunoctium was the temporary IUPAC systematic element name.",
+      description: "Oganesson is historically known as eka-radon",
+      nameOrigin: "Named after the Russian nuclear physicist Yuri Oganessian",
+      toxicity: "Oganesson is harmful due to its radioactivity",
+      applications: "Oganesson is used for scientific research purposes only.",
+    },
   },
 });

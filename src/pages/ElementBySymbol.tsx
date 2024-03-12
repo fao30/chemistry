@@ -113,11 +113,11 @@ export default function ElementBySymbol() {
             </section>
             <section className="grid grid-cols-2">
               <h6 className="title">{t.titles.category}</h6>
-              <h6>{t.elementCategories[data.category] ?? "-"}</h6>
+              <h6>{data.category ? t.elementCategories[data.category] : "-"}</h6>
             </section>
             <section className="grid grid-cols-2">
               <h6 className="title">{t.titles.color}</h6>
-              <h6>{t.colors[data.static.generalProperties.color] ?? "-"}</h6>
+              <h6>{data.static.generalProperties.color ? t.colors[data.static.generalProperties.color] : "-"}</h6>
             </section>
             <section className="grid grid-cols-2">
               <h6 className="title">{t.titles.radioactive}</h6>
@@ -200,7 +200,7 @@ export default function ElementBySymbol() {
           <section className="flex flex-col">
             <section className="grid grid-cols-2">
               <h6 className="title">{t.titles.phase}</h6>
-              <h6>{t.phase[data.static.physhicalProperties.phase]}</h6>
+              <h6>{data.static.physhicalProperties.phase ? t.phase[data.static.physhicalProperties.phase] : "-"}</h6>
             </section>
             <section className="grid grid-cols-2">
               <h6 className="title">{t.titles.density}</h6>

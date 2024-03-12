@@ -184,8 +184,8 @@ export default function Compare() {
 
         <section className="grid grid-cols-3 gap-6">
           <h6 className="title">{t.titles.category}</h6>
-          <h6>{t.colors[dataA.static.generalProperties.color]}</h6>
-          <h6>{t.colors[dataB.static.generalProperties.color]}</h6>
+          <h6>{dataA.static.generalProperties.color ? t.colors[dataA.static.generalProperties.color] : "-"}</h6>
+          <h6>{dataB.static.generalProperties.color ? t.colors[dataB.static.generalProperties.color] : "-"}</h6>
         </section>
 
         <section className="grid grid-cols-3 gap-6">
@@ -214,8 +214,8 @@ export default function Compare() {
 
         <section className="grid grid-cols-3 gap-6">
           <h6 className="title">{t.titles.phase}</h6>
-          <h6>{t.phase[dataA.static.physhicalProperties.phase] ?? "-"}</h6>
-          <h6>{t.phase[dataB.static.physhicalProperties.phase] ?? "-"}</h6>
+          <h6>{dataA.static.physhicalProperties.phase ? t.phase[dataA.static.physhicalProperties.phase] : "-"}</h6>
+          <h6>{dataB.static.physhicalProperties.phase ? t.phase[dataB.static.physhicalProperties.phase] : "-"}</h6>
         </section>
 
         <section className="grid grid-cols-3 gap-6">

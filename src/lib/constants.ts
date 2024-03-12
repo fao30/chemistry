@@ -3559,4 +3559,877 @@ export const ELEMENT_DATA = [
       },
     },
   },
+
+  {
+    symbol: "Fr",
+    category: CATEGORIES.ALKALI_METALS.value,
+    group: 1,
+    period: 7,
+    block: "s",
+
+    static: {
+      abundance: { earth: null, universe: null },
+      unGrouped: { casNumber: "7440-73-5", pubChem: null, protons: 87, electrons: 87, neutrons: 136 },
+      generalProperties: {
+        atomicNumber: 87,
+        atomicWeight: 223,
+        massNumber: 223,
+        radioActive: true,
+        color: ELEMENT_COLORS.SILVER,
+      },
+      crystalStructure: null,
+      electrons: {
+        electronsPerShell: [2, 8, 18, 32, 18, 8, 1],
+        electronConfiguration: ["[Rn]", "7s-1"],
+      },
+      physhicalProperties: {
+        phase: ELEMENT_PHASE.SOLID,
+        density: 1.87,
+        meltingPoint: 296.15,
+        boilingPoint: 950.15,
+        heatOfFusion: 2,
+        heatOfVaporization: 65,
+        specificHeatCapacity: null,
+      },
+      atomicProperties: {
+        atomicRadius: 260,
+        covalentRadius: 348,
+        electronegativity: 0.7,
+        ionizationPotential: 4.0727,
+        atomicVolume: 71.07,
+        thermalConductivity: 0.15,
+        oxidationStates: [1],
+      },
+
+      isotopes: {
+        stable: [],
+        unstable: [
+          199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223,
+          224, 225, 226, 227, 228, 229, 230, 231, 232,
+        ],
+      },
+    },
+  },
+
+  {
+    symbol: "Ra",
+    category: CATEGORIES.ALKALINE_EARTH_METALS.value,
+    group: 2,
+    period: 7,
+    block: "s",
+
+    static: {
+      abundance: { earth: "9.9×10_-12", universe: null },
+      unGrouped: { casNumber: "7440-14-4", pubChem: 6328144, protons: 88, electrons: 88, neutrons: 138 },
+      generalProperties: {
+        atomicNumber: 88,
+        atomicWeight: 226,
+        massNumber: 226,
+        radioActive: true,
+        color: ELEMENT_COLORS.SILVER,
+      },
+      crystalStructure: CRYSTAL_STRUCTURES.BODY_CENTERED_CUBIC.value,
+      electrons: {
+        electronsPerShell: [2, 8, 18, 32, 18, 8, 2],
+        electronConfiguration: ["[Rn]", "7s-2"],
+      },
+      physhicalProperties: {
+        phase: ELEMENT_PHASE.SOLID,
+        density: 5.5,
+        meltingPoint: 973.15,
+        boilingPoint: 2010.15,
+        heatOfFusion: 8,
+        heatOfVaporization: 125,
+        specificHeatCapacity: null,
+      },
+      atomicProperties: {
+        atomicRadius: null,
+        covalentRadius: 221,
+        electronegativity: 0.9,
+        ionizationPotential: 5.2784,
+        atomicVolume: 45.2,
+        thermalConductivity: 1.86,
+        oxidationStates: [2],
+      },
+
+      isotopes: {
+        stable: [],
+        unstable: [
+          202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226,
+          227, 228, 229, 230, 231, 232, 233, 234,
+        ],
+      },
+    },
+  },
+
+  {
+    symbol: "Ac",
+    category: CATEGORIES.ACTINIDES.value,
+    group: 3,
+    period: 7,
+    block: "f",
+
+    static: {
+      abundance: { earth: null, universe: null },
+      unGrouped: { casNumber: "7440-34-8", pubChem: null, protons: 89, electrons: 89, neutrons: 138 },
+      generalProperties: {
+        atomicNumber: 89,
+        atomicWeight: 227,
+        massNumber: 227,
+        radioActive: true,
+        color: ELEMENT_COLORS.SILVER,
+      },
+      crystalStructure: CRYSTAL_STRUCTURES.FACE_CENTERED_CUBIC.value,
+      electrons: {
+        electronsPerShell: [2, 8, 18, 32, 18, 9, 2],
+        electronConfiguration: ["[Rn]", "6d-1", "7s-2"],
+      },
+      physhicalProperties: {
+        phase: ELEMENT_PHASE.SOLID,
+        density: 10.07,
+        meltingPoint: 1323.15,
+        boilingPoint: 3471.15,
+        heatOfFusion: 14,
+        heatOfVaporization: 400,
+        specificHeatCapacity: 0.12,
+      },
+      atomicProperties: {
+        atomicRadius: null,
+        covalentRadius: 215,
+        electronegativity: 1.1,
+        ionizationPotential: 5.17,
+        atomicVolume: 22.54,
+        thermalConductivity: 0.12,
+        oxidationStates: [3],
+      },
+
+      isotopes: {
+        stable: [],
+        unstable: [
+          206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230,
+          231, 232, 233, 234, 235, 236,
+        ],
+      },
+    },
+  },
+
+  {
+    symbol: "Rf",
+    category: CATEGORIES.TRANSITION_METALS.value,
+    group: 4,
+    period: 7,
+    block: "d",
+
+    static: {
+      abundance: { earth: null, universe: null },
+      unGrouped: { casNumber: "53850-36-5", pubChem: null, protons: 104, electrons: 104, neutrons: 157 },
+      generalProperties: {
+        atomicNumber: 104,
+        atomicWeight: 267,
+        massNumber: 261,
+        radioActive: true,
+        color: null,
+      },
+      crystalStructure: null,
+      electrons: {
+        electronsPerShell: [2, 8, 18, 32, 32, 10, 2],
+        electronConfiguration: ["[Rn]", "5f-14", "6d-2", "7s-2"],
+      },
+      physhicalProperties: {
+        phase: ELEMENT_PHASE.SOLID,
+        density: 23,
+        meltingPoint: 2373.15,
+        boilingPoint: 5773.15,
+        heatOfFusion: null,
+        heatOfVaporization: null,
+        specificHeatCapacity: null,
+      },
+      atomicProperties: {
+        atomicRadius: null,
+        covalentRadius: 215,
+        electronegativity: 1.1,
+        ionizationPotential: 5.17,
+        atomicVolume: 22.54,
+        thermalConductivity: 0.12,
+        oxidationStates: [3],
+      },
+
+      isotopes: {
+        stable: [],
+        unstable: [253, 254, 255, 256, 257, 258, 259, 260, 261, 262, 263, 264, 265, 265, 266, 267, 268],
+      },
+    },
+  },
+
+  {
+    symbol: "Db",
+    category: CATEGORIES.TRANSITION_METALS.value,
+    group: 5,
+    period: 7,
+    block: "d",
+
+    static: {
+      abundance: { earth: null, universe: null },
+      unGrouped: { casNumber: "53850-35-4", pubChem: null, protons: 105, electrons: 105, neutrons: 157 },
+      generalProperties: {
+        atomicNumber: 105,
+        atomicWeight: 268,
+        massNumber: 262,
+        radioActive: true,
+        color: null,
+      },
+      crystalStructure: null,
+      electrons: {
+        electronsPerShell: [2, 8, 18, 32, 32, 11, 2],
+        electronConfiguration: ["[Rn]", "5f-14", "6d-3", "7s-2"],
+      },
+      physhicalProperties: {
+        phase: ELEMENT_PHASE.SOLID,
+        density: 39,
+        meltingPoint: null,
+        boilingPoint: null,
+        heatOfFusion: null,
+        heatOfVaporization: null,
+        specificHeatCapacity: null,
+      },
+      atomicProperties: {
+        atomicRadius: null,
+        covalentRadius: 149,
+        electronegativity: null,
+        ionizationPotential: null,
+        atomicVolume: null,
+        thermalConductivity: 0.58,
+        oxidationStates: [5],
+      },
+
+      isotopes: {
+        stable: [],
+        unstable: [255, 256, 257, 258, 259, 260, 261, 262, 263, 264, 265, 265, 266, 267, 268, 269, 270],
+      },
+    },
+  },
+
+  {
+    symbol: "Sg",
+    category: CATEGORIES.TRANSITION_METALS.value,
+    group: 6,
+    period: 7,
+    block: "d",
+
+    static: {
+      abundance: { earth: null, universe: null },
+      unGrouped: { casNumber: "54038-81-2", pubChem: null, protons: 106, electrons: 106, neutrons: 156 },
+      generalProperties: {
+        atomicNumber: 106,
+        atomicWeight: 269,
+        massNumber: 262,
+        radioActive: true,
+        color: null,
+      },
+      crystalStructure: null,
+      electrons: {
+        electronsPerShell: [2, 8, 18, 32, 32, 12, 2],
+        electronConfiguration: ["[Rn]", "5f-14", "6d-4", "7s-2"],
+      },
+      physhicalProperties: {
+        phase: ELEMENT_PHASE.SOLID,
+        density: 35,
+        meltingPoint: null,
+        boilingPoint: null,
+        heatOfFusion: null,
+        heatOfVaporization: null,
+        specificHeatCapacity: null,
+      },
+      atomicProperties: {
+        atomicRadius: null,
+        covalentRadius: 143,
+        electronegativity: null,
+        ionizationPotential: null,
+        atomicVolume: null,
+        thermalConductivity: null,
+        oxidationStates: [6],
+      },
+
+      isotopes: {
+        stable: [],
+        unstable: [258, 259, 260, 261, 262, 263, 264, 265, 265, 266, 267, 268, 269, 270, 271, 272, 273],
+      },
+    },
+  },
+
+  {
+    symbol: "Bh",
+    category: CATEGORIES.TRANSITION_METALS.value,
+    group: 7,
+    period: 7,
+    block: "d",
+
+    static: {
+      abundance: { earth: null, universe: null },
+      unGrouped: { casNumber: "54037-14-8", pubChem: null, protons: 107, electrons: 107, neutrons: 157 },
+      generalProperties: {
+        atomicNumber: 107,
+        atomicWeight: 270,
+        massNumber: 264,
+        radioActive: true,
+        color: null,
+      },
+      crystalStructure: null,
+      electrons: {
+        electronsPerShell: [2, 8, 18, 32, 32, 13, 2],
+        electronConfiguration: ["[Rn]", "5f-14", "6d-5", "7s-2"],
+      },
+      physhicalProperties: {
+        phase: ELEMENT_PHASE.SOLID,
+        density: 37,
+        meltingPoint: null,
+        boilingPoint: null,
+        heatOfFusion: null,
+        heatOfVaporization: null,
+        specificHeatCapacity: null,
+      },
+      atomicProperties: {
+        atomicRadius: null,
+        covalentRadius: 141,
+        electronegativity: null,
+        ionizationPotential: null,
+        atomicVolume: null,
+        thermalConductivity: null,
+        oxidationStates: [7],
+      },
+
+      isotopes: {
+        stable: [],
+        unstable: [260, 261, 262, 263, 264, 265, 265, 266, 267, 268, 269, 270, 271, 272, 273, 274, 275],
+      },
+    },
+  },
+
+  {
+    symbol: "Hs",
+    category: CATEGORIES.TRANSITION_METALS.value,
+    group: 8,
+    period: 7,
+    block: "d",
+
+    static: {
+      abundance: { earth: null, universe: null },
+      unGrouped: { casNumber: "54037-14-8", pubChem: null, protons: 108, electrons: 108, neutrons: 161 },
+      generalProperties: {
+        atomicNumber: 108,
+        atomicWeight: 269,
+        massNumber: 269,
+        radioActive: true,
+        color: null,
+      },
+      crystalStructure: null,
+      electrons: {
+        electronsPerShell: [2, 8, 18, 32, 32, 14, 2],
+        electronConfiguration: ["[Rn]", "5f-14", "6d-6", "7s-2"],
+      },
+      physhicalProperties: {
+        phase: ELEMENT_PHASE.SOLID,
+        density: 41,
+        meltingPoint: null,
+        boilingPoint: null,
+        heatOfFusion: null,
+        heatOfVaporization: null,
+        specificHeatCapacity: null,
+      },
+      atomicProperties: {
+        atomicRadius: null,
+        covalentRadius: 134,
+        electronegativity: null,
+        ionizationPotential: null,
+        atomicVolume: null,
+        thermalConductivity: null,
+        oxidationStates: [8],
+      },
+
+      isotopes: {
+        stable: [],
+        unstable: [263, 264, 265, 265, 266, 267, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277],
+      },
+    },
+  },
+
+  {
+    symbol: "Mt",
+    category: null,
+    group: 9,
+    period: 7,
+    block: "d",
+
+    static: {
+      abundance: { earth: null, universe: null },
+      unGrouped: { casNumber: "54038-01-6", pubChem: null, protons: 109, electrons: 109, neutrons: 159 },
+      generalProperties: {
+        atomicNumber: 109,
+        atomicWeight: 278,
+        massNumber: 268,
+        radioActive: true,
+        color: null,
+      },
+      crystalStructure: null,
+      electrons: {
+        electronsPerShell: [2, 8, 18, 32, 32, 15, 2],
+        electronConfiguration: ["[Rn]", "5f-14", "6d-7", "7s-2"],
+      },
+      physhicalProperties: {
+        phase: ELEMENT_PHASE.SOLID,
+        density: 35,
+        meltingPoint: null,
+        boilingPoint: null,
+        heatOfFusion: null,
+        heatOfVaporization: null,
+        specificHeatCapacity: null,
+      },
+      atomicProperties: {
+        atomicRadius: null,
+        covalentRadius: 129,
+        electronegativity: null,
+        ionizationPotential: null,
+        atomicVolume: null,
+        thermalConductivity: null,
+        oxidationStates: [3, 4, 6],
+      },
+
+      isotopes: {
+        stable: [],
+        unstable: [265, 265, 266, 267, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279],
+      },
+    },
+  },
+
+  {
+    symbol: "Ds",
+    category: null,
+    group: 10,
+    period: 7,
+    block: "d",
+
+    static: {
+      abundance: { earth: null, universe: null },
+      unGrouped: { casNumber: "54083-77-1", pubChem: null, protons: 110, electrons: 110, neutrons: 171 },
+      generalProperties: {
+        atomicNumber: 110,
+        atomicWeight: 281,
+        massNumber: 281,
+        radioActive: true,
+        color: null,
+      },
+      crystalStructure: null,
+      electrons: {
+        electronsPerShell: [2, 8, 18, 32, 32, 16, 2],
+        electronConfiguration: ["[Rn]", "5f-14", "6d-8", "7s-2"],
+      },
+      physhicalProperties: {
+        phase: null,
+        density: null,
+        meltingPoint: null,
+        boilingPoint: null,
+        heatOfFusion: null,
+        heatOfVaporization: null,
+        specificHeatCapacity: null,
+      },
+      atomicProperties: {
+        atomicRadius: null,
+        covalentRadius: 128,
+        electronegativity: null,
+        ionizationPotential: null,
+        atomicVolume: null,
+        thermalConductivity: null,
+        oxidationStates: [6],
+      },
+
+      isotopes: {
+        stable: [],
+        unstable: [267, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 280, 281],
+      },
+    },
+  },
+
+  {
+    symbol: "Rg",
+    category: null,
+    group: 11,
+    period: 7,
+    block: "d",
+
+    static: {
+      abundance: { earth: null, universe: null },
+      unGrouped: { casNumber: "54386-24-2", pubChem: null, protons: 111, electrons: 111, neutrons: 170 },
+      generalProperties: {
+        atomicNumber: 111,
+        atomicWeight: 281,
+        massNumber: 281,
+        radioActive: true,
+        color: null,
+      },
+      crystalStructure: null,
+      electrons: {
+        electronsPerShell: [2, 8, 18, 32, 32, 17, 2],
+        electronConfiguration: ["[Rn]", "5f-14", "6d-9", "7s-2"],
+      },
+      physhicalProperties: {
+        phase: ELEMENT_PHASE.SOLID,
+        density: null,
+        meltingPoint: null,
+        boilingPoint: null,
+        heatOfFusion: null,
+        heatOfVaporization: null,
+        specificHeatCapacity: null,
+      },
+      atomicProperties: {
+        atomicRadius: null,
+        covalentRadius: 121,
+        electronegativity: null,
+        ionizationPotential: null,
+        atomicVolume: null,
+        thermalConductivity: null,
+        oxidationStates: [-1, 1, 3, 5],
+      },
+
+      isotopes: {
+        stable: [],
+        unstable: [272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 283],
+      },
+    },
+  },
+
+  {
+    symbol: "Cn",
+    category: null,
+    group: 12,
+    period: 7,
+    block: "d",
+
+    static: {
+      abundance: { earth: null, universe: null },
+      unGrouped: { casNumber: "54084-26-3", pubChem: null, protons: 112, electrons: 112, neutrons: 173 },
+      generalProperties: {
+        atomicNumber: 112,
+        atomicWeight: 285,
+        massNumber: 285,
+        radioActive: true,
+        color: null,
+      },
+      crystalStructure: null,
+      electrons: {
+        electronsPerShell: [2, 8, 18, 32, 32, 18, 2],
+        electronConfiguration: ["[Rn]", "5f-14", "6d-10", "7s-2"],
+      },
+      physhicalProperties: {
+        phase: ELEMENT_PHASE.LIQUID,
+        density: null,
+        meltingPoint: null,
+        boilingPoint: null,
+        heatOfFusion: null,
+        heatOfVaporization: null,
+        specificHeatCapacity: null,
+      },
+      atomicProperties: {
+        atomicRadius: null,
+        covalentRadius: 122,
+        electronegativity: null,
+        ionizationPotential: null,
+        atomicVolume: null,
+        thermalConductivity: null,
+        oxidationStates: [2, 4],
+      },
+
+      isotopes: {
+        stable: [],
+        unstable: [277, 278, 279, 280, 281, 282, 283, 283, 284, 285],
+      },
+    },
+  },
+
+  {
+    symbol: "Nh",
+    category: null,
+    group: 13,
+    period: 7,
+    block: "p",
+
+    static: {
+      abundance: { earth: null, universe: null },
+      unGrouped: { casNumber: "54084-70-7", pubChem: null, protons: 112, electrons: 112, neutrons: 173 },
+      generalProperties: {
+        atomicNumber: 113,
+        atomicWeight: 286,
+        massNumber: 286,
+        radioActive: true,
+        color: null,
+      },
+      crystalStructure: null,
+      electrons: {
+        electronsPerShell: [2, 8, 18, 32, 32, 18, 3],
+        electronConfiguration: ["[Rn]", "5f-14", "6d-10", "7s-2", "7p-1"],
+      },
+      physhicalProperties: {
+        phase: ELEMENT_PHASE.SOLID,
+        density: 16,
+        meltingPoint: 703.15,
+        boilingPoint: 1373.15,
+        heatOfFusion: null,
+        heatOfVaporization: null,
+        specificHeatCapacity: null,
+      },
+      atomicProperties: {
+        atomicRadius: null,
+        covalentRadius: 136,
+        electronegativity: null,
+        ionizationPotential: null,
+        atomicVolume: null,
+        thermalConductivity: null,
+        oxidationStates: [1, 3, 5],
+      },
+
+      isotopes: {
+        stable: [],
+        unstable: [278, 279, 280, 281, 282, 283, 283, 284, 285, 286, 287],
+      },
+    },
+  },
+
+  {
+    symbol: "Fl",
+    category: null,
+    group: 14,
+    period: 7,
+    block: "p",
+
+    static: {
+      abundance: { earth: null, universe: null },
+      unGrouped: { casNumber: "54084-70-7", pubChem: null, protons: 114, electrons: 114, neutrons: 173 },
+      generalProperties: {
+        atomicNumber: 114,
+        atomicWeight: 289,
+        massNumber: 297,
+        radioActive: true,
+        color: null,
+      },
+      crystalStructure: null,
+      electrons: {
+        electronsPerShell: [2, 8, 18, 32, 32, 18, 4],
+        electronConfiguration: ["[Rn]", "5f-14", "6d-10", "7s-2", "7p-2"],
+      },
+      physhicalProperties: {
+        phase: ELEMENT_PHASE.SOLID,
+        density: 14,
+        meltingPoint: 343.15,
+        boilingPoint: 423.15,
+        heatOfFusion: null,
+        heatOfVaporization: null,
+        specificHeatCapacity: null,
+      },
+      atomicProperties: {
+        atomicRadius: null,
+        covalentRadius: 143,
+        electronegativity: null,
+        ionizationPotential: null,
+        atomicVolume: null,
+        thermalConductivity: null,
+        oxidationStates: [2, 4],
+      },
+
+      isotopes: {
+        stable: [],
+        unstable: [284, 285, 286, 287, 288, 289],
+      },
+    },
+  },
+
+  {
+    symbol: "Mc",
+    category: null,
+    group: 15,
+    period: 7,
+    block: "p",
+
+    static: {
+      abundance: { earth: null, universe: null },
+      unGrouped: { casNumber: "54085-64-2", pubChem: null, protons: 115, electrons: 115, neutrons: 173 },
+      generalProperties: {
+        atomicNumber: 115,
+        atomicWeight: 288,
+        massNumber: 288,
+        radioActive: true,
+        color: null,
+      },
+      crystalStructure: null,
+      electrons: {
+        electronsPerShell: [2, 8, 18, 32, 32, 18, 5],
+        electronConfiguration: ["[Rn]", "5f-14", "6d-10", "7s-2", "7p-3"],
+      },
+      physhicalProperties: {
+        phase: ELEMENT_PHASE.SOLID,
+        density: null,
+        meltingPoint: null,
+        boilingPoint: null,
+        heatOfFusion: null,
+        heatOfVaporization: null,
+        specificHeatCapacity: null,
+      },
+      atomicProperties: {
+        atomicRadius: null,
+        covalentRadius: 162,
+        electronegativity: null,
+        ionizationPotential: null,
+        atomicVolume: null,
+        thermalConductivity: null,
+        oxidationStates: [1, 3],
+      },
+
+      isotopes: {
+        stable: [],
+        unstable: [287, 288, 289, 290, 291],
+      },
+    },
+  },
+
+  {
+    symbol: "Lv",
+    category: null,
+    group: 16,
+    period: 7,
+    block: "p",
+
+    static: {
+      abundance: { earth: null, universe: null },
+      unGrouped: { casNumber: "54100-71-9", pubChem: null, protons: 116, electrons: 116, neutrons: 175 },
+      generalProperties: {
+        atomicNumber: 116,
+        atomicWeight: 293,
+        massNumber: 291,
+        radioActive: true,
+        color: null,
+      },
+      crystalStructure: null,
+      electrons: {
+        electronsPerShell: [2, 8, 18, 32, 32, 18, 6],
+        electronConfiguration: ["[Rn]", "5f-14", "6d-10", "7s-2", "7p-4"],
+      },
+      physhicalProperties: {
+        phase: ELEMENT_PHASE.SOLID,
+        density: null,
+        meltingPoint: null,
+        boilingPoint: null,
+        heatOfFusion: null,
+        heatOfVaporization: null,
+        specificHeatCapacity: null,
+      },
+      atomicProperties: {
+        atomicRadius: null,
+        covalentRadius: 175,
+        electronegativity: null,
+        ionizationPotential: null,
+        atomicVolume: null,
+        thermalConductivity: null,
+        oxidationStates: [2, 4],
+      },
+
+      isotopes: {
+        stable: [],
+        unstable: [289, 290, 291, 292, 293],
+      },
+    },
+  },
+
+  {
+    symbol: "Ts",
+    category: null,
+    group: 17,
+    period: 7,
+    block: "p",
+
+    static: {
+      abundance: { earth: null, universe: null },
+      unGrouped: { casNumber: "54100-71-9", pubChem: null, protons: 117, electrons: 117, neutrons: 177 },
+      generalProperties: {
+        atomicNumber: 117,
+        atomicWeight: 294,
+        massNumber: 294,
+        radioActive: true,
+        color: null,
+      },
+      crystalStructure: null,
+      electrons: {
+        electronsPerShell: [2, 8, 18, 32, 32, 18, 7],
+        electronConfiguration: ["[Rn]", "5f-14", "6d-10", "7s-2", "7p-5"],
+      },
+      physhicalProperties: {
+        phase: ELEMENT_PHASE.SOLID,
+        density: null,
+        meltingPoint: null,
+        boilingPoint: null,
+        heatOfFusion: null,
+        heatOfVaporization: null,
+        specificHeatCapacity: null,
+      },
+      atomicProperties: {
+        atomicRadius: null,
+        covalentRadius: 165,
+        electronegativity: null,
+        ionizationPotential: null,
+        atomicVolume: null,
+        thermalConductivity: null,
+        oxidationStates: [-1, 1, 3, 5],
+      },
+
+      isotopes: {
+        stable: [],
+        unstable: [291, 292, 293, 294],
+      },
+    },
+  },
+
+  {
+    symbol: "Og",
+    category: null,
+    group: 18,
+    period: 7,
+    block: "p",
+
+    static: {
+      abundance: { earth: null, universe: null },
+      unGrouped: { casNumber: "54144-19-3", pubChem: null, protons: 118, electrons: 118, neutrons: 176 },
+      generalProperties: {
+        atomicNumber: 118,
+        atomicWeight: 294,
+        massNumber: 294,
+        radioActive: true,
+        color: null,
+      },
+      crystalStructure: null,
+      electrons: {
+        electronsPerShell: [2, 8, 18, 32, 32, 18, 8],
+        electronConfiguration: ["[Rn]", "5f-14", "6d-10", "7s-2", "7p-6"],
+      },
+      physhicalProperties: {
+        phase: ELEMENT_PHASE.SOLID,
+        density: 13.65,
+        meltingPoint: null,
+        boilingPoint: null,
+        heatOfFusion: null,
+        heatOfVaporization: null,
+        specificHeatCapacity: null,
+      },
+      atomicProperties: {
+        atomicRadius: 152,
+        covalentRadius: 157,
+        electronegativity: null,
+        ionizationPotential: null,
+        atomicVolume: null,
+        thermalConductivity: null,
+        oxidationStates: [-1, 0, 2, 4, 6],
+      },
+
+      isotopes: {
+        stable: [],
+        unstable: [293, 294],
+      },
+    },
+  },
 ] as const;
