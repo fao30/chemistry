@@ -491,7 +491,7 @@ export const ELEMENT_SOLUBILITY_DATA: Record<
     IronII: "I",
     IronIII: "I",
     CopperII: "I",
-    Silver: "S",
+    Silver: "SS",
     Zinc: "I",
     LeadII: "I",
     Aluminum: "I",
