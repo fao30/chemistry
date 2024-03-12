@@ -44,7 +44,8 @@ export default function Home() {
                     <div
                       key={colIndex}
                       className={cn(
-                        { "border-4 bg-light aspect-square relative group": element },
+                        { "aspect-square": !isActive },
+                        { "border-4 bg-light relative group": element },
                         { "pb-10 grid grid-cols-subgrid col-span-10 row-span-3 col-start-3 row-start-1": isActive },
                       )}
                       style={{
@@ -85,10 +86,10 @@ export default function Home() {
                               <div className="h-1 bg-light w-5 absolute -left-3 top-7" />
 
                               <p className="text-light -left-48 top-1/2 absolute -translate-y-1 text-right w-44">{t.titles.symbol}</p>
-                              <div className="h-1 bg-light w-[6.75rem] absolute -left-3 top-1/2 translate-y-2" />
+                              <div className="h-1 bg-light w-[6.5rem] absolute -left-3 top-1/2 translate-y-2" />
 
                               <p className="text-light -left-48 bottom-7 absolute text-right w-44">{t.titles.title}</p>
-                              <div className="h-1 bg-light w-[5.5rem] absolute -left-3 bottom-11 translate-y-2" />
+                              <div className="h-1 bg-light w-[4.75rem] absolute -left-3 bottom-11 translate-y-2" />
 
                               <div className="absolute right-4 -top-[3.5rem] flex flex-col items-end justify-center">
                                 <p className="text-light">{t.titles.atomicWeight}</p>
@@ -187,7 +188,7 @@ export default function Home() {
               return (
                 <div
                   key={index}
-                  className={cn({ "border-4 bg-light aspect-square relative group": element })}
+                  className="border-4 bg-light aspect-square relative group"
                   style={{
                     borderColor: element?.category ? CATEGORIES[element.category].color : "#B1C0C9",
                     color:
@@ -243,7 +244,7 @@ export default function Home() {
               return (
                 <div
                   key={index}
-                  className={cn({ "border-4 bg-light aspect-square relative group": element })}
+                  className="border-4 bg-light aspect-square relative group"
                   style={{
                     borderColor: element?.category ? CATEGORIES[element.category].color : "#B1C0C9",
                     color:
