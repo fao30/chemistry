@@ -728,7 +728,7 @@ export const ELEMENT_DATA2 = [
         radioActive: false,
         color: ELEMENT_COLORS.SILVER,
       },
-      crystalStructure: CRYSTAL_STRUCTURES.FACE_CENTERED_CUBIC.value,
+      crystalStructure: CRYSTAL_STRUCTURES.SIMPLE_HEXAGONAL.value,
       electrons: {
         electronsPerShell: [2, 8, 18, 32, 9, 2],
         electronConfiguration: ["Xe", "4f-14", "5d-1", "6s-2"],
@@ -874,7 +874,7 @@ export const ELEMENT_DATA3 = [
     period: 7,
     block: "f",
     static: {
-      abundance: { earth: "0.00018", universe: "2×10_-8%" },
+      abundance: { earth: "0.00018", universe: "2×10_-8" },
       unGrouped: { casNumber: "7440-61-1", pubChem: 23989, protons: 92, electrons: 92, neutrons: 146 },
       generalProperties: {
         atomicNumber: 92,
