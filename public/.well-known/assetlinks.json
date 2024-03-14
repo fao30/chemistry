@@ -3,7 +3,7 @@
     "relation": ["delegate_permission/common.handle_all_urls"],
     "target": {
       "namespace": "android_app",
-      "package_name": "package name",
+      "package_name": "app.vercel.chemistry_three.twa",
       "sha256_cert_fingerprints": "8F:F0:77:5C:48:4D:17:CC:1D:12:17:5E:E0:76:68:59:68:FB:1F:96:A5:C9:2E:A7:7C:0C:8F:9C:87:C1:D1:C3"
     }
   }
