@@ -8,11 +8,7 @@ import App from "./App.tsx";
 // biome-ignore lint/style/noNonNullAssertion: <explanation>
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <ConfigProvider
-      theme={{
-        token: { fontFamily: "Jost" },
-      }}
-    >
+    <ConfigProvider theme={{ token: { fontFamily: "Jost" } }}>
       <App />
     </ConfigProvider>
   </React.StrictMode>,

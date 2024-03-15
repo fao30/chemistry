@@ -5,13 +5,14 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 import { useEffect, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 
+type SortBy = "atomicNumber" | "name" | "symbol";
+
 export default function List() {
   const { color, t } = useSetting();
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
   const search = (searchParams.get("q") as string) ?? "";
-  const sortBy: "atomicNumber" | "name" | "symbol" =
-    (searchParams.get("sortBy") as "atomicNumber" | "name" | "symbol") ?? "atomicNumber";
+  const sortBy: SortBy = (searchParams.get("sortBy") as SortBy) ?? "atomicNumber";
   const sortOrder: "asc" | "desc" = (searchParams.get("sortOrder") as "asc" | "desc") ?? "asc";
 
   const defaultData = ELEMENT_DATA_COMPLETE.map((e) => ({
