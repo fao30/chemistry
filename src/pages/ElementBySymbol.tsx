@@ -3,7 +3,6 @@ import { CRYSTAL_STRUCTURES } from "@/components/CrystalStructures";
 import useSetting from "@/hooks/useSetting";
 import { ELEMENT_DATA_COMPLETE } from "@/lib/constants";
 import { kelvinToCelsius, kelvinToFahrenheit } from "@/lib/functions";
-import { useState } from "react";
 import { Navigate, useParams } from "react-router-dom";
 
 const renderUnit = (unit: string) => {
