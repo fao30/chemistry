@@ -3,6 +3,7 @@ import { CRYSTAL_STRUCTURES } from "@/components/CrystalStructures";
 import useSetting from "@/hooks/useSetting";
 import { ELEMENT_DATA_COMPLETE } from "@/lib/constants";
 import { kelvinToCelsius, kelvinToFahrenheit } from "@/lib/functions";
+import { useState } from "react";
 import { Navigate, useParams } from "react-router-dom";
 
 const renderUnit = (unit: string) => {
@@ -60,8 +61,14 @@ export default function ElementBySymbol() {
     <article className="p-6 grid md:grid-cols-2 xl:grid-cols-3 gap-6 text-dark">
       {/* FIRST COLUMN */}
       <section className="flex flex-col gap-6">
-        <Box classNameDiv="p-6 flex items-center justify-center">
+        <Box classNameDiv="p-6 flex-col gap-2 flex items-center justify-center">
           <h5>{tData.name.toUpperCase()}</h5>
+          <section>
+            <audio controls>
+              <source src={`/sound/${data.static.generalProperties.atomicNumber}.mp3`} type="audio/mp3" />
+              <track kind="captions" srcLang="ru" label={tData.name} default />
+            </audio>
+          </section>
         </Box>
         <section className="grid grid-cols-2 gap-6">
           <Box classNameDiv="relative size-full">
