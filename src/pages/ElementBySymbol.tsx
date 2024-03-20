@@ -56,6 +56,8 @@ export default function ElementBySymbol() {
     return <span dangerouslySetInnerHTML={{ __html: renderedStructure }} />;
   };
 
+  const ELEMENTS_WITHOUT_GROUP = [57, 89];
+
   return (
     <article className="p-6 grid md:grid-cols-2 xl:grid-cols-3 gap-6 text-dark">
       {/* FIRST COLUMN */}
@@ -77,7 +79,9 @@ export default function ElementBySymbol() {
           <Box classNameDiv="aspect-[21/9] flex flex-col justify-between">
             <div className="grid grid-cols-2">
               <h6 className="title">{t.titles.group}</h6>
-              <h6>{data.group ?? "-"}</h6>
+              <h6>
+                {ELEMENTS_WITHOUT_GROUP.includes(data.static.generalProperties.atomicNumber) ? "-" : data.group ? data.group : "-"}
+              </h6>
             </div>
             <div className="grid grid-cols-2">
               <h6 className="title">{t.titles.period}</h6>
