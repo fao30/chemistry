@@ -1,7 +1,7 @@
 import Box from "@/components/Box";
 import { CRYSTAL_STRUCTURES } from "@/components/CrystalStructures";
 import useSetting from "@/hooks/useSetting";
-import { ELEMENT_DATA_COMPLETE } from "@/lib/constants";
+import { ELEMENT_DATA_COMPLETE, is2k } from "@/lib/constants";
 import { kelvinToCelsius, kelvinToFahrenheit } from "@/lib/functions";
 import { Navigate, useParams } from "react-router-dom";
 
@@ -165,13 +165,16 @@ export default function ElementBySymbol() {
               <h6 className="title">{t.titles.electronConfiguration}</h6>
               <h6>{renderElectronConfiguration(data.static.electrons.electronConfiguration)}</h6>
             </section>
-            <section className="relative" style={{ height: data.static.electrons.electronsPerShell.length >= 6 ? "25rem" : "20rem" }}>
-              <div className="absolute flex items-center justify-center centered size-12 bg-dark text-light rounded-full">
+            <section
+              className="relative"
+              style={{ height: data.static.electrons.electronsPerShell.length >= 6 && !is2k ? "25rem" : is2k ? "40rem" : "20rem" }}
+            >
+              <div className="absolute flex items-center justify-center centered size-12 2k:size-24 bg-dark text-light rounded-full">
                 <h6>{data.symbol}</h6>
               </div>
 
               {data.static.electrons.electronsPerShell?.map((e, shellIndex) => {
-                const radius = 40 + shellIndex * 20;
+                const radius = (is2k ? 80 : 40) + shellIndex * (is2k ? 30 : 20);
 
                 return (
                   <div
@@ -189,7 +192,7 @@ export default function ElementBySymbol() {
                           return (
                             <div
                               key={`${shellIndex}-${electronIndex}`}
-                              className="!-translate-x-2 !-translate-y-2 size-4 rounded-full bg-dark absolute border-2 border-light"
+                              className="!-translate-x-2 !-translate-y-2 2k:!-translate-x-3 2k:!-translate-y-3 size-4 2k:size-6 rounded-full bg-dark absolute border-2 border-light"
                               style={{ left: x, top: y }}
                             />
                           );
