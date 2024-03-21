@@ -137,6 +137,7 @@ export const getRussianDictionary = (): Dictionary => ({
   },
 
   titles: {
+    details: "Детали",
     audio: "Аудио",
     solubilityChart: "Таблица растворимости",
     reactivitySeries: "Ряд активности",

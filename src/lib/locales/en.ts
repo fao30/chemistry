@@ -136,6 +136,7 @@ export const getEnglishDictionary = (): Dictionary => ({
   },
 
   titles: {
+    details: "Details",
     audio: "Audio",
     solubilityChart: "Solubility Chart",
     reactivitySeries: "Reactivity Series",

@@ -118,7 +118,7 @@ export default function Home() {
                               onClick={() => navigate(`/element/${clickedElement?.symbol}`)}
                               type="button"
                             >
-                              Detail
+                              {t.titles.details}
                             </button>
                             {/* MENDELEEV */}
                             {/* <div className="w-[60%] animate flex gap-4 p-3 bg-light text-dark">
