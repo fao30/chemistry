@@ -19,7 +19,12 @@ export default function Home() {
 
   return (
     // <article className="overflow-auto bg-gradient-to-r from-[#274786] to-[#229FBC]">
-    <article className="overflow-auto">
+    <article
+      className="overflow-auto"
+      onClick={() => {
+        if (clickedElement) setClickedElement(null);
+      }}
+    >
       <section
         className="animate mx-auto max-xl:!w-[120rem] overflow-x-auto min-h-screen py-24 2k:pt-44"
         style={{ width: `${setting.tableWidth}%` }}
