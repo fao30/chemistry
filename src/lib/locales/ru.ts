@@ -69,7 +69,7 @@ export const getRussianDictionary = (): Dictionary => ({
 
   elementCategories: {
     OTHER_NONMETALS: "Другие неметаллы",
-    NOBLE_GASSES: "Благородные газыs",
+    NOBLE_GASSES: "Благородные газы",
     ALKALI_METALS: "Щелочные металлы",
     ALKALINE_EARTH_METALS: "Щелочно-земельные металлы",
     POST_TRANSITION_METALS: "Пост-переходные металлы",
@@ -137,6 +137,7 @@ export const getRussianDictionary = (): Dictionary => ({
   },
 
   titles: {
+    audio: "Аудио",
     solubilityChart: "Таблица растворимости",
     reactivitySeries: "Ряд активности",
     tables: "Таблицы",

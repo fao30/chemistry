@@ -5,8 +5,8 @@ import { cn } from "@/lib/functions";
 export default function ReactivitySeries() {
   const { t, color, setting } = useSetting();
   return (
-    <article className="px-6 py-12 flex flex-col gap-6">
-      <h3 className="text-center">{t.titles.reactivitySeries}</h3>
+    <article className="px-6 py-12 flex flex-col gap-6 2k:gap-12">
+      <h1 className="text-center">{t.titles.reactivitySeries}</h1>
       <section className="overflow-auto">
         <section style={{ width: `${setting.tableWidth}%` }} className="mx-auto animate relative h-[70vh] overflow-y-auto">
           <section className="grid grid-cols-4 sticky top-0 z-10" style={{ backgroundColor: color }}>
@@ -24,11 +24,11 @@ export default function ReactivitySeries() {
             return (
               <section
                 key={e}
-                className={cn("grid grid-cols-4 text-center", {
-                  "bg-gray-700/20": i % 2 !== 0,
+                className={cn("grid bg-gray-900 grid-cols-4 text-center", {
+                  "bg-gray-900/90": i % 2 !== 0,
                 })}
               >
-                <a className="bg-dark/80 h-full p-2" href={`/element/${e}`}>
+                <a className="bg-gray-900 border-y-[1px] border-gray-700/20 h-full p-2" href={`/element/${e}`}>
                   <h6>{t.elements[e].name}</h6>
                 </a>
                 <h6

@@ -3,6 +3,8 @@ import type { Color, ElementCategory, Lang, Phase, ReactionKey, SolubilityKey } 
 
 export const defaultLang: Lang = "ru";
 
+export const is2k = window.innerWidth >= 2560;
+
 export const COLOR_SETTING = {
   RED: { color: "#dc2626", value: "RED" },
   ORANGE: { color: "#ea580c", value: "ORANGE" },

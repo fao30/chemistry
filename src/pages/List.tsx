@@ -67,7 +67,7 @@ export default function List() {
     <article className="p-6 flex flex-col gap-6">
       <section className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
         <input
-          className="h-12 bg-black text-light border-2 border-gray-600 px-6 outline-none"
+          className="h-12 2k:h-24 h6 bg-black text-light border-2 border-gray-600 px-6 outline-none"
           placeholder="Search"
           value={search}
           onChange={(e) => {
@@ -77,7 +77,7 @@ export default function List() {
         />
         <button
           type="button"
-          className="hover:opacity-80 h-12 text-light px-6 outline-none flex items-center justify-center"
+          className="hover:opacity-80 h-12 2k:h-24 text-light px-6 outline-none flex items-center justify-center"
           style={{ backgroundColor: color }}
           onClick={() => handleSort("atomicNumber")}
         >
@@ -88,12 +88,12 @@ export default function List() {
               className={cn("animate", { "rotate-180": sortOrder === "asc" }, { "rotate-270": sortOrder === "desc" })}
             />
           ) : null}
-          {t.navbar.sortByNumber}
+          <h6>{t.navbar.sortByNumber}</h6>
         </button>
 
         <button
           type="button"
-          className="hover:opacity-80 h-12 text-light px-6 outline-none flex items-center justify-center"
+          className="hover:opacity-80 h-12 2k:h-24 text-light px-6 outline-none flex items-center justify-center"
           style={{ backgroundColor: color }}
           onClick={() => handleSort("name")}
         >
@@ -104,12 +104,12 @@ export default function List() {
               className={cn("animate", { "rotate-180": sortOrder === "asc" }, { "rotate-270": sortOrder === "desc" })}
             />
           ) : null}
-          {t.navbar.sortByName}
+          <h6>{t.navbar.sortByName}</h6>
         </button>
 
         <button
           type="button"
-          className="hover:opacity-80 h-12 text-light px-6 outline-none flex items-center justify-center"
+          className="hover:opacity-80 h-12 2k:h-24 text-light px-6 outline-none flex items-center justify-center"
           style={{ backgroundColor: color }}
           onClick={() => handleSort("symbol")}
         >
@@ -120,10 +120,10 @@ export default function List() {
               className={cn("animate", { "rotate-180": sortOrder === "asc" }, { "rotate-270": sortOrder === "desc" })}
             />
           ) : null}
-          {t.navbar.sortBySymbol}
+          <h6>{t.navbar.sortBySymbol}</h6>
         </button>
       </section>
-      <section className="grid md:grid-cols-3 lg:grid-cols-5 gap-4">
+      <section className="grid md:grid-cols-3 lg:grid-cols-5 4k:grid-cols-4 gap-4">
         {data.map((e) => {
           return (
             <button

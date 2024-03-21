@@ -4,7 +4,14 @@ import { getRussianDictionary } from "@/lib/locales/ru";
 import type { ColorSetting, Lang, TableWidth } from "@/types";
 import { useLocalStorage } from "@uidotdev/usehooks";
 
-type Setting = { lang: Lang; color: ColorSetting; tableWidth: TableWidth; withName: boolean; withAtomicWeight: boolean };
+type Setting = {
+  lang: Lang;
+  color: ColorSetting;
+  tableWidth: TableWidth;
+  withName: boolean;
+  withAtomicWeight: boolean;
+  withAudio: boolean;
+};
 
 export default function useSetting() {
   const [setting, setSetting] = useLocalStorage<Setting>("setting", {
@@ -13,6 +20,7 @@ export default function useSetting() {
     tableWidth: "100",
     withAtomicWeight: false,
     withName: true,
+    withAudio: true,
   });
 
   return {

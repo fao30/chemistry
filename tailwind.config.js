@@ -20,6 +20,16 @@ export default {
         NOBLE_GASSES: "#396113",
         ALKALI_METALS: "#7e1957",
       },
+      screens: {
+        hd: "1280px",
+        fullHd: "1920px",
+        "2k": "2560px",
+        "4k": "3840px",
+      },
+      fontSize: {
+        "10xl": "9rem",
+        "11xl": "10rem",
+      },
     },
   },
   plugins: [],

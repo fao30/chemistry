@@ -1,5 +1,5 @@
 import useSetting from "@/hooks/useSetting";
-import { COLOR_SETTING_OPTIONS } from "@/lib/constants";
+import { COLOR_SETTING_OPTIONS, is2k } from "@/lib/constants";
 import { cn } from "@/lib/functions";
 import type { ColorSetting, Lang, TableWidth } from "@/types";
 import { Icon } from "@iconify/react/dist/iconify.js";
@@ -15,14 +15,14 @@ export default function Navbar() {
   return (
     <Fragment>
       <nav
-        className="animate sticky top-0 w-full py-2 px-6 text-light flex justify-between z-50 backdrop-blur-2xl"
+        className="animate sticky top-0 w-full py-2 4k:py-6 px-6 text-light flex justify-between z-50 backdrop-blur-2xl"
         style={{ backgroundColor: color }}
       >
         <button type="button" onClick={() => navigate("/")}>
-          <Icon width={35} icon="mdi:home" />
+          <Icon width={is2k ? 60 : 35} icon="mdi:home" />
         </button>
 
-        <section className="flex gap-4 items-center">
+        <section className="flex gap-4 2k:gap-8 4k:gap-10 items-center">
           <Popover
             style={{ backgroundColor: "#FEFEFE" }}
             content={
@@ -51,35 +51,35 @@ export default function Navbar() {
             placement="bottom"
           >
             <button type="button" className="flex gap-2 items-center">
-              <Icon icon="tabler:table" width={27} />
+              <Icon icon="tabler:table" width={is2k ? 45 : 27} />
               <h6 className="max-md:hidden">{t.titles.tables}</h6>
             </button>
           </Popover>
           <a type="button" href="/list" target="_blank" rel="noreferrer" className="flex gap-2 items-center">
-            <Icon icon="material-symbols:list" width={40} />
+            <Icon icon="material-symbols:list" width={is2k ? 60 : 40} />
             <h6 className="max-md:hidden">{t.navbar.list}</h6>
           </a>
           <a type="button" href="/compare" target="_blank" rel="noreferrer" className="flex gap-2 items-center">
-            <Icon icon="teenyicons:git-compare-solid" width={27} rotate={3} />
+            <Icon icon="teenyicons:git-compare-solid" width={is2k ? 45 : 27} rotate={3} />
             <h6 className="max-md:hidden">{t.navbar.compare}</h6>
           </a>
           <button onClick={() => setOpenSetting(true)} type="button">
-            <Icon icon="uil:setting" width={27} />
+            <Icon icon="uil:setting" width={is2k ? 45 : 27} />
           </button>
         </section>
       </nav>
       <Drawer
-        width={400}
+        width={is2k ? 1000 : 400}
         open={openSetting}
         onClose={() => setOpenSetting(false)}
         title={<h6>{t.titles.setting}</h6>}
         style={{ backgroundColor: "#FEFEFE" }}
       >
-        <section className="flex flex-col gap-4">
-          <section className="grid grid-cols-2 text-dark items-center">
+        <section className="flex flex-col gap-4 2k:gap-6">
+          <section className="grid grid-cols-2 gap-4 text-dark items-center">
             <h6 className="title">{t.titles.language}</h6>
             <select
-              className="px-2 bg-gray-400/40 h-8 text-lg outline-none"
+              className="px-2 bg-gray-400/40 h-8 outline-none h6 2k:h-auto"
               value={setting.lang}
               onChange={(e) => setSetting({ ...setting, lang: e.target.value as Lang })}
             >
@@ -87,7 +87,7 @@ export default function Navbar() {
               <option value="ru">{t.titles.russian}</option>
             </select>
           </section>
-          <section className="grid grid-cols-2">
+          <section className="grid grid-cols-2 gap-4">
             <h6 className="title">{t.titles.color}</h6>
             <section className="grid grid-cols-5 gap-1">
               {COLOR_SETTING_OPTIONS.map((e) => (
@@ -104,10 +104,10 @@ export default function Navbar() {
             </section>
           </section>
 
-          <section className="grid grid-cols-2 text-dark items-center">
+          <section className="grid grid-cols-2 gap-4 text-dark items-center">
             <h6 className="title">{t.titles.tableWidth}</h6>
             <select
-              className="px-2 bg-gray-400/40 h-8 text-lg outline-none"
+              className="px-2 bg-gray-400/40 h-8 outline-none h6 2k:h-auto"
               value={setting.tableWidth}
               onChange={(e) => setSetting({ ...setting, tableWidth: e.target.value as TableWidth })}
             >
@@ -130,7 +130,7 @@ export default function Navbar() {
             }}
           >
             <Fragment>
-              <section className="grid grid-cols-2 text-dark items-center">
+              <section className="grid grid-cols-2 gap-4 text-dark items-center">
                 <h6 className="title">{t.titles.title}</h6>
                 <Switch
                   className="bg-gray-400/40"
@@ -139,13 +139,22 @@ export default function Navbar() {
                   onChange={(e) => setSetting({ ...setting, withName: e })}
                 />
               </section>
-              <section className="grid grid-cols-2 text-dark items-center">
+              <section className="grid grid-cols-2 gap-4 text-dark items-center">
                 <h6 className="title">{t.titles.atomicWeight}</h6>
                 <Switch
                   className="bg-gray-400/40"
                   style={{ width: 50 }}
                   defaultChecked={setting.withAtomicWeight}
                   onChange={(e) => setSetting({ ...setting, withAtomicWeight: e })}
+                />
+              </section>
+              <section className="grid grid-cols-2 gap-4 text-dark items-center">
+                <h6 className="title">{t.titles.audio}</h6>
+                <Switch
+                  className="bg-gray-400/40"
+                  style={{ width: 50 }}
+                  defaultChecked={setting.withAudio}
+                  onChange={(e) => setSetting({ ...setting, withAudio: e })}
                 />
               </section>
             </Fragment>

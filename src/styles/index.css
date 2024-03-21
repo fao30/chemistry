@@ -22,32 +22,29 @@ body {
     @apply animate;
   }
   h1 {
-    @apply text-6xl 2xl:text-7xl;
+    @apply hd:text-5xl fullHd:text-7xl 2k:text-9xl 4k:text-11xl;
   }
   h2 {
-    @apply text-5xl 2xl:text-6xl;
+    @apply hd:text-2xl fullHd:text-3xl 2k:text-5xl 4k:text-7xl font-semibold;
   }
   h3 {
-    @apply text-4xl 2xl:text-5xl font-semibold;
+    @apply hd:text-xl fullHd:text-2xl 2k:text-4xl 4k:text-6xl font-semibold;
   }
   h4 {
     @apply text-3xl 2xl:text-4xl font-semibold;
   }
   h5 {
-    @apply text-2xl 2xl:text-3xl font-semibold;
+    @apply text-3xl hd:text-xl fullHd:text-4xl 2k:text-5xl 4k:text-8xl font-semibold;
   }
   h6 {
-    @apply text-lg 2xl:text-xl;
+    @apply hd:text-base fullHd:text-2xl 2k:text-3xl 4k:text-5xl;
   }
   label {
     @apply font-medium text-base select-none;
   }
   p,
   a {
-    @apply text-base;
-  }
-  small {
-    @apply text-sm font-normal;
+    @apply hd:text-[0.6rem] fullHd:text-[0.9rem] 2k:text-xl 4k:text-3xl;
   }
   p {
     @apply text-pretty;
@@ -63,6 +60,9 @@ body {
 }
 
 @layer components {
+  .h6 {
+    @apply hd:text-base fullHd:text-2xl 2k:text-3xl 4k:text-5xl;
+  }
   /* animation */
   .animate {
     @apply transition-all duration-300;
@@ -99,6 +99,9 @@ body {
     @apply left-1/2 -translate-x-1/2;
   }
   .title {
-    @apply text-gray-500;
+    @apply text-dark/60;
+  }
+  .title2 {
+    @apply text-light/80 font-medium;
   }
 }

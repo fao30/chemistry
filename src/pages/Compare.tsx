@@ -112,49 +112,49 @@ export default function Compare() {
       {/* FIRST COLUMN */}
       <section className="flex flex-col gap-4">
         <section className="grid grid-cols-3 gap-6">
-          <h6 className="title">{t.titles.title}</h6>
+          <h6 className="title2">{t.titles.title}</h6>
           <h6>{tDataA.name}</h6>
           <h6>{tDataB.name}</h6>
         </section>
 
         <section className="grid grid-cols-3 gap-6">
-          <h6 className="title">{t.titles.symbol}</h6>
+          <h6 className="title2">{t.titles.symbol}</h6>
           <h6>{dataA.symbol ?? "-"}</h6>
           <h6>{dataB.symbol ?? "-"}</h6>
         </section>
 
         <section className="grid grid-cols-3 gap-6">
-          <h6 className="title">{t.titles.atomicNumber}</h6>
+          <h6 className="title2">{t.titles.atomicNumber}</h6>
           <h6>{dataA.static.generalProperties.atomicNumber ?? "-"}</h6>
           <h6>{dataB.static.generalProperties.atomicNumber ?? "-"}</h6>
         </section>
 
         <section className="grid grid-cols-3 gap-6">
-          <h6 className="title">{t.titles.group}</h6>
+          <h6 className="title2">{t.titles.group}</h6>
           <h6>{dataA.group ?? "-"}</h6>
           <h6>{dataB.group ?? "-"}</h6>
         </section>
 
         <section className="grid grid-cols-3 gap-6">
-          <h6 className="title">{t.titles.period}</h6>
+          <h6 className="title2">{t.titles.period}</h6>
           <h6>{dataA.period ?? "-"}</h6>
           <h6>{dataB.period ?? "-"}</h6>
         </section>
 
         <section className="grid grid-cols-3 gap-6">
-          <h6 className="title">{t.titles.block}</h6>
+          <h6 className="title2">{t.titles.block}</h6>
           <h6>{dataA.block ?? "-"}</h6>
           <h6>{dataB.block ?? "-"}</h6>
         </section>
 
         <section className="grid grid-cols-3 gap-6">
-          <h6 className="title">{t.titles.abudanceInEarthCrust}</h6>
+          <h6 className="title2">{t.titles.abudanceInEarthCrust}</h6>
           <h6>{dataA.static.abundance.earth ? renderAbudance(dataA.static.abundance.earth) : "-"}</h6>
           <h6>{dataB.static.abundance.earth ? renderAbudance(dataB.static.abundance.earth) : "-"}</h6>
         </section>
 
         <section className="grid grid-cols-3 gap-6">
-          <h6 className="title">{t.titles.abudanceInUniverse}</h6>
+          <h6 className="title2">{t.titles.abudanceInUniverse}</h6>
           <h6>{dataA.static.abundance.universe ? renderAbudance(dataA.static.abundance.universe) : "-"}</h6>
           <h6>{dataB.static.abundance.universe ? renderAbudance(dataB.static.abundance.universe) : "-"}</h6>
         </section>
@@ -164,7 +164,7 @@ export default function Compare() {
         <Title title={t.titles.generalProperties} />
 
         <section className="grid grid-cols-3 gap-6">
-          <h6 className="title">{t.titles.atomicWeight}</h6>
+          <h6 className="title2">{t.titles.atomicWeight}</h6>
           <h6>
             {dataA.static.generalProperties.atomicWeight ? dataA.static.generalProperties.atomicWeight.toLocaleString(lang) : "-"}
           </h6>
@@ -174,25 +174,25 @@ export default function Compare() {
         </section>
 
         <section className="grid grid-cols-3 gap-6">
-          <h6 className="title">{t.titles.category}</h6>
+          <h6 className="title2">{t.titles.category}</h6>
           <h6>{dataA.category ? t.elementCategories[dataA.category] : "-"}</h6>
           <h6>{dataB.category ? t.elementCategories[dataB.category] : "-"}</h6>
         </section>
 
         <section className="grid grid-cols-3 gap-6">
-          <h6 className="title">{t.titles.category}</h6>
+          <h6 className="title2">{t.titles.category}</h6>
           <h6>{dataA.static.generalProperties.color ? t.colors[dataA.static.generalProperties.color] : "-"}</h6>
           <h6>{dataB.static.generalProperties.color ? t.colors[dataB.static.generalProperties.color] : "-"}</h6>
         </section>
 
         <section className="grid grid-cols-3 gap-6">
-          <h6 className="title">{t.titles.radioactive}</h6>
+          <h6 className="title2">{t.titles.radioactive}</h6>
           <h6>{dataA.static.generalProperties.radioActive ? t.titles.yes : t.titles.no}</h6>
           <h6>{dataB.static.generalProperties.radioActive ? t.titles.yes : t.titles.no}</h6>
         </section>
 
         <section className="grid grid-cols-3 gap-6">
-          <h6 className="title">{t.titles.radioactive}</h6>
+          <h6 className="title2">{t.titles.radioactive}</h6>
           <h6>{dataA.static.crystalStructure ? t.crystalStructures[dataA.static.crystalStructure] : "-"}</h6>
           <h6>{dataB.static.crystalStructure ? t.crystalStructures[dataB.static.crystalStructure] : "-"}</h6>
         </section>
@@ -202,7 +202,7 @@ export default function Compare() {
       <section className="flex flex-col gap-4">
         <Title title={t.titles.atomicProperties} />
         <section className="grid grid-cols-3 gap-6">
-          <h6 className="title">
+          <h6 className="title2">
             {t.titles.density} ({renderUnit(t.unit.density)})
           </h6>
           <h6>{dataA.static.physhicalProperties.density ? dataA.static.physhicalProperties.density.toLocaleString(lang) : "-"}</h6>
@@ -210,13 +210,13 @@ export default function Compare() {
         </section>
 
         <section className="grid grid-cols-3 gap-6">
-          <h6 className="title">{t.titles.phase}</h6>
+          <h6 className="title2">{t.titles.phase}</h6>
           <h6>{dataA.static.physhicalProperties.phase ? t.phase[dataA.static.physhicalProperties.phase] : "-"}</h6>
           <h6>{dataB.static.physhicalProperties.phase ? t.phase[dataB.static.physhicalProperties.phase] : "-"}</h6>
         </section>
 
         <section className="grid grid-cols-3 gap-6">
-          <h6 className="title">{t.titles.meltingPoint}</h6>
+          <h6 className="title2">{t.titles.meltingPoint}</h6>
           <h6>
             {dataA.static.physhicalProperties.meltingPoint
               ? `${dataA.static.physhicalProperties.meltingPoint.toLocaleString(lang)} K | ${parseInt(
@@ -238,7 +238,7 @@ export default function Compare() {
         </section>
 
         <section className="grid grid-cols-3 gap-6">
-          <h6 className="title">{t.titles.boilingPoint}</h6>
+          <h6 className="title2">{t.titles.boilingPoint}</h6>
           <h6>
             {dataA.static.physhicalProperties.boilingPoint
               ? `${dataA.static.physhicalProperties.boilingPoint.toLocaleString(lang)} K | ${parseInt(
@@ -260,7 +260,7 @@ export default function Compare() {
         </section>
 
         <section className="grid grid-cols-3 gap-6">
-          <h6 className="title">
+          <h6 className="title2">
             {t.titles.heatOfFusion} ({renderUnit(t.unit.heatOfFusion)})
           </h6>
           <h6>
@@ -272,7 +272,7 @@ export default function Compare() {
         </section>
 
         <section className="grid grid-cols-3 gap-6">
-          <h6 className="title">
+          <h6 className="title2">
             {t.titles.heatOfVaporization} ({renderUnit(t.unit.heatOfVaporization)})
           </h6>
           <h6>
@@ -288,7 +288,7 @@ export default function Compare() {
         </section>
 
         <section className="grid grid-cols-3 gap-6">
-          <h6 className="title">
+          <h6 className="title2">
             {t.titles.specificHeatCapacity} ({renderUnit(t.unit.specificHeatCapacity)})
           </h6>
           <h6>
@@ -308,7 +308,7 @@ export default function Compare() {
       <section className="flex flex-col gap-4">
         <Title title={t.titles.atomicProperties} />
         <section className="grid grid-cols-3 gap-6">
-          <h6 className="title">
+          <h6 className="title2">
             {t.titles.atomicRadius} ({renderUnit(t.unit.atomicRadius)})
           </h6>
           <h6>{dataA.static.atomicProperties.atomicRadius ? dataA.static.atomicProperties.atomicRadius.toLocaleString(lang) : "-"}</h6>
@@ -316,7 +316,7 @@ export default function Compare() {
         </section>
 
         <section className="grid grid-cols-3 gap-6">
-          <h6 className="title">{t.titles.covalentRadius}</h6>
+          <h6 className="title2">{t.titles.covalentRadius}</h6>
           <h6>
             {dataA.static.atomicProperties.covalentRadius ? dataA.static.atomicProperties.covalentRadius.toLocaleString(lang) : "-"}
           </h6>
@@ -326,7 +326,7 @@ export default function Compare() {
         </section>
 
         <section className="grid grid-cols-3 gap-6">
-          <h6 className="title">{t.titles.electronegativity}</h6>
+          <h6 className="title2">{t.titles.electronegativity}</h6>
           <h6>
             {dataA.static.atomicProperties.electronegativity
               ? dataA.static.atomicProperties.electronegativity.toLocaleString(lang)
@@ -340,7 +340,7 @@ export default function Compare() {
         </section>
 
         <section className="grid grid-cols-3 gap-6">
-          <h6 className="title">
+          <h6 className="title2">
             {t.titles.atomicVolume} {renderUnit(t.unit.atomicVolume)}
           </h6>
           <h6>{dataA.static.atomicProperties.atomicVolume ? dataA.static.atomicProperties.atomicVolume.toLocaleString(lang) : "-"}</h6>
@@ -348,7 +348,7 @@ export default function Compare() {
         </section>
 
         <section className="grid grid-cols-3 gap-6">
-          <h6 className="title">{t.titles.oxidationStates}</h6>
+          <h6 className="title2">{t.titles.oxidationStates}</h6>
           <h6>
             {dataA.static.atomicProperties.oxidationStates.length ? dataA.static.atomicProperties.oxidationStates.join(", ") : "-"}
           </h6>
@@ -358,7 +358,7 @@ export default function Compare() {
         </section>
 
         <section className="grid grid-cols-3 gap-6">
-          <h6 className="title">{t.titles.electronConfiguration}</h6>
+          <h6 className="title2">{t.titles.electronConfiguration}</h6>
           <h6>
             {dataA.static.electrons.electronConfiguration.length
               ? renderElectronConfiguration(dataA.static.electrons.electronConfiguration)
@@ -372,7 +372,7 @@ export default function Compare() {
         </section>
 
         <section className="grid grid-cols-3 gap-6">
-          <h6 className="title">{t.titles.electronsPerShell}</h6>
+          <h6 className="title2">{t.titles.electronsPerShell}</h6>
           <h6>{dataA.static.electrons.electronsPerShell.length ? dataA.static.electrons.electronsPerShell.join(", ") : "-"}</h6>
           <h6>{dataB.static.electrons.electronsPerShell.length ? dataB.static.electrons.electronsPerShell.join(", ") : "-"}</h6>
         </section>
