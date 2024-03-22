@@ -12,21 +12,22 @@ export default function Home() {
   const { t, setting, lang } = useSetting();
   const navigate = useNavigate();
 
-  const handleClickElement = (element: Element) => () => {
+  const handleClickElement = (element: Element) => (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    e.stopPropagation();
     if (clickedElement?.symbol !== element.symbol) return setClickedElement(element);
-    setClickedElement(null);
+    return setClickedElement(null);
   };
 
   return (
     // <article className="overflow-auto bg-gradient-to-r from-[#274786] to-[#229FBC]">
     <article
-      className="overflow-auto"
       onClick={() => {
         if (clickedElement) setClickedElement(null);
       }}
+      className="overflow-auto"
     >
       <section
-        className="animate mx-auto max-xl:!w-[120rem] overflow-x-auto min-h-screen pb-6 pt-24 2k:pt-44"
+        className="animate mx-auto max-xl:!w-[120rem] overflow-x-auto min-h-screen pb-6 pt-16 2k:pt-44"
         style={{ width: `${setting.tableWidth}%` }}
       >
         <section className="grid grid-cols-18 gap-1 fullHd:gap-2 4k:gap-4 animate pl-12 4k:pl-20 pr-6 mb-6">
@@ -108,9 +109,9 @@ export default function Home() {
                                 <div className="h-1 bg-light w-[15%] 2k:w-[20%]" />
                               </div>
 
-                              <div className="absolute right-4 -top-[3.6rem] 2k:-top-[4rem] 4k:-top-[5.5rem] 4k:gap-2 flex flex-col items-end justify-center">
+                              <div className="flex gap-2 4k:gap-4 items-center absolute top-3 -right-[23.6rem] w-96">
+                                <div className="w-12 h-1 bg-light" />
                                 <h6 className="text-light">{t.titles.atomicWeight}</h6>
-                                <div className="w-1 h-10 bg-light" />
                               </div>
                             </div>
                             <button
@@ -167,7 +168,8 @@ export default function Home() {
                               </p>
                             </div>
                           ) : null}
-                          <div
+                          <button
+                            type="button"
                             onDoubleClick={() => navigate(`/element/${element.symbol}`)}
                             onClick={handleClickElement(element)}
                             className={cn("z-10 bg-dark/50 opacity-0 absolute size-full centered animate cursor-pointer", {
@@ -233,10 +235,11 @@ export default function Home() {
                 >
                   {element ? (
                     <Fragment>
-                      <div
+                      <button
+                        type="button"
                         onDoubleClick={() => navigate(`/element/${element.symbol}`)}
                         onClick={handleClickElement(element)}
-                        className={cn("z-10 bg-dark/50 opacity-0 absolute size-full centered animate cursor-pointer", {
+                        className={cn("z-50 bg-dark/50 opacity-0 absolute size-full centered animate cursor-pointer", {
                           "opacity-100": notHovered,
                         })}
                       />
@@ -295,10 +298,11 @@ export default function Home() {
                 >
                   {element ? (
                     <Fragment>
-                      <div
+                      <button
+                        type="button"
                         onDoubleClick={() => navigate(`/element/${element.symbol}`)}
                         onClick={handleClickElement(element)}
-                        className={cn("z-10 bg-dark/50 opacity-0 absolute size-full centered animate cursor-pointer", {
+                        className={cn("z-50 bg-dark/50 opacity-0 absolute size-full centered animate cursor-pointer", {
                           "opacity-100": notHovered,
                         })}
                       />
@@ -346,7 +350,7 @@ export default function Home() {
                   >
                     <div className="size-12 4k:size-32 aspect-square relative" style={{ backgroundColor: e.color }}>
                       <div
-                        className={cn("z-10 bg-dark/50 opacity-0 absolute size-full centered animate cursor-pointer", {
+                        className={cn("z-50 bg-dark/50 opacity-0 absolute size-full centered animate cursor-pointer", {
                           "opacity-100": notHovered,
                         })}
                       />
