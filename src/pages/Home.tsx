@@ -26,7 +26,7 @@ export default function Home() {
       }}
     >
       <section
-        className="animate mx-auto max-xl:!w-[120rem] overflow-x-auto min-h-screen py-24 2k:pt-44"
+        className="animate mx-auto max-xl:!w-[120rem] overflow-x-auto min-h-screen pb-6 pt-24 2k:pt-44"
         style={{ width: `${setting.tableWidth}%` }}
       >
         <section className="grid grid-cols-18 gap-1 fullHd:gap-2 4k:gap-4 animate pl-12 4k:pl-20 pr-6 mb-6">
@@ -333,27 +333,30 @@ export default function Home() {
               );
             })}
           </section>
-          <section className="pl-12 4k:pl-20 pr-6 grid grid-cols-3 gap-4 mt-8 w-[50%] xl:w-[70%]">
-            {CATEGORIES_OPTIONS.map((e) => {
-              const notHovered = hoveredCategory && hoveredCategory !== e.value;
-              return (
-                <section
-                  onMouseEnter={() => setHoveredCategory(e.value)}
-                  onMouseLeave={() => setHoveredCategory(null)}
-                  key={e.value}
-                  className="flex gap-3 4k:gap-6 items-center"
-                >
-                  <div className="size-12 4k:size-32 aspect-square relative" style={{ backgroundColor: e.color }}>
-                    <div
-                      className={cn("z-10 bg-dark/50 opacity-0 absolute size-full centered animate cursor-pointer", {
-                        "opacity-100": notHovered,
-                      })}
-                    />
-                  </div>
-                  <h6 className="leading-5">{t.elementCategories[e.value]}</h6>
-                </section>
-              );
-            })}
+          <section className="flex justify-between items-end pl-12 4k:pl-20 pr-6">
+            <section className="grid grid-cols-3 gap-4 mt-8 w-[50%] xl:w-[70%]">
+              {CATEGORIES_OPTIONS.map((e) => {
+                const notHovered = hoveredCategory && hoveredCategory !== e.value;
+                return (
+                  <section
+                    onMouseEnter={() => setHoveredCategory(e.value)}
+                    onMouseLeave={() => setHoveredCategory(null)}
+                    key={e.value}
+                    className="flex gap-3 4k:gap-6 items-center"
+                  >
+                    <div className="size-12 4k:size-32 aspect-square relative" style={{ backgroundColor: e.color }}>
+                      <div
+                        className={cn("z-10 bg-dark/50 opacity-0 absolute size-full centered animate cursor-pointer", {
+                          "opacity-100": notHovered,
+                        })}
+                      />
+                    </div>
+                    <h6 className="leading-5">{t.elementCategories[e.value]}</h6>
+                  </section>
+                );
+              })}
+            </section>
+            <img alt="Logo" src="/logo.svg" className="size-20 bg-light rounded-md shadow-md" />
           </section>
         </section>
       </section>

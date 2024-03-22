@@ -18,8 +18,9 @@ export default function Navbar() {
         className="animate sticky top-0 w-full py-2 4k:py-6 px-6 text-light flex justify-between z-50 backdrop-blur-2xl"
         style={{ backgroundColor: color }}
       >
-        <button type="button" onClick={() => navigate("/")}>
-          <Icon width={is2k ? 60 : 35} icon="mdi:home" />
+        <button type="button" onClick={() => navigate("/")} className="flex items-center gap-2 bg-light px-2 rounded-md">
+          <Icon width={is2k ? 60 : 35} icon="mdi:home" style={{ color }} />
+          <img src="/logo.svg" alt="Logo" className="size-12" />
         </button>
 
         <section className="flex gap-4 2k:gap-8 4k:gap-10 items-center">
