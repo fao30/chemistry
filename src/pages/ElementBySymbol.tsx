@@ -65,7 +65,7 @@ export default function ElementBySymbol() {
         <Box classNameDiv="p-6 flex-col gap-2 flex items-center justify-center">
           <h5>{tData.name.toUpperCase()}</h5>
           {setting.withAudio ? (
-            <audio controls className="invisible size-0" autoPlay loop>
+            <audio controls className="invisible size-0" autoPlay>
               <source src={`/sound/${data.static.generalProperties.atomicNumber}.mp3`} type="audio/mp3" />
               <track kind="captions" srcLang="ru" label={tData.name} default />
             </audio>
