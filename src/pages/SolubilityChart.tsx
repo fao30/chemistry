@@ -9,39 +9,26 @@ import {
 } from "@/lib/constants";
 import { cn } from "@/lib/functions";
 import { Icon } from "@iconify/react/dist/iconify.js";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 
 export default function SolubilityChart() {
   const { t, color } = useSetting();
 
   const tableContainerRef = useRef<HTMLDivElement>(null);
-  const [scrollInterval, setScrollInterval] = useState<NodeJS.Timeout | null>(null);
 
   const handleScrollDown = () => {
     if (tableContainerRef.current) {
-      scrollByAmount(125);
-    }
-  };
-
-  const handleScrollUp = () => {
-    if (tableContainerRef.current) {
-      scrollByAmount(-125);
-    }
-  };
-
-  const scrollByAmount = (amount: number) => {
-    if (tableContainerRef.current) {
       tableContainerRef.current.scrollTo({
-        top: tableContainerRef.current.scrollTop + amount,
+        top: tableContainerRef.current.scrollTop + 125,
         behavior: "smooth",
       });
     }
   };
 
-  const handleScrollLeft = () => {
+  const handleScrollUp = () => {
     if (tableContainerRef.current) {
-      tableContainerRef.current.scrollBy({
-        left: -125,
+      tableContainerRef.current.scrollTo({
+        top: tableContainerRef.current.scrollTop - 125,
         behavior: "smooth",
       });
     }
@@ -49,40 +36,19 @@ export default function SolubilityChart() {
 
   const handleScrollRight = () => {
     if (tableContainerRef.current) {
-      tableContainerRef.current.scrollBy({
-        left: 125,
+      tableContainerRef.current.scrollTo({
+        left: tableContainerRef.current.scrollTop + 125,
         behavior: "smooth",
       });
     }
   };
 
-  const handleMouseDown = (scrollDirection: "up" | "down" | "left" | "right") => {
-    setScrollInterval(
-      setInterval(() => {
-        switch (scrollDirection) {
-          case "down":
-            handleScrollDown();
-            break;
-          case "up":
-            handleScrollUp();
-            break;
-          case "left":
-            handleScrollLeft();
-            break;
-          case "right":
-            handleScrollRight();
-            break;
-          default:
-            break;
-        }
-      }, 300),
-    ); // Adjust the interval duration as needed
-  };
-
-  const handleMouseUp = () => {
-    if (scrollInterval !== null) {
-      clearInterval(scrollInterval);
-      setScrollInterval(null);
+  const handleScrollLeft = () => {
+    if (tableContainerRef.current) {
+      tableContainerRef.current.scrollTo({
+        left: tableContainerRef.current.scrollTop - 125,
+        behavior: "smooth",
+      });
     }
   };
 
@@ -93,28 +59,28 @@ export default function SolubilityChart() {
         <h1 className="text-center">{t.titles.solubilityChart}</h1>
         <section className="grid grid-cols-3">
           <div />
-          <button type="button" onMouseDown={() => handleMouseDown("up")} onMouseUp={handleMouseUp} onMouseLeave={handleMouseUp}>
+          <button onClick={handleScrollUp} type="button">
             <Icon icon="mdi:arrow-down-bold" width={40} rotate={2} />
           </button>
           <div />
 
-          <button type="button" onMouseDown={() => handleMouseDown("left")} onMouseUp={handleMouseUp} onMouseLeave={handleMouseUp}>
+          <button onClick={handleScrollLeft} type="button">
             <Icon icon="mdi:arrow-down-bold" width={40} rotate={5} />
           </button>
           <div />
-          <button type="button" onMouseDown={() => handleMouseDown("right")} onMouseUp={handleMouseUp} onMouseLeave={handleMouseUp}>
+          <button onClick={handleScrollRight} type="button">
             <Icon icon="mdi:arrow-down-bold" width={40} rotate={3} />
           </button>
 
           <div />
-          <button type="button" onMouseDown={() => handleMouseDown("down")} onMouseUp={handleMouseUp} onMouseLeave={handleMouseUp}>
+          <button onClick={handleScrollDown} type="button">
             <Icon icon="mdi:arrow-down-bold" width={40} />
           </button>
           <div />
         </section>
       </section>
       <div ref={tableContainerRef} className="overflow-auto">
-        <div className="mx-auto animate h-[70vh] w-[140rem] fullHd:w-[200rem] 2k:w-[250rem] 4k:w-[400rem]">
+        <div className="mx-auto animate h-[70dvh] w-[140rem] fullHd:w-[200rem] 2k:w-[250rem] 4k:w-[400rem]">
           <section className="grid grid-cols-15 sticky top-0 z-10" style={{ backgroundColor: color }}>
             <div className="bg-gray-900 sticky left-0 z-10" />
             {SOLUBILITIES.map((e) => {

@@ -2,51 +2,28 @@ import useSetting from "@/hooks/useSetting";
 import { ELEMENT_REACTIONS, ELEMENT_REACTIONS_DATA, REACTIONS, REACTIONS_DATA } from "@/lib/constants";
 import { cn } from "@/lib/functions";
 import { Icon } from "@iconify/react/dist/iconify.js";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 
 export default function ReactivitySeries() {
   const { t, color, setting } = useSetting();
 
   const tableContainerRef = useRef<HTMLDivElement>(null);
-  const [scrollInterval, setScrollInterval] = useState<NodeJS.Timeout | null>(null);
 
   const handleScrollDown = () => {
     if (tableContainerRef.current) {
-      scrollByAmount(125);
-    }
-  };
-
-  const handleScrollUp = () => {
-    if (tableContainerRef.current) {
-      scrollByAmount(-125);
-    }
-  };
-
-  const scrollByAmount = (amount: number) => {
-    if (tableContainerRef.current) {
       tableContainerRef.current.scrollTo({
-        top: tableContainerRef.current.scrollTop + amount,
+        top: tableContainerRef.current.scrollTop + 125,
         behavior: "smooth",
       });
     }
   };
 
-  const handleMouseDown = (scrollDirection: "up" | "down") => {
-    setScrollInterval(
-      setInterval(() => {
-        if (scrollDirection === "down") {
-          handleScrollDown();
-        } else {
-          handleScrollUp();
-        }
-      }, 300),
-    ); // Adjust the interval duration as needed
-  };
-
-  const handleMouseUp = () => {
-    if (scrollInterval !== null) {
-      clearInterval(scrollInterval);
-      setScrollInterval(null);
+  const handleScrollUp = () => {
+    if (tableContainerRef.current) {
+      tableContainerRef.current.scrollTo({
+        top: tableContainerRef.current.scrollTop - 125,
+        behavior: "smooth",
+      });
     }
   };
 
@@ -56,10 +33,10 @@ export default function ReactivitySeries() {
         <div />
         <h1 className="text-center">{t.titles.reactivitySeries}</h1>
         <section className="flex gap-2">
-          <button type="button" onMouseDown={() => handleMouseDown("up")} onMouseUp={handleMouseUp} onMouseLeave={handleMouseUp}>
+          <button type="button" onClick={handleScrollUp}>
             <Icon icon="mdi:arrow-down-bold" width={40} rotate={2} />
           </button>
-          <button type="button" onMouseDown={() => handleMouseDown("down")} onMouseUp={handleMouseUp} onMouseLeave={handleMouseUp}>
+          <button type="button" onClick={handleScrollDown}>
             <Icon icon="mdi:arrow-down-bold" width={40} />
           </button>
         </section>
@@ -68,7 +45,7 @@ export default function ReactivitySeries() {
         <div
           ref={tableContainerRef}
           style={{ width: `${setting.tableWidth}%` }}
-          className="mx-auto animate relative h-[70vh] overflow-y-auto"
+          className="mx-auto animate relative h-[70dvh] overflow-y-auto"
         >
           <section className="grid grid-cols-4 sticky top-0 z-10" style={{ backgroundColor: color }}>
             <div />
