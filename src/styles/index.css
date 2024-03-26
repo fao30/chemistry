@@ -22,7 +22,7 @@ body {
     @apply animate;
   }
   h1 {
-    @apply hd:text-5xl fullHd:text-7xl 2k:text-9xl 4k:text-11xl;
+    @apply text-5xl hd:text-5xl fullHd:text-7xl 2k:text-9xl 4k:text-11xl;
   }
   h2 {
     @apply hd:text-2xl fullHd:text-3xl 2k:text-5xl 4k:text-7xl font-semibold;
@@ -37,7 +37,7 @@ body {
     @apply text-3xl hd:text-xl fullHd:text-4xl 2k:text-5xl 4k:text-8xl font-semibold;
   }
   h6 {
-    @apply hd:text-base fullHd:text-2xl 2k:text-3xl 4k:text-5xl;
+    @apply text-lg hd:text-base fullHd:text-2xl 2k:text-3xl 4k:text-5xl;
   }
   label {
     @apply font-medium text-base select-none;
@@ -61,7 +61,7 @@ body {
 
 @layer components {
   .h6 {
-    @apply hd:text-base fullHd:text-2xl 2k:text-3xl 4k:text-5xl;
+    @apply text-lg hd:text-base fullHd:text-2xl 2k:text-3xl 4k:text-5xl;
   }
   /* animation */
   .animate {
