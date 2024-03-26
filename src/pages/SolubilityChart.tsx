@@ -8,15 +8,113 @@ import {
   SOLUBILITY_DATA,
 } from "@/lib/constants";
 import { cn } from "@/lib/functions";
+import { Icon } from "@iconify/react/dist/iconify.js";
+import { useRef, useState } from "react";
 
 export default function SolubilityChart() {
   const { t, color } = useSetting();
 
+  const tableContainerRef = useRef<HTMLDivElement>(null);
+  const [scrollInterval, setScrollInterval] = useState<NodeJS.Timeout | null>(null);
+
+  const handleScrollDown = () => {
+    if (tableContainerRef.current) {
+      scrollByAmount(125);
+    }
+  };
+
+  const handleScrollUp = () => {
+    if (tableContainerRef.current) {
+      scrollByAmount(-125);
+    }
+  };
+
+  const scrollByAmount = (amount: number) => {
+    if (tableContainerRef.current) {
+      tableContainerRef.current.scrollTo({
+        top: tableContainerRef.current.scrollTop + amount,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  const handleScrollLeft = () => {
+    if (tableContainerRef.current) {
+      tableContainerRef.current.scrollBy({
+        left: -125,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  const handleScrollRight = () => {
+    if (tableContainerRef.current) {
+      tableContainerRef.current.scrollBy({
+        left: 125,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  const handleMouseDown = (scrollDirection: "up" | "down" | "left" | "right") => {
+    setScrollInterval(
+      setInterval(() => {
+        switch (scrollDirection) {
+          case "down":
+            handleScrollDown();
+            break;
+          case "up":
+            handleScrollUp();
+            break;
+          case "left":
+            handleScrollLeft();
+            break;
+          case "right":
+            handleScrollRight();
+            break;
+          default:
+            break;
+        }
+      }, 300),
+    ); // Adjust the interval duration as needed
+  };
+
+  const handleMouseUp = () => {
+    if (scrollInterval !== null) {
+      clearInterval(scrollInterval);
+      setScrollInterval(null);
+    }
+  };
+
   return (
     <article className="px-6 py-12 flex flex-col gap-6 2k:gap-12">
-      <h1 className="text-center">{t.titles.solubilityChart}</h1>
-      <section className="overflow-auto">
-        <section className="mx-auto animate h-[70vh] w-[140rem] fullHd:w-[200rem] 2k:w-[250rem] 4k:w-[400rem]">
+      <section className="flex justify-between items-end">
+        <div />
+        <h1 className="text-center">{t.titles.solubilityChart}</h1>
+        <section className="grid grid-cols-3">
+          <div />
+          <button type="button" onMouseDown={() => handleMouseDown("up")} onMouseUp={handleMouseUp} onMouseLeave={handleMouseUp}>
+            <Icon icon="mdi:arrow-down-bold" width={40} rotate={2} />
+          </button>
+          <div />
+
+          <button type="button" onMouseDown={() => handleMouseDown("left")} onMouseUp={handleMouseUp} onMouseLeave={handleMouseUp}>
+            <Icon icon="mdi:arrow-down-bold" width={40} rotate={5} />
+          </button>
+          <div />
+          <button type="button" onMouseDown={() => handleMouseDown("right")} onMouseUp={handleMouseUp} onMouseLeave={handleMouseUp}>
+            <Icon icon="mdi:arrow-down-bold" width={40} rotate={3} />
+          </button>
+
+          <div />
+          <button type="button" onMouseDown={() => handleMouseDown("down")} onMouseUp={handleMouseUp} onMouseLeave={handleMouseUp}>
+            <Icon icon="mdi:arrow-down-bold" width={40} />
+          </button>
+          <div />
+        </section>
+      </section>
+      <div ref={tableContainerRef} className="overflow-auto">
+        <div className="mx-auto animate h-[70vh] w-[140rem] fullHd:w-[200rem] 2k:w-[250rem] 4k:w-[400rem]">
           <section className="grid grid-cols-15 sticky top-0 z-10" style={{ backgroundColor: color }}>
             <div className="bg-gray-900 sticky left-0 z-10" />
             {SOLUBILITIES.map((e) => {
@@ -88,8 +186,8 @@ export default function SolubilityChart() {
               </section>
             );
           })}
-        </section>
-      </section>
+        </div>
+      </div>
     </article>
   );
 }

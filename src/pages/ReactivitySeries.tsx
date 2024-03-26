@@ -1,15 +1,75 @@
 import useSetting from "@/hooks/useSetting";
 import { ELEMENT_REACTIONS, ELEMENT_REACTIONS_DATA, REACTIONS, REACTIONS_DATA } from "@/lib/constants";
 import { cn } from "@/lib/functions";
+import { Icon } from "@iconify/react/dist/iconify.js";
+import { useRef, useState } from "react";
 
 export default function ReactivitySeries() {
   const { t, color, setting } = useSetting();
 
+  const tableContainerRef = useRef<HTMLDivElement>(null);
+  const [scrollInterval, setScrollInterval] = useState<NodeJS.Timeout | null>(null);
+
+  const handleScrollDown = () => {
+    if (tableContainerRef.current) {
+      scrollByAmount(125);
+    }
+  };
+
+  const handleScrollUp = () => {
+    if (tableContainerRef.current) {
+      scrollByAmount(-125);
+    }
+  };
+
+  const scrollByAmount = (amount: number) => {
+    if (tableContainerRef.current) {
+      tableContainerRef.current.scrollTo({
+        top: tableContainerRef.current.scrollTop + amount,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  const handleMouseDown = (scrollDirection: "up" | "down") => {
+    setScrollInterval(
+      setInterval(() => {
+        if (scrollDirection === "down") {
+          handleScrollDown();
+        } else {
+          handleScrollUp();
+        }
+      }, 300),
+    ); // Adjust the interval duration as needed
+  };
+
+  const handleMouseUp = () => {
+    if (scrollInterval !== null) {
+      clearInterval(scrollInterval);
+      setScrollInterval(null);
+    }
+  };
+
   return (
     <article className="px-6 py-12 flex flex-col gap-6 2k:gap-12">
-      <h1 className="text-center">{t.titles.reactivitySeries}</h1>
+      <section className="flex justify-between items-end">
+        <div />
+        <h1 className="text-center">{t.titles.reactivitySeries}</h1>
+        <section className="flex gap-2">
+          <button type="button" onMouseDown={() => handleMouseDown("up")} onMouseUp={handleMouseUp} onMouseLeave={handleMouseUp}>
+            <Icon icon="mdi:arrow-down-bold" width={40} rotate={2} />
+          </button>
+          <button type="button" onMouseDown={() => handleMouseDown("down")} onMouseUp={handleMouseUp} onMouseLeave={handleMouseUp}>
+            <Icon icon="mdi:arrow-down-bold" width={40} />
+          </button>
+        </section>
+      </section>
       <section className="overflow-auto">
-        <div style={{ width: `${setting.tableWidth}%` }} className="mx-auto animate relative h-[70vh] overflow-y-auto">
+        <div
+          ref={tableContainerRef}
+          style={{ width: `${setting.tableWidth}%` }}
+          className="mx-auto animate relative h-[70vh] overflow-y-auto"
+        >
           <section className="grid grid-cols-4 sticky top-0 z-10" style={{ backgroundColor: color }}>
             <div />
             {REACTIONS.map((e) => {
