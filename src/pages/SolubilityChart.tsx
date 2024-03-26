@@ -37,7 +37,7 @@ export default function SolubilityChart() {
   const handleScrollRight = () => {
     if (tableContainerRef.current) {
       tableContainerRef.current.scrollTo({
-        left: tableContainerRef.current.scrollTop + 125,
+        left: tableContainerRef.current.scrollLeft + 125,
         behavior: "smooth",
       });
     }
@@ -46,7 +46,7 @@ export default function SolubilityChart() {
   const handleScrollLeft = () => {
     if (tableContainerRef.current) {
       tableContainerRef.current.scrollTo({
-        left: tableContainerRef.current.scrollTop - 125,
+        left: tableContainerRef.current.scrollLeft - 125,
         behavior: "smooth",
       });
     }
