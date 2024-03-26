@@ -74,6 +74,7 @@ export type Dictionary = {
   elementCategories: Record<ElementCategory, string>;
   tableFounder: { name: string; birthDate: Date; deathDate: Date; history: { text1: string; text2: string; text3: string } };
   titles: {
+    search: string;
     details: string;
     audio: string;
     solubilityChart: string;

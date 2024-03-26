@@ -4,11 +4,12 @@ import { cn } from "@/lib/functions";
 
 export default function ReactivitySeries() {
   const { t, color, setting } = useSetting();
+
   return (
     <article className="px-6 py-12 flex flex-col gap-6 2k:gap-12">
       <h1 className="text-center">{t.titles.reactivitySeries}</h1>
       <section className="overflow-auto">
-        <section style={{ width: `${setting.tableWidth}%` }} className="mx-auto animate relative h-[70vh] overflow-y-auto">
+        <div style={{ width: `${setting.tableWidth}%` }} className="mx-auto animate relative h-[70vh] overflow-y-auto">
           <section className="grid grid-cols-4 sticky top-0 z-10" style={{ backgroundColor: color }}>
             <div />
             {REACTIONS.map((e) => {
@@ -52,7 +53,7 @@ export default function ReactivitySeries() {
               </section>
             );
           })}
-        </section>
+        </div>
       </section>
     </article>
   );

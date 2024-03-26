@@ -68,7 +68,7 @@ export default function List() {
       <section className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
         <input
           className="h-12 2k:h-24 h6 bg-black text-light border-2 border-gray-600 px-6 outline-none"
-          placeholder="Search"
+          placeholder={t.titles.search}
           value={search}
           onChange={(e) => {
             searchParams.set("q", e.target.value);
