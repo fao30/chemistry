@@ -65,7 +65,7 @@ export default function ElementBySymbol() {
     <article className="p-6 grid md:grid-cols-2 xl:grid-cols-3 gap-6 text-dark">
       {/* FIRST COLUMN */}
       <section className="flex flex-col gap-6">
-        <div onClick={() => audioRef.current?.play()}>
+        <div onClick={() => audioRef.current?.play()} className="cursor-pointer">
           <Box classNameDiv="p-6 flex-col gap-2 flex items-center justify-center">
             <h5>{tData.name.toUpperCase()}</h5>
             {setting.withAudio ? (

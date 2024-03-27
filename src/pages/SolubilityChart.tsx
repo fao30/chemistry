@@ -53,11 +53,10 @@ export default function SolubilityChart() {
   };
 
   return (
-    <article className="px-6 py-12 flex flex-col gap-6 2k:gap-12">
-      <section className="flex justify-between items-end">
-        <div />
+    <article className="px-6 pt-20 pb-12 flex flex-col gap-6 2k:gap-12">
+      <section className="relative">
         <h1 className="text-center">{t.titles.solubilityChart}</h1>
-        <section className="grid grid-cols-3">
+        <section className="absolute right-0 bottom-0 grid grid-cols-3">
           <div />
           <button onClick={handleScrollUp} type="button">
             <Icon icon="mdi:arrow-down-bold" width={40} rotate={2} />

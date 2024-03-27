@@ -29,10 +29,9 @@ export default function ReactivitySeries() {
 
   return (
     <article className="px-6 py-12 flex flex-col gap-6 2k:gap-12">
-      <section className="flex justify-between items-end">
-        <div />
+      <section className="relative">
         <h1 className="text-center">{t.titles.reactivitySeries}</h1>
-        <section className="flex gap-2">
+        <section className="absolute bottom-0 right-0 flex gap-2">
           <button type="button" onClick={handleScrollUp}>
             <Icon icon="mdi:arrow-down-bold" width={40} rotate={2} />
           </button>
