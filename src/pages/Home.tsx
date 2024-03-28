@@ -24,6 +24,8 @@ export default function Home() {
     return setClickedCategory(null);
   };
 
+  const isBelow90 = +setting.tableWidth <= 90;
+
   return (
     // <article className="overflow-auto bg-gradient-to-r from-[#274786] to-[#229FBC]">
     <article
@@ -197,16 +199,18 @@ export default function Home() {
                               {
                                 "opacity-0": !setting.withAtomicWeight,
                               },
+                              { "!text-[0.75rem]": isBelow90 },
                             )}
                           >
                             {element?.static.generalProperties.atomicWeight.toLocaleString(lang, {
-                              minimumFractionDigits: 2,
-                              maximumFractionDigits: 2,
+                              minimumFractionDigits: isBelow90 ? 0 : 2,
+                              maximumFractionDigits: isBelow90 ? 0 : 2,
                             })}
                           </p>
                           <p
-                            className={cn("animate absolute centered-bottom text-dark font-semibold", {
+                            className={cn("animate absolute centered-bottom text-dark font-semibold truncate w-full text-center", {
                               "opacity-0": !setting.withName,
+                              "px-1": isBelow90,
                             })}
                           >
                             {tElement?.name}
@@ -264,16 +268,18 @@ export default function Home() {
                           {
                             "opacity-0": !setting.withAtomicWeight,
                           },
+                          { "!text-[0.75rem]": isBelow90 },
                         )}
                       >
                         {element?.static.generalProperties.atomicWeight.toLocaleString(lang, {
-                          minimumFractionDigits: 2,
-                          maximumFractionDigits: 2,
+                          minimumFractionDigits: isBelow90 ? 0 : 2,
+                          maximumFractionDigits: isBelow90 ? 0 : 2,
                         })}
                       </p>
                       <p
-                        className={cn("animate absolute centered-bottom text-dark font-semibold", {
+                        className={cn("animate absolute centered-bottom text-dark font-semibold truncate w-full text-center", {
                           "opacity-0": !setting.withName,
+                          "px-1": isBelow90,
                         })}
                       >
                         {tElement?.name}
@@ -327,16 +333,18 @@ export default function Home() {
                           {
                             "opacity-0": !setting.withAtomicWeight,
                           },
+                          { "!text-[0.75rem]": isBelow90 },
                         )}
                       >
                         {element?.static.generalProperties.atomicWeight.toLocaleString(lang, {
-                          minimumFractionDigits: 2,
-                          maximumFractionDigits: 2,
+                          minimumFractionDigits: isBelow90 ? 0 : 2,
+                          maximumFractionDigits: isBelow90 ? 0 : 2,
                         })}
                       </p>
                       <p
-                        className={cn("animate absolute centered-bottom text-dark font-semibold", {
+                        className={cn("animate absolute centered-bottom text-dark font-semibold truncate w-full text-center", {
                           "opacity-0": !setting.withName,
+                          "px-1": isBelow90,
                         })}
                       >
                         {tElement?.name}
