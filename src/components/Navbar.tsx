@@ -20,7 +20,7 @@ export default function Navbar() {
       >
         <button type="button" onClick={() => navigate("/")} className="flex items-center gap-2 bg-light px-2 rounded-md">
           <Icon width={is2k ? 60 : 35} icon="mdi:home" style={{ color }} />
-          <img src="/logo.svg" alt="Logo" className="size-12" />
+          <img src="/logo.svg" alt="Logo" className="size-8 fullHd:size-12" />
         </button>
 
         <section className="flex gap-4 2k:gap-8 4k:gap-10 items-center">
