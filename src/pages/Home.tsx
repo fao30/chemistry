@@ -199,7 +199,7 @@ export default function Home() {
                               {
                                 "opacity-0": !setting.withAtomicWeight,
                               },
-                              { "!text-[0.75rem]": isBelow90 },
+                              { "!text-[0.8rem]": isBelow90 },
                             )}
                           >
                             {element?.static.generalProperties.atomicWeight.toLocaleString(lang, {
@@ -268,7 +268,7 @@ export default function Home() {
                           {
                             "opacity-0": !setting.withAtomicWeight,
                           },
-                          { "!text-[0.75rem]": isBelow90 },
+                          { "!text-[0.8rem]": isBelow90 },
                         )}
                       >
                         {element?.static.generalProperties.atomicWeight.toLocaleString(lang, {
@@ -333,7 +333,7 @@ export default function Home() {
                           {
                             "opacity-0": !setting.withAtomicWeight,
                           },
-                          { "!text-[0.75rem]": isBelow90 },
+                          { "!text-[0.8rem]": isBelow90 },
                         )}
                       >
                         {element?.static.generalProperties.atomicWeight.toLocaleString(lang, {
