@@ -34,10 +34,10 @@ export default function Home() {
       className="overflow-auto"
     >
       <section
-        className="animate mx-auto max-xl:!w-[120rem] overflow-x-auto min-h-screen pb-6 pt-16 2k:pt-44"
+        className="animate mx-auto max-xl:!w-[120rem] overflow-x-auto min-h-screen pb-6 pt-16 2k:pt-24 4k:pt-36"
         style={{ width: `${setting.tableWidth}%` }}
       >
-        <section className="grid grid-cols-18 gap-1 fullHd:gap-2 4k:gap-4 animate pl-12 4k:pl-20 pr-6 mb-6">
+        <section className="grid grid-cols-18 gap-1 fullHd:gap-2 4k:gap-4 animate pl-12 4k:pl-20 pr-6 mb-1 fullHd:mb-2 4k:mb-4">
           {data.map((row, rowIndex) => {
             return (
               <Fragment key={rowIndex}>
@@ -223,7 +223,7 @@ export default function Home() {
           })}
         </section>
 
-        <section className="flex flex-col gap-2">
+        <section className="flex flex-col gap-1 fullHd:gap-2 4k:gap-4">
           <section className="grid grid-cols-18 gap-1 fullHd:gap-2 4k:gap-4 animate pl-12 4k:pl-20 pr-6">
             {ELEMENT_DATA2.map((element, index) => {
               const hovered =
@@ -349,30 +349,31 @@ export default function Home() {
               );
             })}
           </section>
-          <section className="flex justify-between items-end pl-12 4k:pl-20 pr-6">
-            <section className="grid grid-cols-3 gap-4 mt-8 w-[50%] xl:w-[70%]">
-              {CATEGORIES_OPTIONS.map((e) => {
-                const notHovered = clickedCategory && clickedCategory !== e.value;
-                return (
-                  <section
-                    onClick={handleClickCategory(e.value)}
-                    key={e.value}
-                    className="flex gap-3 4k:gap-6 items-center cursor-pointer"
-                  >
-                    <div className="size-12 4k:size-32 aspect-square relative" style={{ backgroundColor: e.color }}>
-                      <div
-                        className={cn("z-50 bg-dark/50 opacity-0 absolute size-full centered animate cursor-pointer", {
-                          "opacity-100": notHovered,
-                        })}
-                      />
-                    </div>
-                    <h6 className="leading-5">{t.elementCategories[e.value]}</h6>
-                  </section>
-                );
-              })}
-            </section>
-            <img alt="Logo" src="/logo.svg" className="size-20 bg-light rounded-md shadow-md" />
+        </section>
+
+        <section className="flex justify-between items-end pl-12 4k:pl-20 pr-6 mt-6 4k:mt-12">
+          <section className="grid grid-cols-3 gap-4 w-[50%] xl:w-[70%]">
+            {CATEGORIES_OPTIONS.map((e) => {
+              const notHovered = clickedCategory && clickedCategory !== e.value;
+              return (
+                <section
+                  onClick={handleClickCategory(e.value)}
+                  key={e.value}
+                  className="flex gap-3 4k:gap-6 items-center cursor-pointer"
+                >
+                  <div className="size-12 4k:size-32 aspect-square relative" style={{ backgroundColor: e.color }}>
+                    <div
+                      className={cn("z-50 bg-dark/50 opacity-0 absolute size-full centered animate cursor-pointer", {
+                        "opacity-100": notHovered,
+                      })}
+                    />
+                  </div>
+                  <h6 className="leading-5">{t.elementCategories[e.value]}</h6>
+                </section>
+              );
+            })}
           </section>
+          <img alt="Logo" src="/logo.svg" className="size-20 bg-light rounded-md shadow-md" />
         </section>
       </section>
     </article>
