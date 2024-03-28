@@ -219,20 +219,18 @@ export default function Compare() {
           <h6 className="title2">{t.titles.meltingPoint}</h6>
           <h6>
             {dataA.static.physhicalProperties.meltingPoint
-              ? `${dataA.static.physhicalProperties.meltingPoint.toLocaleString(lang)} K | ${parseInt(
-                  kelvinToCelsius(dataA.static.physhicalProperties.meltingPoint),
-                ).toLocaleString(lang)}°C | ${parseInt(
-                  kelvinToFahrenheit(dataA.static.physhicalProperties.meltingPoint),
-                ).toLocaleString(lang)}°F`
+              ? `${dataA.static.physhicalProperties.meltingPoint.toLocaleString(lang)} K | ${kelvinToCelsius(
+                  dataA.static.physhicalProperties.meltingPoint,
+                  lang,
+                )}°C | ${kelvinToFahrenheit(dataA.static.physhicalProperties.meltingPoint, lang)}°F`
               : "-"}
           </h6>
           <h6>
             {dataB.static.physhicalProperties.meltingPoint
-              ? `${dataB.static.physhicalProperties.meltingPoint.toLocaleString(lang)} K | ${parseInt(
-                  kelvinToCelsius(dataB.static.physhicalProperties.meltingPoint),
-                ).toLocaleString(lang)}°C | ${parseInt(
-                  kelvinToFahrenheit(dataB.static.physhicalProperties.meltingPoint),
-                ).toLocaleString(lang)}°F`
+              ? `${dataB.static.physhicalProperties.meltingPoint.toLocaleString(lang)} K | ${kelvinToCelsius(
+                  dataB.static.physhicalProperties.meltingPoint,
+                  lang,
+                )}°C | ${kelvinToFahrenheit(dataB.static.physhicalProperties.meltingPoint, lang)}°F`
               : "-"}
           </h6>
         </section>
@@ -241,20 +239,18 @@ export default function Compare() {
           <h6 className="title2">{t.titles.boilingPoint}</h6>
           <h6>
             {dataA.static.physhicalProperties.boilingPoint
-              ? `${dataA.static.physhicalProperties.boilingPoint.toLocaleString(lang)} K | ${parseInt(
-                  kelvinToCelsius(dataA.static.physhicalProperties.boilingPoint),
-                ).toLocaleString(lang)}°C | ${parseInt(
-                  kelvinToFahrenheit(dataA.static.physhicalProperties.boilingPoint),
-                ).toLocaleString(lang)}°F`
+              ? `${dataA.static.physhicalProperties.boilingPoint.toLocaleString(lang)} K | ${kelvinToCelsius(
+                  dataA.static.physhicalProperties.boilingPoint,
+                  lang,
+                )}°C | ${kelvinToFahrenheit(dataA.static.physhicalProperties.boilingPoint, lang)}°F`
               : "-"}
           </h6>
           <h6>
             {dataB.static.physhicalProperties.boilingPoint
-              ? `${dataB.static.physhicalProperties.boilingPoint.toLocaleString(lang)} K | ${parseInt(
-                  kelvinToCelsius(dataB.static.physhicalProperties.boilingPoint),
-                ).toLocaleString(lang)}°C | ${parseInt(
-                  kelvinToFahrenheit(dataB.static.physhicalProperties.boilingPoint),
-                ).toLocaleString(lang)}°F`
+              ? `${dataB.static.physhicalProperties.boilingPoint.toLocaleString(lang)} K | ${kelvinToCelsius(
+                  dataB.static.physhicalProperties.boilingPoint,
+                  lang,
+                )}°C | ${kelvinToFahrenheit(dataB.static.physhicalProperties.boilingPoint, lang)}°F`
               : "-"}
           </h6>
         </section>

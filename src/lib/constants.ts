@@ -881,8 +881,8 @@ export const ELEMENT_DATA2 = [
       physhicalProperties: {
         phase: ELEMENT_PHASE.SOLID,
         density: 8.229,
-        meltingPoint: 1629.15,
-        boilingPoint: 3503.15,
+        meltingPoint: 1629,
+        boilingPoint: 3396,
         heatOfFusion: 10.8,
         heatOfVaporization: 295,
         specificHeatCapacity: 0.182,
@@ -1240,8 +1240,8 @@ export const ELEMENT_DATA3 = [
       physhicalProperties: {
         phase: ELEMENT_PHASE.SOLID,
         density: 11.7,
-        meltingPoint: 2115.15,
-        boilingPoint: 5061.15,
+        meltingPoint: 2028,
+        boilingPoint: 5060,
         heatOfFusion: 16,
         heatOfVaporization: 530,
         specificHeatCapacity: 0.113,
@@ -1336,7 +1336,7 @@ export const ELEMENT_DATA3 = [
       crystalStructure: CRYSTAL_STRUCTURES.BASE_CENTERED_ORTHORHOMBIC.value,
       electrons: {
         electronsPerShell: [2, 8, 18, 32, 21, 9, 2],
-        electronConfiguration: ["Rn", "5f-3", "6d-1", "7s-1"],
+        electronConfiguration: ["Rn", "5f-3", "6d-1", "7s-2"],
       },
 
       physhicalProperties: {
@@ -1387,14 +1387,14 @@ export const ELEMENT_DATA3 = [
       crystalStructure: CRYSTAL_STRUCTURES.SIMPLE_ORTHORHOMBIC.value,
       electrons: {
         electronsPerShell: [2, 8, 18, 32, 22, 9, 2],
-        electronConfiguration: ["Rn", "5f-3", "6d-1", "7s-2"],
+        electronConfiguration: ["Rn", "5f-4", "6d-1", "7s-2"],
       },
 
       physhicalProperties: {
         phase: ELEMENT_PHASE.SOLID,
         density: 20.45,
-        meltingPoint: 910.15,
-        boilingPoint: 4273.15,
+        meltingPoint: 913,
+        boilingPoint: 4175,
         heatOfFusion: 10,
         heatOfVaporization: 335,
         specificHeatCapacity: null,
@@ -1586,7 +1586,7 @@ export const ELEMENT_DATA3 = [
         phase: ELEMENT_PHASE.SOLID,
         density: 14.78,
         meltingPoint: 1259.15,
-        boilingPoint: 3173.15,
+        boilingPoint: 2900,
         heatOfFusion: null,
         heatOfVaporization: null,
         specificHeatCapacity: null,
@@ -1859,8 +1859,8 @@ export const ELEMENT_DATA3 = [
       unGrouped: { casNumber: "22537-19-5", pubChem: null, protons: 103, electrons: 103, neutrons: 159 },
       generalProperties: {
         atomicNumber: 103,
-        atomicWeight: 262,
-        massNumber: 262,
+        atomicWeight: 266,
+        massNumber: 266,
         radioActive: true,
         color: null,
       },
@@ -3122,8 +3122,8 @@ export const ELEMENT_DATA = [
       physhicalProperties: {
         phase: ELEMENT_PHASE.SOLID,
         density: 8.86,
-        meltingPoint: 3200.15,
-        boilingPoint: 3134.15,
+        meltingPoint: 1768,
+        boilingPoint: 3143,
         heatOfFusion: 16.2,
         heatOfVaporization: 375,
         specificHeatCapacity: 0.421,
@@ -4059,8 +4059,8 @@ export const ELEMENT_DATA = [
       physhicalProperties: {
         phase: ELEMENT_PHASE.SOLID,
         density: 12.02,
-        meltingPoint: 1828.05,
-        boilingPoint: 3236.15,
+        meltingPoint: 1827.15,
+        boilingPoint: 2940,
         heatOfFusion: 16.7,
         heatOfVaporization: 380,
         specificHeatCapacity: 0.244,
@@ -4567,8 +4567,8 @@ export const ELEMENT_DATA = [
       physhicalProperties: {
         phase: ELEMENT_PHASE.SOLID,
         density: 3.594,
-        meltingPoint: 1000.15,
-        boilingPoint: 2170.15,
+        meltingPoint: 1002,
+        boilingPoint: 1910,
         heatOfFusion: 8,
         heatOfVaporization: 140,
         specificHeatCapacity: 0.204,
@@ -5266,8 +5266,8 @@ export const ELEMENT_DATA = [
       unGrouped: { casNumber: "7440-08-6", pubChem: null, protons: 84, electrons: 84, neutrons: 126 },
       generalProperties: {
         atomicNumber: 84,
-        atomicWeight: 210,
-        massNumber: 210,
+        atomicWeight: 209,
+        massNumber: 209,
         radioActive: true,
         color: ELEMENT_COLORS.SILVER,
       },
@@ -5330,8 +5330,8 @@ export const ELEMENT_DATA = [
       physhicalProperties: {
         phase: ELEMENT_PHASE.SOLID,
         density: 7,
-        meltingPoint: 575.15,
-        boilingPoint: 610.15,
+        meltingPoint: 503,
+        boilingPoint: 575,
         heatOfFusion: 6,
         heatOfVaporization: 40,
         specificHeatCapacity: null,
@@ -5432,8 +5432,8 @@ export const ELEMENT_DATA = [
       physhicalProperties: {
         phase: ELEMENT_PHASE.SOLID,
         density: 1.87,
-        meltingPoint: 296.15,
-        boilingPoint: 950.15,
+        meltingPoint: 291,
+        boilingPoint: 893,
         heatOfFusion: 2,
         heatOfVaporization: 65,
         specificHeatCapacity: null,
@@ -5908,15 +5908,15 @@ export const ELEMENT_DATA = [
       unGrouped: { casNumber: "54386-24-2", pubChem: null, protons: 111, electrons: 111, neutrons: 170 },
       generalProperties: {
         atomicNumber: 111,
-        atomicWeight: 281,
-        massNumber: 281,
+        atomicWeight: 282,
+        massNumber: 282,
         radioActive: true,
         color: null,
       },
       crystalStructure: null,
       electrons: {
         electronsPerShell: [2, 8, 18, 32, 32, 17, 2],
-        electronConfiguration: ["[Rn]", "5f-14", "6d-9", "7s-2"],
+        electronConfiguration: ["[Rn]", "5f-14", "6d-10", "7s-1"],
       },
       physhicalProperties: {
         phase: ELEMENT_PHASE.SOLID,

@@ -42,10 +42,10 @@ export const formatDate = ({
     day: "numeric",
   });
 
-export function kelvinToCelsius(K: number) {
-  return (K - 273.15).toFixed(2);
+export function kelvinToCelsius(K: number, lang: Lang) {
+  return Math.round(K - 273.15).toLocaleString(lang);
 }
 
-export function kelvinToFahrenheit(K: number) {
-  return (((K - 273.15) * 9) / 5 + 32).toFixed(2);
+export function kelvinToFahrenheit(K: number, lang: Lang) {
+  return Math.round(((K - 273.15) * 9) / 5 + 32).toLocaleString(lang);
 }

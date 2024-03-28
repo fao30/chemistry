@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 export default function Home() {
   const data = getElement();
   const [clickedElement, setClickedElement] = useState<null | Element>(null);
-  const [hoveredCategory, setHoveredCategory] = useState<ElementCategory | null>(null);
+  const [clickedCategory, setClickedCategory] = useState<ElementCategory | null>(null);
   const { t, setting, lang } = useSetting();
   const navigate = useNavigate();
 
@@ -18,11 +18,18 @@ export default function Home() {
     return setClickedElement(null);
   };
 
+  const handleClickCategory = (category: ElementCategory) => (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    e.stopPropagation();
+    if (clickedCategory !== category) return setClickedCategory(category);
+    return setClickedCategory(null);
+  };
+
   return (
     // <article className="overflow-auto bg-gradient-to-r from-[#274786] to-[#229FBC]">
     <article
       onClick={() => {
         if (clickedElement) setClickedElement(null);
+        if (clickedCategory) setClickedCategory(null);
       }}
       className="overflow-auto"
     >
@@ -44,10 +51,10 @@ export default function Home() {
 
                   const hovered =
                     (clickedElement && element && clickedElement.symbol === element.symbol) ||
-                    (hoveredCategory && element && hoveredCategory === element.category);
+                    (clickedCategory && element && clickedCategory === element.category);
                   const notHovered =
                     (clickedElement && element && clickedElement.symbol !== element.symbol) ||
-                    (hoveredCategory && element && hoveredCategory !== element.category);
+                    (clickedCategory && element && clickedCategory !== element.category);
 
                   const tClickedElement = clickedElement && t.elements[clickedElement.symbol];
                   const tElement = element && t.elements[element.symbol];
@@ -83,7 +90,12 @@ export default function Home() {
                                 <span>{clickedElement?.static.generalProperties.atomicNumber}</span>
                               </h2>
                               <h3 className="absolute right-3 top-3 text-light">
-                                <span>{clickedElement?.static.generalProperties.atomicWeight}</span>
+                                <span>
+                                  {clickedElement?.static.generalProperties.atomicWeight?.toLocaleString(lang, {
+                                    minimumFractionDigits: 3,
+                                    maximumFractionDigits: 3,
+                                  })}
+                                </span>
                               </h3>
                               <h1
                                 className="absolute centered font-bold"
@@ -216,10 +228,10 @@ export default function Home() {
             {ELEMENT_DATA2.map((element, index) => {
               const hovered =
                 (clickedElement && element && clickedElement.symbol === element.symbol) ||
-                (hoveredCategory && element && hoveredCategory === element.category);
+                (clickedCategory && element && clickedCategory === element.category);
               const notHovered =
                 (clickedElement && element && clickedElement.symbol !== element.symbol) ||
-                (hoveredCategory && element && hoveredCategory !== element.category);
+                (clickedCategory && element && clickedCategory !== element.category);
 
               const tElement = element && t.elements[element.symbol];
               return (
@@ -279,10 +291,10 @@ export default function Home() {
             {ELEMENT_DATA3.map((element, index) => {
               const hovered =
                 (clickedElement && element && clickedElement.symbol === element.symbol) ||
-                (hoveredCategory && element && hoveredCategory === element.category);
+                (clickedCategory && element && clickedCategory === element.category);
               const notHovered =
                 (clickedElement && element && clickedElement.symbol !== element.symbol) ||
-                (hoveredCategory && element && hoveredCategory !== element.category);
+                (clickedCategory && element && clickedCategory !== element.category);
 
               const tElement = element && t.elements[element.symbol];
               return (
@@ -340,13 +352,12 @@ export default function Home() {
           <section className="flex justify-between items-end pl-12 4k:pl-20 pr-6">
             <section className="grid grid-cols-3 gap-4 mt-8 w-[50%] xl:w-[70%]">
               {CATEGORIES_OPTIONS.map((e) => {
-                const notHovered = hoveredCategory && hoveredCategory !== e.value;
+                const notHovered = clickedCategory && clickedCategory !== e.value;
                 return (
                   <section
-                    onMouseEnter={() => setHoveredCategory(e.value)}
-                    onMouseLeave={() => setHoveredCategory(null)}
+                    onClick={handleClickCategory(e.value)}
                     key={e.value}
-                    className="flex gap-3 4k:gap-6 items-center"
+                    className="flex gap-3 4k:gap-6 items-center cursor-pointer"
                   >
                     <div className="size-12 4k:size-32 aspect-square relative" style={{ backgroundColor: e.color }}>
                       <div

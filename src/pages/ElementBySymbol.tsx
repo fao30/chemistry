@@ -65,7 +65,7 @@ export default function ElementBySymbol() {
     <article className="p-6 grid md:grid-cols-2 xl:grid-cols-3 gap-6 text-dark">
       {/* FIRST COLUMN */}
       <section className="flex flex-col gap-6">
-        <div onClick={() => audioRef.current?.play()} className="cursor-pointer">
+        <div onClick={() => audioRef.current?.load()} className="cursor-pointer">
           <Box classNameDiv="p-6 flex-col gap-2 flex items-center justify-center">
             <h5>{tData.name.toUpperCase()}</h5>
             {setting.withAudio ? (
@@ -233,8 +233,8 @@ export default function ElementBySymbol() {
               {data.static.physhicalProperties.meltingPoint ? (
                 <h6>
                   {data.static.physhicalProperties.meltingPoint.toLocaleString(lang)} K |{" "}
-                  {parseInt(kelvinToCelsius(data.static.physhicalProperties.meltingPoint)).toLocaleString(lang)}°C |{" "}
-                  {parseInt(kelvinToFahrenheit(data.static.physhicalProperties.meltingPoint)).toLocaleString(lang)}°F
+                  {kelvinToCelsius(data.static.physhicalProperties.meltingPoint, lang)}°C |{" "}
+                  {kelvinToFahrenheit(data.static.physhicalProperties.meltingPoint, lang)}°F
                 </h6>
               ) : (
                 <h6>-</h6>
@@ -246,8 +246,8 @@ export default function ElementBySymbol() {
               {data.static.physhicalProperties.boilingPoint ? (
                 <h6>
                   {data.static.physhicalProperties.boilingPoint.toLocaleString(lang)} K |{" "}
-                  {parseInt(kelvinToCelsius(data.static.physhicalProperties.boilingPoint)).toLocaleString(lang)}°C |{" "}
-                  {parseInt(kelvinToFahrenheit(data.static.physhicalProperties.boilingPoint)).toLocaleString(lang)}°F
+                  {kelvinToCelsius(data.static.physhicalProperties.boilingPoint, lang)}°C |{" "}
+                  {kelvinToFahrenheit(data.static.physhicalProperties.boilingPoint, lang)}°F
                 </h6>
               ) : (
                 <h6>-</h6>
