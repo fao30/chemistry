@@ -3,7 +3,7 @@ import { CRYSTAL_STRUCTURES } from "@/components/CrystalStructures";
 import useSetting from "@/hooks/useSetting";
 import { ELEMENT_DATA_COMPLETE, is2k } from "@/lib/constants";
 import { kelvinToCelsius, kelvinToFahrenheit } from "@/lib/functions";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { Navigate, useParams } from "react-router-dom";
 
 const renderUnit = (unit: string) => {
@@ -61,6 +61,10 @@ export default function ElementBySymbol() {
 
   const ELEMENTS_WITHOUT_GROUP = [57, 89];
 
+  useEffect(() => {
+    if (setting.withAudio) audioRef.current?.load();
+  }, [setting.withAudio, data.static.generalProperties.atomicNumber]);
+
   return (
     <article className="p-6 grid md:grid-cols-2 xl:grid-cols-3 gap-6 text-dark">
       {/* FIRST COLUMN */}
@@ -69,7 +73,7 @@ export default function ElementBySymbol() {
           <Box classNameDiv="p-6 flex-col gap-2 flex items-center justify-center">
             <h5>{tData.name.toUpperCase()}</h5>
             {setting.withAudio ? (
-              <audio ref={audioRef} controls className="invisible size-0" autoPlay>
+              <audio ref={audioRef} className="hidden" autoPlay>
                 <source src={`/sound/${data.static.generalProperties.atomicNumber}.mp3`} type="audio/mp3" />
                 <track kind="captions" srcLang="ru" label={tData.name} default />
               </audio>
