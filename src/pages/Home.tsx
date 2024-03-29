@@ -36,10 +36,10 @@ export default function Home() {
       className="overflow-auto"
     >
       <section
-        className="animate mx-auto max-xl:!w-[120rem] overflow-x-auto min-h-screen pb-6 pt-12 fullHd:pt-16 2k:pt-24 4k:pt-36"
+        className="animate mx-auto max-xl:!w-[120rem] overflow-x-auto min-h-screen pb-6 pt-12 fullHd:pt-16 2k:pt-24 4k:pt-36 pl-20 4k:pl-20 pr-16"
         style={{ width: `${setting.tableWidth}%` }}
       >
-        <section className="grid grid-cols-18 gap-1 fullHd:gap-2 4k:gap-4 animate pl-8 fullHd:pl-12 4k:pl-20 pr-6 mb-1 fullHd:mb-2 4k:mb-4">
+        <section className="grid grid-cols-18 gap-1 fullHd:gap-2 4k:gap-4 animate mb-1 fullHd:mb-2 4k:mb-4">
           {data.map((row, rowIndex) => {
             return (
               <Fragment key={rowIndex}>
@@ -228,7 +228,7 @@ export default function Home() {
         </section>
 
         <section className="flex flex-col gap-1 fullHd:gap-2 4k:gap-4">
-          <section className="grid grid-cols-18 gap-1 fullHd:gap-2 4k:gap-4 animate pl-8 fullHd:pl-12 4k:pl-20 pr-6">
+          <section className="grid grid-cols-18 gap-1 fullHd:gap-2 4k:gap-4 animate">
             {ELEMENT_DATA2.map((element, index) => {
               const hovered =
                 (clickedElement && element && clickedElement.symbol === element.symbol) ||
@@ -293,7 +293,7 @@ export default function Home() {
             })}
           </section>
 
-          <section className="grid grid-cols-18 gap-1 fullHd:gap-2 4k:gap-4 animate pl-8 fullHd:pl-12 4k:pl-20 pr-6">
+          <section className="grid grid-cols-18 gap-1 fullHd:gap-2 4k:gap-4 animate">
             {ELEMENT_DATA3.map((element, index) => {
               const hovered =
                 (clickedElement && element && clickedElement.symbol === element.symbol) ||
@@ -359,7 +359,7 @@ export default function Home() {
           </section>
         </section>
 
-        <section className="flex justify-between items-end pl-8 fullHd:pl-12 4k:pl-20 pr-6 mt-6 4k:mt-12">
+        <section className="flex justify-between items-end mt-6 4k:mt-12">
           <section className="grid grid-cols-3 gap-4 w-[50%] xl:w-[70%]">
             {CATEGORIES_OPTIONS.map((e) => {
               const notHovered = clickedCategory && clickedCategory !== e.value;
