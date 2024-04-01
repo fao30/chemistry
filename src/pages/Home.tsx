@@ -94,7 +94,6 @@ export default function Home() {
                               <h3 className="absolute right-3 top-3 text-light">
                                 <span>
                                   {clickedElement?.static.generalProperties.atomicWeight?.toLocaleString(lang, {
-                                    minimumFractionDigits: 3,
                                     maximumFractionDigits: 3,
                                   })}
                                 </span>
