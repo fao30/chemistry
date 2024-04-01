@@ -203,7 +203,6 @@ export default function Home() {
                             )}
                           >
                             {element?.static.generalProperties.atomicWeight.toLocaleString(lang, {
-                              minimumFractionDigits: isBelow90 ? 0 : 2,
                               maximumFractionDigits: isBelow90 ? 0 : 2,
                             })}
                           </p>
@@ -272,7 +271,6 @@ export default function Home() {
                         )}
                       >
                         {element?.static.generalProperties.atomicWeight.toLocaleString(lang, {
-                          minimumFractionDigits: isBelow90 ? 0 : 2,
                           maximumFractionDigits: isBelow90 ? 0 : 2,
                         })}
                       </p>
@@ -293,7 +291,7 @@ export default function Home() {
             })}
           </section>
 
-          <section className="grid grid-cols-18 gap-1 fullHd:gap-2 4k:gap-4 animate">
+          <section className="grid grid-cols-18 gap-1 fullHd:gap-2 4k:gap-4 animate relative">
             {ELEMENT_DATA3.map((element, index) => {
               const hovered =
                 (clickedElement && element && clickedElement.symbol === element.symbol) ||
@@ -337,7 +335,6 @@ export default function Home() {
                         )}
                       >
                         {element?.static.generalProperties.atomicWeight.toLocaleString(lang, {
-                          minimumFractionDigits: isBelow90 ? 0 : 2,
                           maximumFractionDigits: isBelow90 ? 0 : 2,
                         })}
                       </p>
@@ -356,32 +353,30 @@ export default function Home() {
                 </div>
               );
             })}
+            <img alt="Logo" src="/logo.svg" className="absolute centered-right size-20 bg-light rounded-md shadow-md" />
           </section>
         </section>
 
-        <section className="flex justify-between items-end mt-6 4k:mt-12">
-          <section className="grid grid-cols-3 gap-4 w-[50%] xl:w-[70%]">
-            {CATEGORIES_OPTIONS.map((e) => {
-              const notHovered = clickedCategory && clickedCategory !== e.value;
-              return (
-                <section
-                  onClick={handleClickCategory(e.value)}
-                  key={e.value}
-                  className="flex gap-3 4k:gap-6 items-center cursor-pointer"
-                >
-                  <div className="size-12 4k:size-32 aspect-square relative" style={{ backgroundColor: e.color }}>
-                    <div
-                      className={cn("z-50 bg-dark/50 opacity-0 absolute size-full centered animate cursor-pointer", {
-                        "opacity-100": notHovered,
-                      })}
-                    />
-                  </div>
-                  <h6 className="leading-5">{t.elementCategories[e.value]}</h6>
-                </section>
-              );
-            })}
-          </section>
-          <img alt="Logo" src="/logo.svg" className="size-20 bg-light rounded-md shadow-md" />
+        <section className="grid grid-cols-3 gap-4 w-[50%] xl:w-[70%] mt-6 4k:mt-12">
+          {CATEGORIES_OPTIONS.map((e) => {
+            const notHovered = clickedCategory && clickedCategory !== e.value;
+            return (
+              <section
+                onClick={handleClickCategory(e.value)}
+                key={e.value}
+                className="flex gap-3 4k:gap-6 items-center cursor-pointer"
+              >
+                <div className="size-12 4k:size-32 aspect-square relative" style={{ backgroundColor: e.color }}>
+                  <div
+                    className={cn("z-50 bg-dark/50 opacity-0 absolute size-full centered animate cursor-pointer", {
+                      "opacity-100": notHovered,
+                    })}
+                  />
+                </div>
+                <h6 className="leading-5">{t.elementCategories[e.value]}</h6>
+              </section>
+            );
+          })}
         </section>
       </section>
     </article>
