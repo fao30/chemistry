@@ -352,7 +352,11 @@ export default function Home() {
                 </div>
               );
             })}
-            <img alt="Logo" src="/logo.svg" className="absolute right-0 bottom-0 size-36 bg-light rounded-md shadow-md" />
+            <img
+              alt="Logo"
+              src="/logo.svg"
+              className="absolute h-[150%] aspect-square right-0 bottom-0 bg-light rounded-md shadow-md"
+            />
           </section>
         </section>
 
